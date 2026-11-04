@@ -1,0 +1,318 @@
+// High School Website Platform — core database schema (MySQL + Prisma 7)
+// Credentials belong in environment variables / prisma.config.cjs, not here.
+
+generator client {
+  // Keep JavaScript client generation (no TypeScript toolchain required).
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum PublicationStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum BlogPostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ContactMessageStatus {
+  NEW
+  READ
+  REPLIED
+  ARCHIVED
+}
+
+enum NewsletterStatus {
+  PENDING
+  ACTIVE
+  UNSUBSCRIBED
+}
+
+enum EventStatus {
+  DRAFT
+  PUBLISHED
+  CANCELLED
+  ARCHIVED
+}
+
+// ---------------------------------------------------------------------------
+// Administrator management
+// ---------------------------------------------------------------------------
+
+model Role {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique @db.VarChar(100)
+  slug        String   @unique @db.VarChar(100)
+  description String?  @db.VarChar(500)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  admins Admin[]
+
+  @@map("roles")
+}
+
+model Admin {
+  id           Int       @id @default(autoincrement())
+  email        String    @unique @db.VarChar(255)
+  passwordHash String    @map("password_hash") @db.VarChar(255)
+  firstName    String    @map("first_name") @db.VarChar(100)
+  lastName     String    @map("last_name") @db.VarChar(100)
+  isActive     Boolean   @default(true) @map("is_active")
+  lastLoginAt  DateTime? @map("last_login_at")
+  deletedAt    DateTime? @map("deleted_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  roleId Int  @map("role_id")
+  role   Role @relation(fields: [roleId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  pagesCreated       Page[]               @relation("PageCreatedBy")
+  pagesUpdated       Page[]               @relation("PageUpdatedBy")
+  blogPosts          BlogPost[]           @relation("BlogPostAuthor")
+  contactMessages    ContactMessage[]     @relation("ContactMessageHandledBy")
+  eventsCreated      Event[]              @relation("EventCreatedBy")
+  mediaUploads       MediaAsset[]         @relation("MediaUploadedBy")
+  settingsUpdated    WebsiteSetting[]     @relation("SettingUpdatedBy")
+  auditLogs          AuditLog[]           @relation("AuditLogAdmin")
+
+  @@index([roleId])
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("admins")
+}
+
+// ---------------------------------------------------------------------------
+// Website pages
+// ---------------------------------------------------------------------------
+
+model Page {
+  id          Int               @id @default(autoincrement())
+  title       String            @db.VarChar(255)
+  slug        String            @unique @db.VarChar(255)
+  content     String            @db.LongText
+  status      PublicationStatus @default(DRAFT)
+  publishedAt DateTime?         @map("published_at")
+  deletedAt   DateTime?         @map("deleted_at")
+  createdAt   DateTime          @default(now()) @map("created_at")
+  updatedAt   DateTime          @updatedAt @map("updated_at")
+
+  createdById Int?   @map("created_by_id")
+  updatedById Int?   @map("updated_by_id")
+  createdBy   Admin? @relation("PageCreatedBy", fields: [createdById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  updatedBy   Admin? @relation("PageUpdatedBy", fields: [updatedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([publishedAt])
+  @@index([deletedAt])
+  @@index([createdById])
+  @@index([updatedById])
+  @@map("pages")
+}
+
+// ---------------------------------------------------------------------------
+// Blog management
+// ---------------------------------------------------------------------------
+
+model BlogCategory {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(150)
+  slug        String    @unique @db.VarChar(150)
+  description String?   @db.VarChar(500)
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  posts BlogPost[]
+
+  @@index([deletedAt])
+  @@map("blog_categories")
+}
+
+model BlogPost {
+  id          Int            @id @default(autoincrement())
+  title       String         @db.VarChar(255)
+  slug        String         @unique @db.VarChar(255)
+  excerpt     String?        @db.VarChar(500)
+  content     String         @db.LongText
+  status      BlogPostStatus @default(DRAFT)
+  publishedAt DateTime?      @map("published_at")
+  deletedAt   DateTime?      @map("deleted_at")
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+
+  authorId        Int  @map("author_id")
+  categoryId      Int? @map("category_id")
+  featuredImageId Int? @map("featured_image_id")
+
+  author        Admin         @relation("BlogPostAuthor", fields: [authorId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  category      BlogCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  featuredImage MediaAsset?   @relation("BlogPostFeaturedImage", fields: [featuredImageId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([publishedAt])
+  @@index([authorId])
+  @@index([categoryId])
+  @@index([featuredImageId])
+  @@index([deletedAt])
+  @@map("blog_posts")
+}
+
+// ---------------------------------------------------------------------------
+// Contact messages
+// ---------------------------------------------------------------------------
+
+model ContactMessage {
+  id        Int                  @id @default(autoincrement())
+  name      String               @db.VarChar(150)
+  email     String               @db.VarChar(255)
+  phone     String?              @db.VarChar(50)
+  subject   String               @db.VarChar(255)
+  message   String               @db.Text
+  status    ContactMessageStatus @default(NEW)
+  createdAt DateTime             @default(now()) @map("created_at")
+  updatedAt DateTime             @updatedAt @map("updated_at")
+
+  handledById Int?   @map("handled_by_id")
+  handledBy   Admin? @relation("ContactMessageHandledBy", fields: [handledById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([email])
+  @@index([createdAt])
+  @@index([handledById])
+  @@map("contact_messages")
+}
+
+// ---------------------------------------------------------------------------
+// Newsletter
+// ---------------------------------------------------------------------------
+
+model NewsletterSubscriber {
+  id                Int              @id @default(autoincrement())
+  email             String           @unique @db.VarChar(255)
+  status            NewsletterStatus @default(PENDING)
+  confirmationToken String?          @unique @map("confirmation_token") @db.VarChar(255)
+  confirmedAt       DateTime?        @map("confirmed_at")
+  unsubscribedAt    DateTime?        @map("unsubscribed_at")
+  createdAt         DateTime         @default(now()) @map("created_at")
+  updatedAt         DateTime         @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("newsletter_subscribers")
+}
+
+// ---------------------------------------------------------------------------
+// School events
+// ---------------------------------------------------------------------------
+
+model Event {
+  id          Int         @id @default(autoincrement())
+  title       String      @db.VarChar(255)
+  description String      @db.Text
+  location    String?     @db.VarChar(255)
+  startsAt    DateTime    @map("starts_at")
+  endsAt      DateTime?   @map("ends_at")
+  status      EventStatus @default(DRAFT)
+  deletedAt   DateTime?   @map("deleted_at")
+  createdAt   DateTime    @default(now()) @map("created_at")
+  updatedAt   DateTime    @updatedAt @map("updated_at")
+
+  createdById Int?   @map("created_by_id")
+  createdBy   Admin? @relation("EventCreatedBy", fields: [createdById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([startsAt])
+  @@index([endsAt])
+  @@index([deletedAt])
+  @@index([createdById])
+  @@map("events")
+}
+
+// ---------------------------------------------------------------------------
+// Media management (metadata only — no binary file storage in MySQL)
+// ---------------------------------------------------------------------------
+
+model MediaAsset {
+  id            Int       @id @default(autoincrement())
+  fileName      String    @map("file_name") @db.VarChar(255)
+  originalName  String    @map("original_name") @db.VarChar(255)
+  mimeType      String    @map("mime_type") @db.VarChar(100)
+  fileSize      Int       @map("file_size")
+  storagePath   String    @map("storage_path") @db.VarChar(500)
+  altText       String?   @map("alt_text") @db.VarChar(255)
+  description   String?   @db.VarChar(500)
+  isGalleryImage Boolean  @default(false) @map("is_gallery_image")
+  sortOrder     Int       @default(0) @map("sort_order")
+  deletedAt     DateTime? @map("deleted_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  uploadedById Int?   @map("uploaded_by_id")
+  uploadedBy   Admin? @relation("MediaUploadedBy", fields: [uploadedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  blogPostsAsFeatured BlogPost[] @relation("BlogPostFeaturedImage")
+
+  @@index([mimeType])
+  @@index([isGalleryImage])
+  @@index([sortOrder])
+  @@index([uploadedById])
+  @@index([deletedAt])
+  @@index([createdAt])
+  @@map("media_assets")
+}
+
+// ---------------------------------------------------------------------------
+// Website settings (key/value configuration)
+// ---------------------------------------------------------------------------
+
+model WebsiteSetting {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique @db.VarChar(100)
+  value     String   @db.Text
+  group     String?  @db.VarChar(100)
+  label     String?  @db.VarChar(150)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  updatedById Int?   @map("updated_by_id")
+  updatedBy   Admin? @relation("SettingUpdatedBy", fields: [updatedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([group])
+  @@index([updatedById])
+  @@map("website_settings")
+}
+
+// ---------------------------------------------------------------------------
+// Audit logs
+// ---------------------------------------------------------------------------
+
+model AuditLog {
+  id         Int      @id @default(autoincrement())
+  action     String   @db.VarChar(100)
+  entityType String?  @map("entity_type") @db.VarChar(100)
+  entityId   String?  @map("entity_id") @db.VarChar(100)
+  metadata   Json?
+  ipAddress  String?  @map("ip_address") @db.VarChar(45)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  adminId Int?   @map("admin_id")
+  admin   Admin? @relation("AuditLogAdmin", fields: [adminId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([adminId])
+  @@index([action])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
