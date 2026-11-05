@@ -1,24 +1,13 @@
-# Dependencies
-node_modules/
-
-# Environment files (keep .env.example tracked)
-.env
-.env.local
-.env.*.local
-
-# Logs
-logs/
+# Keep secrets and deps out of the repo root
+backend/node_modules/
+backend/.env
+backend/.env.local
+backend/.env.*.local
+backend/storage/uploads/**
+!backend/storage/uploads/.gitkeep
+backend/coverage/
+backend/logs/
 *.log
-npm-debug.log*
-
-# OS / editor
 .DS_Store
-Thumbs.db
 .idea/
 .vscode/
-
-# Runtime / coverage
-coverage/
-dist/
-tmp/
-temp/

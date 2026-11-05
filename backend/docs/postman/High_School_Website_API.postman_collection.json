@@ -1,0 +1,315 @@
+{
+  "info": {
+    "name": "High School Website Platform API",
+    "description": "Main workflows for /api/v1. Use collection variables baseUrl and accessToken. Do not store real production secrets.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000/api/v1" },
+    { "key": "accessToken", "value": "" },
+    { "key": "pageSlug", "value": "about" },
+    { "key": "blogSlug", "value": "welcome" },
+    { "key": "eventSlug", "value": "science-fair" },
+    { "key": "mediaId", "value": "1" },
+    { "key": "pageId", "value": "1" },
+    { "key": "postId", "value": "1" },
+    { "key": "eventId", "value": "1" },
+    { "key": "contactId", "value": "1" },
+    { "key": "inquiryId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/health"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "  const data = pm.response.json().data;",
+                  "  if (data && data.accessToken) {",
+                  "    pm.collectionVariables.set('accessToken', data.accessToken);",
+                  "  }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"ReplaceWithStrongPass1\"\n}"
+            },
+            "url": "{{baseUrl}}/admin/auth/login"
+          }
+        },
+        {
+          "name": "Me",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" }
+            ],
+            "url": "{{baseUrl}}/admin/auth/me"
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" }
+            ],
+            "url": "{{baseUrl}}/admin/auth/logout"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public content",
+      "item": [
+        {
+          "name": "List pages",
+          "request": { "method": "GET", "url": "{{baseUrl}}/pages" }
+        },
+        {
+          "name": "Get page by slug",
+          "request": { "method": "GET", "url": "{{baseUrl}}/pages/{{pageSlug}}" }
+        },
+        {
+          "name": "List blog posts",
+          "request": { "method": "GET", "url": "{{baseUrl}}/blog/posts" }
+        },
+        {
+          "name": "Get blog post",
+          "request": { "method": "GET", "url": "{{baseUrl}}/blog/posts/{{blogSlug}}" }
+        },
+        {
+          "name": "List events",
+          "request": { "method": "GET", "url": "{{baseUrl}}/events?timeframe=upcoming" }
+        },
+        {
+          "name": "Get event",
+          "request": { "method": "GET", "url": "{{baseUrl}}/events/{{eventSlug}}" }
+        },
+        {
+          "name": "Public settings",
+          "request": { "method": "GET", "url": "{{baseUrl}}/settings/public" }
+        },
+        {
+          "name": "Media content",
+          "request": { "method": "GET", "url": "{{baseUrl}}/media/{{mediaId}}/content" }
+        }
+      ]
+    },
+    {
+      "name": "Public forms",
+      "item": [
+        {
+          "name": "Submit contact",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Parent Name\",\n  \"email\": \"parent@example.com\",\n  \"phone\": \"+251911000000\",\n  \"subject\": \"Admissions question\",\n  \"message\": \"Please share enrollment details.\"\n}"
+            },
+            "url": "{{baseUrl}}/contact"
+          }
+        },
+        {
+          "name": "Newsletter subscribe",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"subscriber@example.com\"\n}"
+            },
+            "url": "{{baseUrl}}/newsletter/subscribe"
+          }
+        },
+        {
+          "name": "Newsletter confirm",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/newsletter/confirm?token=REPLACE_FROM_EMAIL"
+          }
+        },
+        {
+          "name": "Newsletter unsubscribe",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"REPLACE_FROM_WELCOME_EMAIL\"\n}"
+            },
+            "url": "{{baseUrl}}/newsletter/unsubscribe"
+          }
+        },
+        {
+          "name": "Admissions inquiry",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studentName\": \"Abebe Kebede\",\n  \"guardianName\": \"Kebede Alemu\",\n  \"email\": \"parent@example.com\",\n  \"phone\": \"+251 911 000 000\",\n  \"gradeApplyingFor\": \"Grade 9\",\n  \"academicYear\": \"2026/2027\",\n  \"message\": \"Please share admission requirements.\"\n}"
+            },
+            "url": "{{baseUrl}}/admissions/inquiries"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin content",
+      "item": [
+        {
+          "name": "Create page",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"About\",\n  \"slug\": \"about\",\n  \"content\": \"About our school.\"\n}"
+            },
+            "url": "{{baseUrl}}/admin/pages"
+          }
+        },
+        {
+          "name": "Publish page",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/pages/{{pageId}}/publish"
+          }
+        },
+        {
+          "name": "Upload media",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "file", "type": "file", "src": [] },
+                { "key": "altText", "type": "text", "value": "Campus photo" }
+              ]
+            },
+            "url": "{{baseUrl}}/admin/media/upload"
+          }
+        },
+        {
+          "name": "Create event",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Science Fair\",\n  \"slug\": \"science-fair\",\n  \"description\": \"Annual exhibition\",\n  \"location\": \"Main Hall\",\n  \"startsAt\": \"2026-12-01T09:00:00.000Z\",\n  \"endsAt\": \"2026-12-01T16:00:00.000Z\",\n  \"featuredImageId\": null\n}"
+            },
+            "url": "{{baseUrl}}/admin/events"
+          }
+        },
+        {
+          "name": "Publish event",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/events/{{eventId}}/publish"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin communications",
+      "item": [
+        {
+          "name": "List contact messages",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/contact-messages"
+          }
+        },
+        {
+          "name": "List admissions inquiries",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/admissions/inquiries"
+          }
+        },
+        {
+          "name": "List newsletter subscribers",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/newsletter/subscribers"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin settings and dashboard",
+      "item": [
+        {
+          "name": "Upsert settings",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"settings\": {\n    \"school.name\": \"Example High School\",\n    \"contact.email\": \"info@example.com\"\n  }\n}"
+            },
+            "url": "{{baseUrl}}/admin/settings"
+          }
+        },
+        {
+          "name": "Dashboard overview",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/dashboard/overview"
+          }
+        },
+        {
+          "name": "Recent activity",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+            "url": "{{baseUrl}}/admin/dashboard/recent-activity?page=1&limit=20"
+          }
+        }
+      ]
+    }
+  ]
+}
