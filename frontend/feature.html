@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script>window.API_BASE_URL = "http://localhost:5000/api/v1";</script><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed":"#141e18","on-surface":"#191d19","on-tertiary-container":"#a7b2a9","on-secondary-fixed-variant":"#594409","surface-container-highest":"#e0e3dd","on-secondary-fixed":"#251a00","tertiary":"#252f28","secondary":"#735b21","on-background":"#191d19","on-primary-container":"#86baa2","primary-fixed":"#b9eed4","on-primary-fixed":"#002115","on-primary":"#ffffff","error-container":"#ffdad6","inverse-on-surface":"#eff2eb","on-tertiary":"#ffffff","tertiary-fixed-dim":"#bec9c0","on-primary-fixed-variant":"#1c4f3c","surface-tint":"#366853","on-secondary":"#ffffff","background":"#f7faf4","primary":"#003423","on-error-container":"#93000a","error":"#ba1a1a","surface":"#f7faf4","outline":"#717974","surface-container-low":"#f2f5ee","on-error":"#ffffff","on-secondary-container":"#785f24","outline-variant":"#c0c9c2","tertiary-fixed":"#dae5db","inverse-primary":"#9dd2b8","tertiary-container":"#3b453e","surface-bright":"#f7faf4","on-surface-variant":"#404944","inverse-surface":"#2d312d","secondary-fixed-dim":"#e3c37e","surface-variant":"#e0e3dd","primary-container":"#174b38","on-tertiary-fixed-variant":"#3f4942","surface-container":"#ecefe8","surface-dim":"#d8dbd5","surface-container-high":"#e6e9e3","primary-fixed-dim":"#9dd2b8","surface-container-lowest":"#ffffff","secondary-container":"#fddc94","secondary-fixed":"#ffdf9b"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter":"1.75rem","space-md":"1rem","margin":"3.5rem","space-sm":"0.5rem","space-2xl":"4.5rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-xs":"0.25rem","space-lg":"1.75rem","space-xl":"2.75rem"},fontFamily:{"label-caps":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"headline-lg":["Playfair Display"],"display-hero":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"title-editorial":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],caption:["Plus Jakarta Sans"]},fontSize:{"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.14em",fontWeight:"700"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"500"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"title-editorial":["19px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"400"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],caption:["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script><title>Academics — Abyssinia Academy</title></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-24 max-w-7xl mx-auto px-margin flex items-center justify-between gap-4">
+    <a class="flex items-center gap-3 group shrink-0" href="/">
+      <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-secondary-fixed font-headline-sm font-bold border border-secondary/40 shadow-sm">A</div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none group-hover:text-primary-container transition-colors">Abyssinia Academy</span>
+        <span class="font-label-caps text-label-caps tracking-widest text-secondary uppercase mt-0.5">Addis Ababa • Ethiopia</span>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a><a class="font-label-md text-label-md text-primary font-semibold border-b-2 border-secondary pb-1" href="/feature.html">Feature</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/blogs.html">Blogs</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/pricing.html">Pricing</a></nav>
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      
+    <div class="relative">
+      <button type="button" id="lang-toggle" onclick="toggleLangMenu(event)"
+        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-outline-variant/60 text-on-surface hover:bg-surface-container transition-colors"
+        aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+        <span class="material-symbols-outlined text-[20px] text-primary">translate</span>
+        <span id="lang-current-label" class="hidden sm:inline font-label-md text-label-md">English</span>
+        <span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span>
+      </button>
+      <div id="lang-menu" class="hidden absolute right-0 mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.12)] border border-outline-variant/40 py-2 z-[60]" role="listbox" onclick="event.stopPropagation()">
+        <button type="button" data-lang-item="en" onclick="selectLang('en', event)" class="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-surface-container transition-colors text-left">
+          <span class="text-lg leading-none" aria-hidden="true">🇬🇧</span>
+          <span class="flex-1 font-label-md text-label-md text-on-surface">English</span>
+          <span data-lang-check class="material-symbols-outlined text-[18px] text-primary opacity-0">check</span>
+        </button>
+        <button type="button" data-lang-item="am" onclick="selectLang('am', event)" class="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-surface-container transition-colors text-left">
+          <span class="text-lg leading-none" aria-hidden="true">🇪🇹</span>
+          <span class="flex-1 font-label-md text-label-md text-on-surface">አማርኛ</span>
+          <span data-lang-check class="material-symbols-outlined text-[18px] text-primary opacity-0">check</span>
+        </button>
+        <button type="button" data-lang-item="om" onclick="selectLang('om', event)" class="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-surface-container transition-colors text-left">
+          <span class="text-lg leading-none" aria-hidden="true">🇪🇹</span>
+          <span class="flex-1 font-label-md text-label-md text-on-surface">Afaan Oromoo</span>
+          <span data-lang-check class="material-symbols-outlined text-[18px] text-primary opacity-0">check</span>
+        </button>
+      </div>
+    </div>
+
+      <button aria-label="Toggle Navigation Menu" class="lg:hidden p-2 text-on-surface hover:text-primary" type="button" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-[26px]">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-nav" class="hidden lg:hidden border-t border-outline-variant bg-surface">
+    <a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Home</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/about.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">About</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/feature.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Feature</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/blogs.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Blogs</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/contact.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Contact</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/pricing.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Pricing</a>
+  </div>
+</header><main class="w-full pt-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: ACADEMICS HERO & EDITORIAL LEDGER -->
+<section class="w-full bg-surface pb-space-2xl pt-space-xl">
+<div class="max-w-7xl mx-auto px-margin">
+<!-- Main Headline & Subheading Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-baseline pt-4 pb-space-lg">
+<div class="lg:col-span-8">
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight leading-[1.08]">
+            Academic Excellence Through Purposeful Learning
+          </h1>
+</div>
+<div class="lg:col-span-4 pl-0 lg:pl-6"><p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-4">Discover an educational environment that encourages curiosity, critical thinking, creativity, and the development of knowledge and skills.</p><a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps uppercase tracking-wider font-bold border-b border-primary pb-1 hover:text-primary-container transition-colors" href="#curriculum-overview">Explore Our Curriculum <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div>
+</div>
+<!-- Hero Visual Frame -->
+<div class="relative w-full aspect-[16/9] lg:aspect-[21/9] overflow-hidden bg-primary-container shadow-md"><img alt="Abyssinia Academy students" class="w-full h-full object-cover" src="/students.png"/><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent pointer-events-none"></div><div class="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-4 text-on-primary font-caption text-caption"><span class="bg-primary/90 px-3 py-1.5 backdrop-blur-sm">The Senayt Library Commons • Academic Study Wing</span><span class="hidden md:inline-block text-secondary-fixed opacity-90">Scholars engaged in research and collaborative analysis under natural highland daylight</span></div></div>
+<!-- Academic Key Indicators Ledger Ribbon -->
+<div class="mt-8 bg-surface-container-low p-space-lg shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-1">Instructional Level</span>
+<span class="font-headline-md text-headline-md text-primary">Grades 9–12</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Secondary &amp; University Transition Cycle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-1">Accredited Framework</span>
+<span class="font-headline-md text-headline-md text-primary">National MoE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ethiopian Ministry of Education Standards</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-1">Linguistic Core</span>
+<span class="font-headline-md text-headline-md text-primary">Dual Mastery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Fluent Amharic &amp; Academic English</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-1">Pedagogical Stance</span>
+<span class="font-headline-md text-headline-md text-primary">Inquiry-Led</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Formative Proof &amp; Practical Synthesis</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: EDUCATIONAL PHILOSOPHY -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Editorial Lead -->
+<div class="lg:col-span-5 flex flex-col justify-between h-full pr-0 lg:pr-8">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-px bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Foundational Ethos</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-snug mb-6">
+              Cultivating Critical Thought, Intellectual Discipline, and Independent Inquiry.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+              At Abyssinia Academy, education is not an exercise in passive memorization; it is the deliberate habit of interrogation, analysis, and ethical formulation. We challenge students to view regional and global realities through grounded evidentiary lenses.
+            </p>
+</div>
+<!-- Archival Pull Box -->
+<div class="bg-primary text-on-primary p-space-lg relative overflow-hidden shadow-sm mt-4">
+<div class="absolute -right-8 -bottom-8 w-28 h-28 rounded-full bg-primary-container/40 pointer-events-none"></div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-3 block">format_quote</span>
+<p class="font-title-editorial text-title-editorial italic text-surface-bright leading-relaxed mb-4">
+              “True intellectual scholarship requires both the humility to listen to historical context and the courage to propose original, structured solutions for Ethiopia’s future.”
+            </p>
+<div class="flex items-center gap-3">
+<span class="w-8 h-px bg-secondary-fixed"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-wider">Academic Dean’s Convocation Address</span>
+</div>
+</div>
+</div>
+<!-- Right Detailed Narrative Columns -->
+<div class="lg:col-span-7 space-y-8 pl-0 lg:pl-6 pt-4 lg:pt-0">
+<div class="bg-surface-container-low p-space-lg">
+<div class="flex items-start gap-4">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">01</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Curiosity Anchored in Evidence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Scholars are trained to trace every assertion back to its primary source. In natural sciences, hypotheses are verified through observational fieldwork and bench experiments; in the humanities, social phenomena are contextualized against documentary history and socio-economic realities.
+                </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg">
+<div class="flex items-start gap-4">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">02</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Bilingual Rhetorical Rigor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Mastery in modern high school scholarship requires profound articulacy in both Amharic and English. Scholars construct persuasive theses, defend historical essays, and articulate complex scientific concepts with precision in both working media.
+                </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg">
+<div class="flex items-start gap-4">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">03</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Moral Stewardship &amp; Civic Duty</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Academic prowess disconnected from communal responsibility produces hollow results. We instill an acute awareness of communal welfare, ethical citizenship, and an enduring obligation to serve the Ethiopian and broader East African community.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CURRICULUM OVERVIEW (GRADES 9 TO 12 STRUCTURE) -->
+<section class="w-full bg-surface py-space-2xl" id="curriculum-overview">
+<div class="max-w-7xl mx-auto px-margin">
+<!-- Section Header -->
+<div class="max-w-3xl mb-space-xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-px bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Four-Year Academic Architecture</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-snug">
+          Structured Secondary Progression: Grades 9 Through 12
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+          Our curriculum balances the standardized national expectations set by the Ministry of Education with rigorous institutional extension modules, preparing students for both the Ethiopian University Entrance Examination and international matriculation.
+        </p>
+</div>
+<!-- Curriculum Cycle Columns -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-12">
+<!-- Cycle 1: General Secondary Cycle (Grades 9 & 10) -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-4 mb-6">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider block">Cycle I • Lower Secondary</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">General Secondary Competencies</h3>
+</div>
+<span class="font-label-md text-label-md px-3 py-1 bg-surface-container-high text-primary font-semibold">Grades 9 • 10</span>
+</div>
+<!-- Grade 9 Details -->
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-0.5">Grade 9</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Foundational Transition</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Establishes disciplined laboratory methodologies, foundational mathematical proof, Amharic textual criticism, and advanced English composition.
+              </p>
+<div class="bg-surface-container-low p-4 space-y-2 text-body-sm font-body-sm text-on-surface">
+<div class="flex justify-between">
+<span class="font-medium text-primary">Core Science &amp; Math:</span>
+<span class="text-on-surface-variant">General Biology, Chemistry, Physics, Plane Geometry</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Language &amp; Society:</span>
+<span class="text-on-surface-variant">Amharic Grammar, Academic English, Civics &amp; Geography</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Applied Computing:</span>
+<span class="text-on-surface-variant">Digital Systems &amp; Computational Logic [Introductory]</span>
+</div>
+</div>
+</div>
+<!-- Grade 10 Details -->
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-0.5">Grade 10</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Intermediate Secondary Mastery</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Consolidates academic breadth while initiating formal stream diagnostics to guide students toward their senior specializations. Rigorous alignment with national assessment rubrics.
+              </p>
+<div class="bg-surface-container-low p-4 space-y-2 text-body-sm font-body-sm text-on-surface">
+<div class="flex justify-between">
+<span class="font-medium text-primary">Core Quantitative:</span>
+<span class="text-on-surface-variant">Algebra II, Analytical Geometry, Statistics Fundamentals</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Integrated Inquiries:</span>
+<span class="text-on-surface-variant">Cellular Biology, Chemical Reactions, Mechanics &amp; Optics</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Formative Milestone:</span>
+<span class="text-on-surface-variant">Regional Diagnostic Examinations &amp; Stream Advisory</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Weekly Contact Hours: 32 Periods</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary">Termly Benchmarks: 4 Cycles</span>
+</div>
+</div>
+<!-- Cycle 2: Preparatory Cycle (Grades 11 & 12) -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-4 mb-6">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider block">Cycle II • Preparatory Secondary</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Disciplinary Concentration</h3>
+</div>
+<span class="font-label-md text-label-md px-3 py-1 bg-surface-container-high text-primary font-semibold">Grades 11 • 12</span>
+</div>
+<!-- Grade 11 Details -->
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-0.5">Grade 11</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Natural &amp; Social Science Streams</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Students declare either Natural Science (Advanced Physics, Organic Chemistry, Calculus prep) or Social Science (Economics, World History, Political Geography) pathways.
+              </p>
+<div class="bg-surface-container-low p-4 space-y-2 text-body-sm font-body-sm text-on-surface">
+<div class="flex justify-between">
+<span class="font-medium text-primary">Natural Science Track:</span>
+<span class="text-on-surface-variant">Advanced Calculus, Thermodynamics, Molecular Genetics</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Social Science Track:</span>
+<span class="text-on-surface-variant">Microeconomics, Ethiopian Historiography, Sociological Theory</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Common Seminars:</span>
+<span class="text-on-surface-variant">Rhetoric &amp; Technical Writing, Civic Ethics, IT Applications</span>
+</div>
+</div>
+</div>
+<!-- Grade 12 Details -->
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-0.5">Grade 12</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Senior Capstone &amp; University Matriculation</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Culmination of secondary studies. Intensive focus on national university entrance testing, individual research papers, and transitional academic counseling.
+              </p>
+<div class="bg-surface-container-low p-4 space-y-2 text-body-sm font-body-sm text-on-surface">
+<div class="flex justify-between">
+<span class="font-medium text-primary">Capstone Synthesis:</span>
+<span class="text-on-surface-variant">Supervised Secondary Research Project (Amharic or English)</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Entrance Preparation:</span>
+<span class="text-on-surface-variant">Comprehensive Review Seminars across Streamed Fields</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium text-primary">Higher Ed Advisory:</span>
+<span class="text-on-surface-variant">Individual Faculty Mentorship &amp; Faculty Consultation</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Specialization Focus: Dual Pathway</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary">National Exam Preparation</span>
+</div>
+</div>
+</div>
+<!-- Syllabus Archive Editable Notice -->
+<div class="p-4 bg-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">menu_book</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Curricular handbooks containing week-by-week unit plans and bibliography lists are available to registered scholars.</span>
+</div>
+<a class="font-label-caps text-label-caps uppercase text-primary hover:text-primary-container inline-flex items-center gap-1 font-bold whitespace-nowrap" href="#">
+          View Syllabi Outline →
+        </a>
+</div>
+</div>
+</section>
+<!-- SECTION 4: ACADEMIC DEPARTMENTS -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-space-lg">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-6 h-px bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Faculty Organization</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            The Six Academic Departments
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Departmental faculties work in structured coordination to deliver disciplined instruction that honors national curricula while encouraging rigorous analytical depth.
+        </p>
+</div>
+<!-- Departmental Ledger List (Editorial Asymmetric Stack) -->
+<div class="space-y-4"><div class="bg-surface-container-low p-space-lg hover:bg-surface-container-high transition-colors"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-1 flex items-baseline"><span class="font-headline-lg text-headline-lg text-secondary/70 font-semibold">01</span></div><div class="lg:col-span-4"><h3 class="font-headline-md text-headline-md text-primary mb-1">Mathematics</h3><span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Analytical Reasoning &amp; Quantitative Problem-Solving</span></div><div class="lg:col-span-4"><p class="font-body-sm text-body-sm text-on-surface-variant">Progressing from foundational Euclidean geometry and algebra in Grade 9 to analytical calculus, statistics, and discrete mathematics in Grade 12. Develops deductive logic and modeling capabilities.</p></div><div class="lg:col-span-3"><div class="text-caption font-caption text-on-surface bg-surface-container-lowest p-3 space-y-1"><div class="text-primary font-bold">Key Focus Modules:</div><div>• Algebra &amp; Plane Geometry</div><div>• Trigonometry &amp; Pre-Calculus</div><div>• Probability &amp; Statistics</div></div></div></div></div><div class="bg-surface-container-low p-space-lg hover:bg-surface-container-high transition-colors"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-1 flex items-baseline"><span class="font-headline-lg text-headline-lg text-secondary/70 font-semibold">02</span></div><div class="lg:col-span-4"><h3 class="font-headline-md text-headline-md text-primary mb-1">Natural Sciences</h3><span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Physics • Chemistry • Biology</span></div><div class="lg:col-span-4"><p class="font-body-sm text-body-sm text-on-surface-variant">Laboratory-centered study covering mechanics, organic chemistry, molecular genetics, and ecological systems. Scholars formulate hypotheses, conduct controlled bench work, and analyze empirical findings.</p></div><div class="lg:col-span-3"><div class="text-caption font-caption text-on-surface bg-surface-container-lowest p-3 space-y-1"><div class="text-primary font-bold">Key Focus Modules:</div><div>• Mechanics &amp; Electromagnetism</div><div>• Chemical Synthesis &amp; Thermodynamics</div><div>• Genetics &amp; Regional Biodiversity</div></div></div></div></div><div class="bg-surface-container-low p-space-lg hover:bg-surface-container-high transition-colors"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-1 flex items-baseline"><span class="font-headline-lg text-headline-lg text-secondary/70 font-semibold">03</span></div><div class="lg:col-span-4"><h3 class="font-headline-md text-headline-md text-primary mb-1">English &amp; Languages</h3><span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Amharic • Academic English • World Languages</span></div><div class="lg:col-span-4"><p class="font-body-sm text-body-sm text-on-surface-variant">Dual-language eloquence combining classical and contemporary Amharic literary analysis with high-level academic English rhetoric, textual interpretation, and structured essay defense.</p></div><div class="lg:col-span-3"><div class="text-caption font-caption text-on-surface bg-surface-container-lowest p-3 space-y-1"><div class="text-primary font-bold">Key Focus Modules:</div><div>• Amharic Literature &amp; Rhetoric</div><div>• Advanced Academic English Composition</div><div>• Comparative Linguistics &amp; French Electives</div></div></div></div></div><div class="bg-surface-container-low p-space-lg hover:bg-surface-container-high transition-colors"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-1 flex items-baseline"><span class="font-headline-lg text-headline-lg text-secondary/70 font-semibold">04</span></div><div class="lg:col-span-4"><h3 class="font-headline-md text-headline-md text-primary mb-1">Social Sciences</h3><span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Economics • Geography • History • Civics</span></div><div class="lg:col-span-4"><p class="font-body-sm text-body-sm text-on-surface-variant">Critical examination of economic dynamics, Ethiopian and Pan-African historiography, spatial geography, and constitutional principles that shape civic responsibility in the Horn of Africa.</p></div><div class="lg:col-span-3"><div class="text-caption font-caption text-on-surface bg-surface-container-lowest p-3 space-y-1"><div class="text-primary font-bold">Key Focus Modules:</div><div>• Macro &amp; Microeconomic Principles</div><div>• Ethiopian &amp; African Historiography</div><div>• Regional Spatial Geography &amp; Civic Law</div></div></div></div></div><div class="bg-surface-container-low p-space-lg hover:bg-surface-container-high transition-colors"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-1 flex items-baseline"><span class="font-headline-lg text-headline-lg text-secondary/70 font-semibold">05</span></div><div class="lg:col-span-4"><h3 class="font-headline-md text-headline-md text-primary mb-1">ICT &amp; Computer Science</h3><span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Computational Thinking &amp; Systems Architecture</span></div><div class="lg:col-span-4"><p class="font-body-sm text-body-sm text-on-surface-variant">Structured development of algorithmic logic, programming foundations, relational database design, and ethical information systems management for digital problem-solving.</p></div><div class="lg:col-span-3"><div class="text-caption font-caption text-on-surface bg-surface-container-lowest p-3 space-y-1"><div class="text-primary font-bold">Key Focus Modules:</div><div>• Algorithmic Logic &amp; Python Programming</div><div>• Database Design &amp; Information Systems</div><div>• Cyber Ethics &amp; Digital Infrastructure</div></div></div></div></div><div class="bg-surface-container-low p-space-lg hover:bg-surface-container-high transition-colors"><div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"><div class="lg:col-span-1 flex items-baseline"><span class="font-headline-lg text-headline-lg text-secondary/70 font-semibold">06</span></div><div class="lg:col-span-4"><h3 class="font-headline-md text-headline-md text-primary mb-1">Arts &amp; Creative Studies</h3><span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Visual Arts • Design Thinking • Cultural Expression</span></div><div class="lg:col-span-4"><p class="font-body-sm text-body-sm text-on-surface-variant">Cultivating creative discipline, aesthetic judgment, visual storytelling, and cultural heritage design. Scholars explore technical drawing, traditional motifs, studio fine arts, and spatial composition.</p></div><div class="lg:col-span-3"><div class="text-caption font-caption text-on-surface bg-surface-container-lowest p-3 space-y-1"><div class="text-primary font-bold">Key Focus Modules:</div><div>• Studio Art &amp; Technical Drawing</div><div>• Ethiopian Heritage &amp; Design Traditions</div><div>• Creative Synthesis &amp; Visual Communication</div></div></div></div></div></div>
+</div>
+</section>
+<!-- SECTION 5: TEACHING AND LEARNING APPROACH -->
+<section class="w-full bg-surface py-space-2xl"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start mb-space-xl"><div class="lg:col-span-6"><div class="flex items-center gap-2 mb-3"><span class="w-6 h-px bg-secondary"></span><span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Pedagogical Method</span></div><h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Teaching and Learning Methods</h2></div><div class="lg:col-span-6"><p class="font-body-lg text-body-lg text-on-surface-variant">Our instructional model emphasizes disciplined classroom instruction, interactive group discussions, practical application, research and independent study, problem-solving exercises, and collaborative learning.</p></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-12 items-center"><div class="lg:col-span-5"><div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden shadow-md"><img alt="Abyssinia Academy students" class="w-full h-full object-cover" src="/students.png"/><div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent pointer-events-none"></div><div class="absolute bottom-4 left-4 right-4 text-on-primary font-caption text-caption"><span class="bg-primary/90 px-2.5 py-1 backdrop-blur-sm">Scholars in collegiate discussion along campus walkways</span></div></div></div><div class="lg:col-span-7 space-y-4 pl-0 lg:pl-4"><div class="bg-surface-container-lowest p-space-md shadow-sm border-l-2 border-secondary"><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Direct Classroom Instruction &amp; Group Discussions</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Engaging Socratic lectures paired with structured group discussions where students defend analytical assertions and explore multifaceted cultural and scientific questions.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm border-l-2 border-secondary"><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Practical Activities &amp; Problem-Solving Exercises</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Hands-on laboratory investigations and quantitative problem-solving sets that connect theoretical formulas to tangible physical, biological, and economic realities.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm border-l-2 border-secondary"><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Research, Independent Study &amp; Collaborative Learning</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Independent research writing, guided library study periods, and team-based cohort inquiries that foster intellectual autonomy alongside peer accountability.</p></div></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"><div class="bg-surface-container-lowest p-space-md shadow-sm"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center text-primary mb-3"><span class="material-symbols-outlined text-[20px]">record_voice_over</span></div><h4 class="font-headline-sm text-headline-sm text-primary mb-2">Classroom Instruction</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Structured, teacher-guided presentations establishing disciplinary foundations and conceptual clarity.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center text-primary mb-3"><span class="material-symbols-outlined text-[20px]">forum</span></div><h4 class="font-headline-sm text-headline-sm text-primary mb-2">Group Discussions</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Regular seminar exchanges challenging scholars to articulate perspectives with evidentiary rigor.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center text-primary mb-3"><span class="material-symbols-outlined text-[20px]">science</span></div><h4 class="font-headline-sm text-headline-sm text-primary mb-2">Practical Activities</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Laboratory experiments, observational field studies, and applied technical exercises.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center text-primary mb-3"><span class="material-symbols-outlined text-[20px]">auto_stories</span></div><h4 class="font-headline-sm text-headline-sm text-primary mb-2">Independent Study</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Scheduled self-directed research and quiet reading sessions in library commons.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center text-primary mb-3"><span class="material-symbols-outlined text-[20px]">psychology</span></div><h4 class="font-headline-sm text-headline-sm text-primary mb-2">Problem-Solving</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Analytical drills and case evaluations teaching scholars structured troubleshooting.</p></div><div class="bg-surface-container-lowest p-space-md shadow-sm"><div class="w-9 h-9 bg-surface-container-high flex items-center justify-center text-primary mb-3"><span class="material-symbols-outlined text-[20px]">groups</span></div><h4 class="font-headline-sm text-headline-sm text-primary mb-2">Collaborative Learning</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Peer study teams and joint research presentations modeled after university symposia.</p></div></div></div></section>
+<!-- SECTION 6: ASSESSMENT AND STUDENT PROGRESS -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-5">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-px bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Accountability &amp; Feedback</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-snug mb-6">Assessment and Academic Progress</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+            Evaluation is not an end in itself; it is a continuous diagnostic instrument to ensure each student masters secondary core competencies and stays on target for post-secondary transitions.
+          </p>
+<div class="bg-surface-container p-space-md">
+<h4 class="font-label-caps text-label-caps uppercase text-primary mb-2">Institutional Grading Standard</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every course combines formative assignments (30%), diagnostic unit assessments and labs (30%), and comprehensive summative term examinations (40%), coupled with descriptive teacher narrative remarks.
+            </p>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-6 pl-0 lg:pl-6 pt-2 lg:pt-0"><div class="p-6 bg-surface-container-low flex gap-5"><div class="text-secondary font-headline-sm font-semibold">01</div><div><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Continuous Learning Assessment</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Regular checkpoints, weekly quizzes, and formative tasks provide teachers and students with immediate diagnostic feedback on core concepts.</p></div></div><div class="p-6 bg-surface-container-low flex gap-5"><div class="text-secondary font-headline-sm font-semibold">02</div><div><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Examination Preparation &amp; Rigorous Standards</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Structured summative term exams mirror Ethiopian national examination formats and international university entrance expectations.</p></div></div><div class="p-6 bg-surface-container-low flex gap-5"><div class="text-secondary font-headline-sm font-semibold">03</div><div><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Constructive Feedback &amp; Student Evaluation</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Faculty provide detailed qualitative commentary on written drafts, scientific lab reports, and mathematical proof structures.</p></div></div><div class="p-6 bg-surface-container-low flex gap-5"><div class="text-secondary font-headline-sm font-semibold">04</div><div><h3 class="font-headline-sm text-headline-sm text-primary mb-1">Identifying Learning Improvement Opportunities</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Termly student-parent-faculty reviews evaluate academic trajectory and establish tailored support interventions where needed.</p></div></div></div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: ACADEMIC SUPPORT -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="max-w-3xl mb-space-xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-px bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Scholar Care &amp; Guidance</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Comprehensive Academic Support Frameworks
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          High academic expectations require equally dedicated mentorship. We ensure every scholar has direct access to instructors, senior peer tutors, and structured transition guidance.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Support Card 1 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-3">schedule</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Faculty Consultation Hours</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every subject teacher holds weekly scheduled office hours where students receive 1-on-1 clarifications on challenging math theorems, lab results, or essay outlines.
+            </p>
+</div>
+<div class="mt-6 pt-3 text-caption font-caption text-secondary font-medium">Weekly 4:00–5:15 PM</div>
+</div>
+<!-- Support Card 2 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-3">supervisor_account</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Peer Study Circles</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Senior scholars in Grades 11 and 12 lead mentored revision circles for Grade 9 and 10 students, reinforcing foundational concepts through collaborative tutoring.
+            </p>
+</div>
+<div class="mt-6 pt-3 text-caption font-caption text-secondary font-medium">Faculty Supervised</div>
+</div>
+<!-- Support Card 3 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-3">badge</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Advisory Mentorship</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Each student is paired with an Academic Advisor who oversees their four-year scholastic trajectory, study habits, organizational routines, and ethical growth.
+            </p>
+</div>
+<div class="mt-6 pt-3 text-caption font-caption text-secondary font-medium">Termly Individual Reviews</div>
+</div>
+<!-- Support Card 4 -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-3">school</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">University Transition Guidance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Targeted assistance navigating Ethiopian university entrance quotas, scholarship dossiers, international admissions tests, and career discipline selections.
+            </p>
+</div>
+<div class="mt-6 pt-3 text-caption font-caption text-secondary font-medium">Grades 11 • 12 Focus</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: ACADEMIC RESOURCES -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Visual Column -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden shadow-md">
+<img alt="Abyssinia Academy students" class="w-full h-full object-cover" src="/students.png"/>
+</div>
+<div class="bg-primary text-on-primary p-4 mt-3 flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-secondary-fixed">Campus Holdings</span>
+<span class="font-caption text-caption text-surface-container-highest">18,000+ Printed &amp; Curated Digital Titles</span>
+</div>
+</div>
+<!-- Resources Details -->
+<div class="lg:col-span-7 pl-0 lg:pl-8 mt-8 lg:mt-0">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-px bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Scholastic Facilities</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-snug mb-6">Learning Resources &amp; Facilities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+            We prioritize physical collections, disciplined quiet study halls, and curated references over transient digital distractions. Our academic environments are crafted to honor deep focus.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6"><div class="bg-surface-container-low p-5"><div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span><h4 class="font-headline-sm text-headline-sm text-primary">Reading &amp; Research Resources</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant">Curated collection of secondary reference works, Amharic and English literature, historical archives, and designated silent study commons.</p></div><div class="bg-surface-container-low p-5"><div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary text-[20px]">biotech</span><h4 class="font-headline-sm text-headline-sm text-primary">Science Learning Resources</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant">Equipped laboratory suites for chemistry, physics, and biology providing apparatus, safety gear, and materials for structured practical work.</p></div><div class="bg-surface-container-low p-5"><div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary text-[20px]">computer</span><h4 class="font-headline-sm text-headline-sm text-primary">Digital Learning Resources</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant">Curriculum-aligned digital course repositories, academic databases, and verified digital reference materials supporting classroom instruction.</p></div><div class="bg-surface-container-low p-5"><div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary text-[20px]">terminal</span><h4 class="font-headline-sm text-headline-sm text-primary">Computer-Based Learning</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated computational lab providing workstations for programming exercises, data processing, and research applications.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: INSTITUTIONAL CALL TO ACTION -->
+<section class="w-full bg-surface py-space-2xl"><div class="max-w-7xl mx-auto px-margin"><div class="max-w-3xl mb-space-xl"><div class="flex items-center gap-2 mb-3"><span class="w-6 h-px bg-secondary"></span><span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Holistic Competencies</span></div><h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Academic Development &amp; Future Preparation</h2><p class="font-body-md text-body-md text-on-surface-variant mt-2">We are committed to helping students cultivate comprehensive capabilities that extend beyond rote memorization, preparing them thoroughly for university education and professional leadership.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"><div class="bg-surface-container-low p-space-md shadow-sm"><span class="material-symbols-outlined text-secondary text-3xl mb-3">psychology_alt</span><h3 class="font-headline-sm text-headline-sm text-primary mb-2">Analytical Thinking</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Training scholars to evaluate complex premises, discern bias, and construct logically defensible deductions.</p></div><div class="bg-surface-container-low p-space-md shadow-sm"><span class="material-symbols-outlined text-secondary text-3xl mb-3">chat</span><h3 class="font-headline-sm text-headline-sm text-primary mb-2">Communication Skills</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Fostering articulate spoken defense, persuasive written rhetoric, and bilingual fluency in Amharic and English.</p></div><div class="bg-surface-container-low p-space-md shadow-sm"><span class="material-symbols-outlined text-secondary text-3xl mb-3">devices</span><h3 class="font-headline-sm text-headline-sm text-primary mb-2">Digital Literacy</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Developing responsible digital citizenship, computational thinking, and fluency with modern academic tools.</p></div><div class="bg-surface-container-low p-space-md shadow-sm"><span class="material-symbols-outlined text-secondary text-3xl mb-3">search</span><h3 class="font-headline-sm text-headline-sm text-primary mb-2">Research Skills</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Guiding students through systematic source validation, citation integrity, and long-form investigative writing.</p></div><div class="bg-surface-container-low p-space-md shadow-sm"><span class="material-symbols-outlined text-secondary text-3xl mb-3">palette</span><h3 class="font-headline-sm text-headline-sm text-primary mb-2">Creativity &amp; Expression</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Encouraging innovative problem solving, visual arts synthesis, and cultural appreciation across disciplines.</p></div><div class="bg-surface-container-low p-space-md shadow-sm"><span class="material-symbols-outlined text-secondary text-3xl mb-3">school</span><h3 class="font-headline-sm text-headline-sm text-primary mb-2">Preparation for Future Education</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Structured advisory on higher education choices, entrance examination mastery, and academic independence.</p></div></div></div></section><section class="w-full bg-primary text-on-primary py-space-2xl"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center"><div class="lg:col-span-8"><div class="flex items-center gap-2 mb-4"><span class="w-8 h-px bg-secondary-fixed"></span><span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest">Admissions &amp; Academic Inquiries</span></div><h2 class="font-display-hero text-headline-lg lg:text-display-hero tracking-tight leading-[1.1] mb-6">Take the Next Step in Your Academic Journey</h2><p class="font-body-lg text-body-lg text-surface-container-highest max-w-2xl leading-relaxed">Learn more about studying at Abyssinia Academy and explore the opportunities available to prospective students.</p></div><div class="lg:col-span-4 flex flex-col gap-4 pl-0 lg:pl-6 mt-8 lg:mt-0"><a href="/#inquiry-form">Explore Admissions</a><a href="/#inquiry-form">Contact the School</a></div></div></div></section>
+</div></main><footer class="w-full bg-primary text-on-primary pt-space-2xl pb-space-xl"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter pb-space-2xl border-b border-primary-container/40"><div class="lg:col-span-4 flex flex-col justify-between pr-4"><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary font-headline-sm font-bold">A</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight">Abyssinia Academy</span><span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest mt-0.5">Addis Ababa, Ethiopia</span></div></div><p class="font-body-md text-body-md text-surface-container-highest max-w-sm mb-6">Nurturing intellectual leadership, scientific curiosity, and moral integrity in secondary education across Grades 9 through 12.</p><div class="font-body-sm text-body-sm text-surface-container-highest space-y-1"><p class="">Addis Ababa, Ethiopia [Campus Address to be confirmed]</p><p class="">Admissions Office: +251 (0) 11 [Telephone Number] • Inquiries: admissions@[school-domain].edu.et</p><p class="">Administration: info@[school-domain].edu.et</p></div></div><div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-gutter"><div class="flex flex-col"><h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 tracking-wider">Exploration</h4><ul class="space-y-2.5 font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-on-primary transition-colors cursor-pointer">School Heritage &amp; Mission</li><li class="hover:text-on-primary transition-colors cursor-pointer">Grade 9–12 Curriculum</li><li class="hover:text-on-primary transition-colors cursor-pointer">STEM &amp; Science Labs</li><li class="hover:text-on-primary transition-colors cursor-pointer">University Matriculation</li><li class="hover:text-on-primary transition-colors cursor-pointer">Faculty Directory</li></ul></div><div class="flex flex-col"><h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 tracking-wider">Community</h4><ul class="space-y-2.5 font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-on-primary transition-colors cursor-pointer">Parent-Teacher Association</li><li class="hover:text-on-primary transition-colors cursor-pointer">Alumni Network</li><li class="hover:text-on-primary transition-colors cursor-pointer">Student Clubs &amp; Societies</li><li class="hover:text-on-primary transition-colors cursor-pointer">Campus Sports &amp; Athletics</li><li class="hover:text-on-primary transition-colors cursor-pointer">Community Outreach</li></ul></div><div class="flex flex-col"><h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 tracking-wider">Governance</h4><ul class="space-y-2.5 font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-on-primary transition-colors cursor-pointer">Accreditation &amp; Licensing</li><li class="hover:text-on-primary transition-colors cursor-pointer">Student Code of Conduct</li><li class="hover:text-on-primary transition-colors cursor-pointer">Privacy &amp; Safeguarding Policy</li><li class="hover:text-on-primary transition-colors cursor-pointer">Campus Health &amp; Safety</li><li class="hover:text-on-primary transition-colors cursor-pointer">Admissions Advisory Board</li></ul></div></div></div><div class="py-space-xl border-b border-primary-container/40 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex flex-col max-w-lg"><h5 class="font-headline-sm text-headline-sm text-on-primary mb-1">The Abyssinia Bulletin</h5><p class="font-body-sm text-body-sm text-surface-container-highest">Receive termly academic updates, student achievements, and campus event invitations.</p></div><form class="flex w-full md:w-auto items-stretch gap-2" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)"><input aria-label="Email subscription address" class="px-4 py-2.5 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm border border-outline-variant focus:outline-none focus:border-secondary w-full md:w-72" id="newsletter-email" placeholder="scholar.family@academy.org" required type="email"/><button class="px-6 py-2.5 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-colors whitespace-nowrap" type="submit">Subscribe</button></form><p id="newsletter-status" class="font-body-sm text-body-sm text-secondary-fixed mt-2 hidden"></p>
+<script>
+const API_BASE = (window.API_BASE_URL || 'http://localhost:5000/api/v1').replace(/\/$/, '');
+async function handleNewsletterSubmit(event) {
+  event.preventDefault();
+  const emailInput = document.getElementById('newsletter-email');
+  const status = document.getElementById('newsletter-status');
+  const btn = event.target.querySelector('button[type="submit"]');
+  const email = emailInput.value.trim();
+  if (!email) return;
+  if (btn) { btn.disabled = true; btn.textContent = '…'; }
+  status.classList.remove('hidden');
+  status.textContent = 'Sending confirmation…';
+  try {
+    const res = await fetch(API_BASE + '/newsletter/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.success === false) throw new Error((data && data.message) || 'Subscription failed.');
+    status.textContent = data.message || 'Check your email to confirm your subscription.';
+    emailInput.value = '';
+  } catch (err) {
+    status.textContent = err.message || 'Subscription failed. Please try again.';
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+  }
+}
+</script></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-4 font-caption text-caption text-surface-container-highest"><p class="">© 2025 Abyssinia Academy. All Rights Reserved. Secondary Education in Addis Ababa, Ethiopia.</p><div class="flex items-center gap-5 text-secondary-fixed"><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">local_library</span><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">podcasts</span><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">mail</span><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">public</span></div></div></div></footer>
+
+
+<script src="/i18n.js"></script>
+</body></html>

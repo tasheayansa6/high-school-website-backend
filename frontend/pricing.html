@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}}</style>
+<script>window.API_BASE_URL = "http://localhost:5000/api/v1";</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed":"#141e18","on-surface":"#191d19","on-tertiary-container":"#a7b2a9","on-secondary-fixed-variant":"#594409","surface-container-highest":"#e0e3dd","on-secondary-fixed":"#251a00","tertiary":"#252f28","secondary":"#735b21","on-background":"#191d19","on-primary-container":"#86baa2","primary-fixed":"#b9eed4","on-primary-fixed":"#002115","on-primary":"#ffffff","error-container":"#ffdad6","inverse-on-surface":"#eff2eb","on-tertiary":"#ffffff","tertiary-fixed-dim":"#bec9c0","on-primary-fixed-variant":"#1c4f3c","surface-tint":"#366853","on-secondary":"#ffffff","background":"#f7faf4","primary":"#003423","on-error-container":"#93000a","error":"#ba1a1a","surface":"#f7faf4","outline":"#717974","surface-container-low":"#f2f5ee","on-error":"#ffffff","on-secondary-container":"#785f24","outline-variant":"#c0c9c2","tertiary-fixed":"#dae5db","inverse-primary":"#9dd2b8","tertiary-container":"#3b453e","surface-bright":"#f7faf4","on-surface-variant":"#404944","inverse-surface":"#2d312d","secondary-fixed-dim":"#e3c37e","surface-variant":"#e0e3dd","primary-container":"#174b38","on-tertiary-fixed-variant":"#3f4942","surface-container":"#ecefe8","surface-dim":"#d8dbd5","surface-container-high":"#e6e9e3","primary-fixed-dim":"#9dd2b8","surface-container-lowest":"#ffffff","secondary-container":"#fddc94","secondary-fixed":"#ffdf9b"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter":"1.75rem","space-md":"1rem","margin":"3.5rem","space-sm":"0.5rem","space-2xl":"4.5rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-xs":"0.25rem","space-lg":"1.75rem","space-xl":"2.75rem"},fontFamily:{"label-caps":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"headline-lg":["Playfair Display"],"display-hero":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"title-editorial":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],caption:["Plus Jakarta Sans"]},fontSize:{"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.14em",fontWeight:"700"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"500"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"title-editorial":["19px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"400"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],caption:["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script>
+<title>Pricing — Abyssinia Academy</title></head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-24 max-w-7xl mx-auto px-margin flex items-center justify-between gap-4">
+    <a class="flex items-center gap-3 group shrink-0" href="/">
+      <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-secondary-fixed font-headline-sm font-bold border border-secondary/40 shadow-sm">A</div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none group-hover:text-primary-container transition-colors">Abyssinia Academy</span>
+        <span class="font-label-caps text-label-caps tracking-widest text-secondary uppercase mt-0.5">Addis Ababa • Ethiopia</span>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/feature.html">Feature</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/blogs.html">Blogs</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a><a class="font-label-md text-label-md text-primary font-semibold border-b-2 border-secondary pb-1" href="/pricing.html">Pricing</a></nav>
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      
+    <div class="relative">
+      <button type="button" id="lang-toggle" onclick="toggleLangMenu(event)"
+        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-outline-variant/60 text-on-surface hover:bg-surface-container transition-colors"
+        aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+        <span class="material-symbols-outlined text-[20px] text-primary">translate</span>
+        <span id="lang-current-label" class="hidden sm:inline font-label-md text-label-md">English</span>
+        <span class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span>
+      </button>
+      <div id="lang-menu" class="hidden absolute right-0 mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.12)] border border-outline-variant/40 py-2 z-[60]" role="listbox" onclick="event.stopPropagation()">
+        <button type="button" data-lang-item="en" onclick="selectLang('en', event)" class="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-surface-container transition-colors text-left">
+          <span class="text-lg leading-none" aria-hidden="true">🇬🇧</span>
+          <span class="flex-1 font-label-md text-label-md text-on-surface">English</span>
+          <span data-lang-check class="material-symbols-outlined text-[18px] text-primary opacity-0">check</span>
+        </button>
+        <button type="button" data-lang-item="am" onclick="selectLang('am', event)" class="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-surface-container transition-colors text-left">
+          <span class="text-lg leading-none" aria-hidden="true">🇪🇹</span>
+          <span class="flex-1 font-label-md text-label-md text-on-surface">አማርኛ</span>
+          <span data-lang-check class="material-symbols-outlined text-[18px] text-primary opacity-0">check</span>
+        </button>
+        <button type="button" data-lang-item="om" onclick="selectLang('om', event)" class="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-surface-container transition-colors text-left">
+          <span class="text-lg leading-none" aria-hidden="true">🇪🇹</span>
+          <span class="flex-1 font-label-md text-label-md text-on-surface">Afaan Oromoo</span>
+          <span data-lang-check class="material-symbols-outlined text-[18px] text-primary opacity-0">check</span>
+        </button>
+      </div>
+    </div>
+
+      <button aria-label="Toggle Navigation Menu" class="lg:hidden p-2 text-on-surface hover:text-primary" type="button" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-[26px]">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-nav" class="hidden lg:hidden border-t border-outline-variant bg-surface">
+    <a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Home</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/about.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">About</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/feature.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Feature</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/blogs.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Blogs</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/contact.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Contact</a><a class="block px-4 py-3 font-label-md text-label-md text-on-surface hover:bg-surface-container" href="/pricing.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Pricing</a>
+  </div>
+</header>
+<main class="pt-24">
+  <section class="bg-primary text-on-primary">
+    <div class="max-w-7xl mx-auto px-margin py-16 md:py-20 text-center">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container/80 border border-secondary/30 font-label-caps text-label-caps uppercase tracking-wider text-secondary-fixed mb-6">
+        <span class="material-symbols-outlined text-[16px]">payments</span>
+        Tuition &amp; Fees
+      </span>
+      <h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-primary mb-4">Transparent Pricing</h1>
+      <p class="font-body-lg text-body-lg text-surface-container-highest max-w-2xl mx-auto">
+        Clear annual fee packages for Grades 9–12. Choose the pathway that fits your family — every plan includes core academics and pastoral care.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-margin py-14 md:py-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+
+        <!-- Day Scholar -->
+        <article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 shadow-[0_8px_24px_rgba(0,0,0,0.04)] p-7 md:p-8 flex flex-col">
+          <p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary mb-3">Day Scholar</p>
+          <h2 class="font-headline-sm text-headline-sm text-primary mb-2">Core Pathway</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-6">Full secondary instruction with weekday campus access.</p>
+          <div class="mb-6">
+            <span class="font-headline-lg text-headline-lg text-primary">ETB 85,000</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant"> / year</span>
+          </div>
+          <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Grades 9–12 national curriculum</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Dual-language Amharic &amp; English</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Library &amp; science lab access</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Academic advisory support</li>
+          </ul>
+          <a href="/contact.html" class="mt-auto inline-flex items-center justify-center w-full px-5 py-3 rounded-lg border border-primary text-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors">Inquire</a>
+        </article>
+
+        <!-- Featured / Best -->
+        <article class="relative bg-primary text-on-primary rounded-2xl border border-secondary/40 shadow-[0_16px_40px_rgba(0,52,35,0.28)] p-7 md:p-8 flex flex-col md:-translate-y-3">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider whitespace-nowrap">Most Popular</span>
+          <p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary-fixed mb-3 mt-2">Boarding Scholar</p>
+          <h2 class="font-headline-sm text-headline-sm text-on-primary mb-2">Residential Pathway</h2>
+          <p class="font-body-md text-body-md text-surface-container-highest mb-6">Full boarding with house mentoring and evening study halls.</p>
+          <div class="mb-6">
+            <span class="font-headline-lg text-headline-lg text-secondary-fixed">ETB 165,000</span>
+            <span class="font-body-sm text-body-sm text-surface-container-highest"> / year</span>
+          </div>
+          <ul class="space-y-3 font-body-md text-body-md text-surface-container-highest mb-8 flex-1">
+            <li class="flex gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span> Everything in Core Pathway</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span> Room, meals &amp; house tutorials</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span> Evening supervised study</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span> Weekend activities &amp; clubs</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span> Priority university counseling</li>
+          </ul>
+          <a href="/contact.html" class="mt-auto inline-flex items-center justify-center w-full px-5 py-3 rounded-lg bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Choose Plan</a>
+        </article>
+
+        <!-- Premium -->
+        <article class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 shadow-[0_8px_24px_rgba(0,0,0,0.04)] p-7 md:p-8 flex flex-col">
+          <p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary mb-3">Scholars Plus</p>
+          <h2 class="font-headline-sm text-headline-sm text-primary mb-2">Advanced Pathway</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-6">Boarding plus research mentorship and exam intensives.</p>
+          <div class="mb-6">
+            <span class="font-headline-lg text-headline-lg text-primary">ETB 210,000</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant"> / year</span>
+          </div>
+          <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Everything in Residential</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Capstone research mentoring</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Exam intensive workshops</li>
+            <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> International applications support</li>
+          </ul>
+          <a href="/contact.html" class="mt-auto inline-flex items-center justify-center w-full px-5 py-3 rounded-lg border border-primary text-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors">Inquire</a>
+        </article>
+
+      </div>
+
+      <p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-10 max-w-2xl mx-auto">
+        Fees shown are illustrative annual packages for the 2026–2027 cycle. Laboratory, uniform, and examination fees may apply separately. Contact Admissions for a personalized quotation.
+      </p>
+
+      <!-- Newsletter still useful under pricing -->
+      <div class="mt-14 max-w-xl mx-auto bg-surface-container-lowest rounded-2xl border border-outline-variant/40 p-6 md:p-8 text-center">
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Stay informed</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-5">Subscribe for fee updates, open days, and admissions deadlines.</p>
+        <form id="newsletter-form-pricing" class="flex flex-col sm:flex-row gap-3" onsubmit="handlePricingNewsletter(event)">
+          <input id="pricing-newsletter-email" required type="email" placeholder="scholar.family@academy.org"
+            class="flex-1 px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:outline-none focus:border-secondary"/>
+          <button type="submit" class="px-6 py-3 rounded-lg bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container">Subscribe</button>
+        </form>
+        <p id="pricing-newsletter-status" class="font-body-sm text-body-sm text-on-surface-variant mt-3 hidden"></p>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+const API_BASE = (window.API_BASE_URL || 'http://localhost:5000/api/v1').replace(/\/$/, '');
+async function handlePricingNewsletter(event) {
+  event.preventDefault();
+  const emailInput = document.getElementById('pricing-newsletter-email');
+  const status = document.getElementById('pricing-newsletter-status');
+  const btn = event.target.querySelector('button[type="submit"]');
+  status.classList.remove('hidden');
+  btn.disabled = true;
+  try {
+    const res = await fetch(API_BASE + '/newsletter/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email: emailInput.value.trim() })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.success === false) throw new Error(data.message || 'Subscription failed');
+    status.textContent = data.message || 'Check your email to confirm.';
+    emailInput.value = '';
+  } catch (err) {
+    status.textContent = err.message || 'Subscription failed.';
+  } finally {
+    btn.disabled = false;
+  }
+}
+</script>
+<footer class="w-full bg-primary text-on-primary pt-space-2xl pb-space-xl"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter pb-space-2xl border-b border-primary-container/40"><div class="lg:col-span-4 flex flex-col justify-between pr-4"><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary font-headline-sm font-bold">A</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight">Abyssinia Academy</span><span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest mt-0.5">Addis Ababa, Ethiopia</span></div></div><p class="font-body-md text-body-md text-surface-container-highest max-w-sm mb-6">Nurturing intellectual leadership, scientific curiosity, and moral integrity in secondary education across Grades 9 through 12.</p><div class="font-body-sm text-body-sm text-surface-container-highest space-y-1"><p class="">Addis Ababa, Ethiopia [Campus Address to be confirmed]</p><p class="">Admissions Office: +251 (0) 11 [Telephone Number] • Inquiries: admissions@[school-domain].edu.et</p><p class="">Administration: info@[school-domain].edu.et</p></div></div><div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-gutter"><div class="flex flex-col"><h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 tracking-wider">Exploration</h4><ul class="space-y-2.5 font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-on-primary transition-colors cursor-pointer">School Heritage &amp; Mission</li><li class="hover:text-on-primary transition-colors cursor-pointer">Grade 9–12 Curriculum</li><li class="hover:text-on-primary transition-colors cursor-pointer">STEM &amp; Science Labs</li><li class="hover:text-on-primary transition-colors cursor-pointer">University Matriculation</li><li class="hover:text-on-primary transition-colors cursor-pointer">Faculty Directory</li></ul></div><div class="flex flex-col"><h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 tracking-wider">Community</h4><ul class="space-y-2.5 font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-on-primary transition-colors cursor-pointer">Parent-Teacher Association</li><li class="hover:text-on-primary transition-colors cursor-pointer">Alumni Network</li><li class="hover:text-on-primary transition-colors cursor-pointer">Student Clubs &amp; Societies</li><li class="hover:text-on-primary transition-colors cursor-pointer">Campus Sports &amp; Athletics</li><li class="hover:text-on-primary transition-colors cursor-pointer">Community Outreach</li></ul></div><div class="flex flex-col"><h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed mb-4 tracking-wider">Governance</h4><ul class="space-y-2.5 font-body-sm text-body-sm text-surface-container-highest"><li class="hover:text-on-primary transition-colors cursor-pointer">Accreditation &amp; Licensing</li><li class="hover:text-on-primary transition-colors cursor-pointer">Student Code of Conduct</li><li class="hover:text-on-primary transition-colors cursor-pointer">Privacy &amp; Safeguarding Policy</li><li class="hover:text-on-primary transition-colors cursor-pointer">Campus Health &amp; Safety</li><li class="hover:text-on-primary transition-colors cursor-pointer">Admissions Advisory Board</li></ul></div></div></div><div class="py-space-xl border-b border-primary-container/40 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex flex-col max-w-lg"><h5 class="font-headline-sm text-headline-sm text-on-primary mb-1">The Abyssinia Bulletin</h5><p class="font-body-sm text-body-sm text-surface-container-highest">Receive termly academic updates, student achievements, and campus event invitations.</p></div><form class="flex w-full md:w-auto items-stretch gap-2" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)"><input aria-label="Email subscription address" class="px-4 py-2.5 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm border border-outline-variant focus:outline-none focus:border-secondary w-full md:w-72" id="newsletter-email" placeholder="scholar.family@academy.org" required type="email"/><button class="px-6 py-2.5 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-colors whitespace-nowrap" type="submit">Subscribe</button></form><p id="newsletter-status" class="font-body-sm text-body-sm text-secondary-fixed mt-2 hidden"></p>
+<script>
+const API_BASE = (window.API_BASE_URL || 'http://localhost:5000/api/v1').replace(/\/$/, '');
+async function handleNewsletterSubmit(event) {
+  event.preventDefault();
+  const emailInput = document.getElementById('newsletter-email');
+  const status = document.getElementById('newsletter-status');
+  const btn = event.target.querySelector('button[type="submit"]');
+  const email = emailInput.value.trim();
+  if (!email) return;
+  if (btn) { btn.disabled = true; btn.textContent = '…'; }
+  status.classList.remove('hidden');
+  status.textContent = 'Sending confirmation…';
+  try {
+    const res = await fetch(API_BASE + '/newsletter/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.success === false) throw new Error((data && data.message) || 'Subscription failed.');
+    status.textContent = data.message || 'Check your email to confirm your subscription.';
+    emailInput.value = '';
+  } catch (err) {
+    status.textContent = err.message || 'Subscription failed. Please try again.';
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+  }
+}
+</script></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-4 font-caption text-caption text-surface-container-highest"><p class="">© 2025 Abyssinia Academy. All Rights Reserved. Secondary Education in Addis Ababa, Ethiopia.</p><div class="flex items-center gap-5 text-secondary-fixed"><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">local_library</span><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">podcasts</span><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">mail</span><span class="material-symbols-outlined text-[18px] hover:text-on-primary transition-colors cursor-pointer">public</span></div></div></div></footer>
+
+<script src="/i18n.js"></script>
+</body></html>
