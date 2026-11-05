@@ -4,8 +4,9 @@
 
 ```
 backend/     Express + Prisma + MySQL API  → Railway
-frontend/    Static Vite school site       → Netlify
+frontend/    Static Vite school site       → Vercel (or Netlify)
 ```
+
 
 ## Backend
 
@@ -29,11 +30,14 @@ npm run dev
 3. Add MySQL; set `NODE_ENV=production`, `JWT_SECRET`, `CORS_ORIGIN` (Netlify URL).
 4. Redeploy.
 
-## Deploy on Netlify (UI)
+## Deploy on Vercel (UI)
 
-Repo already includes `netlify.toml` (`base = frontend`).
+1. [vercel.com/new](https://vercel.com/new) → import `tasheayansa6/high-school-website-backend`.
+2. **Root Directory** → `frontend` (Edit → select `frontend`).
+3. Framework: **Vite** · Build: `npm run build` · Output: `dist`.
+4. Deploy. Open the `*.vercel.app` URL after it succeeds.
+5. When Railway API is live, set pages’ `window.API_BASE_URL` to `https://YOUR-API.up.railway.app/api/v1` and set Railway `CORS_ORIGIN` to the Vercel URL.
 
-1. Site settings → clear any custom Base directory if it conflicts (toml wins), or set Base to `frontend`.
-2. Build: `npm run build` · Publish: `dist`.
-3. Trigger a new deploy after this push.
-4. When Railway API is live, set each page’s `window.API_BASE_URL` to `https://YOUR-API.up.railway.app/api/v1` and set Railway `CORS_ORIGIN` to the Netlify URL.
+## Deploy on Netlify (UI, optional)
+
+`netlify.toml` uses `base = frontend`. Build `npm run build`, publish `dist`.
