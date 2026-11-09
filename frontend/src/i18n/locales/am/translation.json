@@ -1,0 +1,1550 @@
+{
+  "common": {
+    "siteName": "Abyssinia Academy",
+    "tagline": "አዲስ አበባ • ኢትዮጵያ",
+    "locationLine": "አዲስ አበባ፣ ኢትዮጵያ",
+    "location": "አዲስ አበባ",
+    "country": "ኢትዮጵያ",
+    "description": "ከክፍል 9 እስከ 12 በሁለተኛ ደረጃ ትምህርት ውስጥ የአእምሮ አመራር፣ ሳይንሳዊ ፍላጎት እና ሥነ ምግባራዊ ታማኝነትን እናሳድጋለን።",
+    "gradesLabel": "ክፍል 9–12",
+    "studentsImageAlt": "የ Abyssinia Academy ተማሪዎች",
+    "loading": "በመጫን ላይ…",
+    "loadingPage": "ገጹ በመጫን ላይ…",
+    "somethingWrong": "የሆነ ችግር ተፈጥሯል",
+    "tryAgain": "እንደገና ይሞክሩ",
+    "returnHome": "ወደ መነሻ ይመለሱ",
+    "contactUs": "ያግኙን",
+    "contactSchool": "ትምህርት ቤቱን ያግኙ",
+    "exploreAcademicPrograms": "የትምህርት ፕሮግራሞችን ይመልከቱ",
+    "submitAdmissionsInquiry": "የመግቢያ ጥያቄ ያስገቡ →",
+    "email": "ኢሜይል",
+    "admissionsOffice": "የመግቢያ ጽሕፈት ቤት",
+    "focus": "ትኩረት",
+    "pleaseWait": "እባክዎ ይጠብቁ…"
+  },
+  "languages": {
+    "select": "ቋንቋ ይምረጡ",
+    "listLabel": "ቋንቋዎች",
+    "en": "English",
+    "am": "አማርኛ",
+    "om": "Afaan Oromoo"
+  },
+  "nav": {
+    "home": "መነሻ",
+    "about": "ስለ እኛ",
+    "blogs": "News",
+    "contact": "ያግኙን",
+    "primary": "ዋና ማውጫ",
+    "mobilePrimary": "ዋና ማውጫ (ሞባይል)",
+    "openMenu": "የማውጫ ዝርዝሩን ክፈት",
+    "closeMenu": "የማውጫ ዝርዝሩን ዝጋ",
+    "events": "ዝግጅቶች",
+    "login": "ግባ",
+    "aboutOverview": "Overview",
+    "aboutStory": "Our Story",
+    "aboutMission": "Mission & Vision",
+    "aboutCampus": "Campus Life",
+    "academics": "Academics",
+    "academicsOverview": "Overview",
+    "academicsSubjects": "Subjects",
+    "academicsWhy": "Why Study Here",
+    "admission": "Admission",
+    "news": "News",
+    "search": "Search news"
+  },
+  "signin": {
+    "help": "እገዛ ይፈልጋሉ? የትምህርት ቤት አስተዳዳሪዎን ያግኙ።",
+    "signIn": "ግባ",
+    "signingIn": "በመግባት ላይ…",
+    "forgotPassword": "የይለፍ ቃል ረሱ? ለመቀየር የትምህርት ቤት አስተዳዳሪውን ያግኙ።",
+    "errors": {
+      "generic": "መግባት አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "identify": {
+      "title": "የትምህርት ቤት መግቢያ",
+      "subtitle": "ለመቀጠል መምህር ወይም ተማሪ ይምረጡ።",
+      "label": "እኔ እንደ",
+      "helper": "መለያዎች በትምህርት ቤቱ ይፈጠራሉ። ሰራተኞች በትምህርት ቤቱ የሚሰጠውን የአስተዳዳሪ መግቢያ አገናኝ ይጠቀማሉ።",
+      "continue": "ቀጥል"
+    },
+    "roles": {
+      "admin": {
+        "title": "አስተዳዳሪ"
+      },
+      "teacher": {
+        "title": "መምህር"
+      },
+      "student": {
+        "title": "ተማሪ"
+      }
+    },
+    "welcomeBack": "እንኳን ደህና መጡ!",
+    "authMethod": {
+      "label": "የመግቢያ ዘዴ",
+      "email": "ኢሜይል",
+      "code": "ኮድ",
+      "detectedEmail": "ተገኝቷል፡ ኢሜይል",
+      "detectedStudentCode": "ተገኝቷል፡ የተማሪ ኮድ"
+    },
+    "credentials": {
+      "adminSubtitle": "ትምህርት ቤትዎን ለማስተዳደር ይግቡ",
+      "teacherSubtitle": "ወደ የማስተማር መለያዎ ይግቡ",
+      "studentSubtitle": "ወደ ግላዊ ዳሽቦርድዎ ለመግባት ይግቡ"
+    },
+    "fields": {
+      "email": "ኢሜይል",
+      "emailPlaceholder": "ለምሳሌ you@school.edu.et",
+      "password": "የይለፍ ቃል",
+      "passwordPlaceholder": "የይለፍ ቃልዎን ያስገቡ",
+      "loginCode": "የመግቢያ ኮድ",
+      "loginCodePlaceholder": "የተማሪ ኮድዎን ያስገቡ",
+      "loginCodeHelper": "በትምህርት ቤት አስተዳዳሪ የተሰጠዎትን የተማሪ ኮድ ይጠቀሙ።",
+      "studentIdentifier": "ኢሜይል ወይም የተማሪ ኮድ",
+      "studentIdentifierPlaceholder": "ለምሳሌ 0909 ወይም you@school.edu.et",
+      "studentIdentifierHelper": "በትምህርት ቤት አስተዳዳሪ የተሰጠዎት።"
+    },
+    "switch": {
+      "staffPrompt": "አስተዳዳሪ አይደሉም?",
+      "otherPrompt": "ትክክለኛው ፖርታል አይደለም?",
+      "chooseRole": "ሚና ይምረጡ"
+    },
+    "welcomeSubtitle": "Log in to continue your journey and get things done.",
+    "loginToAccount": "Log in to your account",
+    "keepSignedIn": "Keep me signed in",
+    "resetPassword": "Forgot your password?",
+    "admissionsPrompt": "Don't have an account?"
+  },
+  "footer": {
+    "brandTagline": "በአዲስ አበባ የሁለተኛ ደረጃ ትምህርት",
+    "explore": "ይመልከቱ",
+    "columns": {
+      "platform": "መድረክ",
+      "resources": "ሀብቶች",
+      "support": "ድጋፍ"
+    },
+    "resources": {
+      "contactSales": "ሽያጭን ያግኙ",
+      "ourStory": "ታሪካችን"
+    },
+    "legal": {
+      "privacy": "የግላዊነት ፖሊሲ",
+      "terms": "የአገልግሎት ውሎች"
+    },
+    "newsletter": {
+      "title": "የአቢሲኒያ መግለጫ",
+      "blurb": "የጊዜ ትምህርታዊ ዝማኔዎችን፣ የተማሪ ውጤቶችን እና የግቢ ዝግጅት ግብዣዎችን ይቀበሉ።",
+      "emailLabel": "የኢሜይል የደንበኝነት አድራሻ",
+      "emailPlaceholder": "family@example.com",
+      "subscribe": "ይመዝገቡ",
+      "notice": "ምዝገባዎች ድርብ ማረጋገጫ ይጠቀማሉ። ሙሉ በሙሉ ከመመዝገብዎ በፊት የማረጋገጫ ኢሜል ሊያስፈልግ ይችላል።"
+    },
+    "contact": {
+      "admissionsOffice": "የመግቢያ ጽሕፈት ቤት",
+      "inquiries": "ጥያቄዎች",
+      "administration": "አስተዳደር"
+    },
+    "copyright": "© {{year}} Abyssinia Academy። መብቱ በህግ የተጠበቀ ነው።",
+    "portals": "መግባት",
+    "portalLinks": {
+      "admin": "የአስተዳዳሪ መግባት",
+      "teacher": "የመምህር መግባት",
+      "student": "የተማሪ መግባት",
+      "admissions": "የመግቢያ ጥያቄ"
+    }
+  },
+  "errors": {
+    "boundary": {
+      "title": "የሆነ ችግር ተፈጥሯል",
+      "message": "ይህን ገጽ በማሳየት ላይ ሳለ ያልተጠበቀ ስህተት ተከስቷል። ወደ መነሻ ገጽ ተመልሰው ማሰስዎን መቀጠል ይችላሉ።",
+      "returnHome": "ወደ መነሻ ይመለሱ"
+    }
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "ገጹ አልተገኘም",
+    "description": "የጠየቁት ገጽ የለም ወይም ተንቀሳቅሶ ሊሆን ይችላል። ማውጫውን ይጠቀሙ ወይም ወደ መነሻ ይመለሱ።",
+    "returnHome": "ወደ መነሻ ይመለሱ",
+    "contactUs": "ያግኙን"
+  },
+  "blogDetail": {
+    "eyebrow": "የአካዳሚ መግለጫ",
+    "fallbackTitle": "ጽሑፍ",
+    "description": "የጽሑፍ ዝርዝር",
+    "backToList": "← ወደ ብሎጎች ተመለስ",
+    "loading": "ጽሑፍ በመጫን ላይ…",
+    "loadError": "ይህን ጽሑፍ አሁን መጫን አልተቻለም።",
+    "notFoundTitle": "ጽሑፉ አልተገኘም",
+    "notFoundDescription": "ይህ ልጥፍ አይገኝም ወይም አልታተመም።"
+  },
+  "home": {
+    "scrollNav": {
+      "ariaLabel": "የገጽ ክፍሎች",
+      "top": "መጀመሪያ",
+      "stats": "በአጭሩ",
+      "shaping": "ወደፊቱን መቅረጽ",
+      "subjects": "ትምህርቶች",
+      "campus": "የግቢ ሕይወት",
+      "news": "የቅርብ ጊዜ ዜና",
+      "admission": "መግቢያ"
+    },
+    "campusLifeIntro": "የዕለት ቀናት ትውስታ ይሆናሉ — የጠዋት ክፍሎች፣ በግቢ ውስጥ ጓደኝነት፣ እና በጸጥታ ኩራት የሚያልቁ ምሽቶች።",
+    "hero": {
+      "badge": "ለኢትዮጵያ ትምህርት ቤቶች የተሰራ",
+      "title": "ወደሚሆኑበት ሰው የሚያድጉበት ቦታ።",
+      "description": "በ Abyssinia Academy ተማሪዎች በስም ይታወቃሉ። በጥንቃቄ እናስተምራለን፣ በዓላማ እናፈትናለን፣ እና ከ9ኛ እስከ 12ኛ ክፍል ጎን እንቆማለን።",
+      "ctaPrimary": "ትምህርት ቤታችንን ይገናኙ",
+      "ctaSecondary": "እንነጋገር",
+      "scrollDown": "ቀጥሉ",
+      "tablistLabel": "የሥራ ቅድመ እይታ (መግባት አይደለም)",
+      "dotsLabel": "የሥራ ቅድመ እይታ አሳይ",
+      "openPortal": "የ{{portal}} ሥራ ቅድመ እይታ",
+      "tabs": {
+        "admin": "አስተዳዳሪ",
+        "teacher": "መምህር",
+        "student": "ተማሪ"
+      },
+      "trust": [
+        {
+          "icon": "translate",
+          "label": "እንግሊዝኛ እና አማርኛ"
+        },
+        {
+          "icon": "cloud",
+          "label": "ደህንነቱ የተጠበቀ አስተናጋጅ"
+        },
+        {
+          "icon": "backup",
+          "label": "ዕለታዊ ምትኬ"
+        }
+      ],
+      "previews": {
+        "admin": {
+          "title": "የአስተዳዳሪ የሥራ ቦታ",
+          "subtitle": "መላውን ትምህርት ቤት ያስተዳድሩ",
+          "nav": [
+            "መምህራን እና ተማሪዎች",
+            "ክፍሎች እና ምዝገባ",
+            "አቴንዳንስ",
+            "ተግባራት እና ፈተናዎች",
+            "ክፍያዎች",
+            "ሪፖርት እና ድረ-ገጽ"
+          ],
+          "stats": [
+            {
+              "label": "ንቁ ተማሪዎች",
+              "value": "1,245"
+            },
+            {
+              "label": "ክፍት የክፍያ ቀሪ",
+              "value": "86"
+            }
+          ],
+          "rows": [
+            "ለክፍሎች ማስታወቂያ ያትሙ",
+            "ትምህርት ክፍያ ይመድቡ እና ክፍያ ይመዝግቡ",
+            "የአቴንዳንስ እና የፈተና ሪፖርቶችን ይመልከቱ"
+          ]
+        },
+        "teacher": {
+          "title": "የመምህር የሥራ ቦታ",
+          "subtitle": "የተመደቡ ክፍሎችዎን ያስተምሩ",
+          "nav": [
+            "ክፍሎቼ",
+            "ተማሪዎቼ",
+            "አቴንዳንስ",
+            "ተግባራት",
+            "የፈተና ውጤቶች",
+            "መገለጫ"
+          ],
+          "stats": [
+            {
+              "label": "የተመደቡ ክፍሎች",
+              "value": "4"
+            },
+            {
+              "label": "ለመገምገም ማስረከቢያ",
+              "value": "12"
+            }
+          ],
+          "rows": [
+            "የ9A አቴንዳንስ ይመዝግቡ",
+            "ለፊዚክስ የቤት ሥራ ያትሙ",
+            "የመካከለኛ ፈተና ውጤት ያስገቡ"
+          ]
+        },
+        "student": {
+          "title": "የተማሪ የሥራ ቦታ",
+          "subtitle": "የትምህርት ማዕከልዎ",
+          "nav": [
+            "ክፍሎቼ",
+            "ትምህርቶች",
+            "አቴንዳንስ",
+            "ተግባራት",
+            "የፈተና ውጤቶች",
+            "ክፍያ እና ማስታወቂያ"
+          ],
+          "stats": [
+            {
+              "label": "የሚበቁ ተግባራት",
+              "value": "3"
+            },
+            {
+              "label": "የክፍያ ቀሪ",
+              "value": "ETB 2k"
+            }
+          ],
+          "rows": [
+            "የሒሳብ የቤት ሥራ ያስረክቡ",
+            "የታተሙ የፈተና ውጤቶችን ይመልከቱ",
+            "የትምህርት ቤት ማስታወቂያዎችን ያንብቡ"
+          ]
+        }
+      }
+    },
+    "intro": {
+      "eyebrow": "ቁርጠኝነታችን እና እሴቶቻችን",
+      "heading": "በሥነ ምግባራዊ ኃላፊነት እና ፈጠራ ላይ የተመሠረተ የትምህርት ጥብቅነት ባህል።",
+      "curriculum": "ሥርዓተ ትምህርታችን ጥብቅ የ STEM ትምህርትን፣ በአማርኛ እና በእንግሊዝኛ የቋንቋ ብቃትን እንዲሁም የኢትዮጵያን እና የዓለምን አመለካከት የሚያከብር ሰብአዊነት ትምህርትን ያዋህዳል።",
+      "holistic": {
+        "title": "ሙሉ ሰው ትምህርት",
+        "body": "በአመራር እና በጥያቄ የበለጸገ የተቀናጀ ብሔራዊ ሥርዓተ ትምህርት።"
+      },
+      "language": {
+        "title": "የቋንቋ ብቃት",
+        "body": "ከባለጸጋ የአማርኛ ንግግር ጥበብ ጋር የትምህርታዊ እንግሊዝኛ ብቃት።"
+      },
+      "imageLabel": "የግቢ ሕይወት",
+      "quote": "ተቋማዊ ቁርጠኝነታችን ባህላዊ ቅርስን እያከበሩ ማህበረሰባቸውን በታማኝነት ለማገልገል የትንተና ብቃት የሚያገኙ አሳቢ ምሁራንን ማፍራት ነው።",
+      "attribution": "Abyssinia Academy፣ {{location}}"
+    },
+    "pillars": {
+      "eyebrow": "ተቋማዊ መርሆዎች",
+      "title": "የ Abyssinia Academy ሁለት ምሰሶዎች",
+      "one": {
+        "label": "ምሰሶ አንድ",
+        "title": "የትምህርት ጥብቅነት እና የአእምሮ ፍላጎት",
+        "body": "ተመራቂዎች በከፍተኛ ትምህርት በጥልቅ ማስተዋል እንዲመሩ የትንተና ችግር አፈታትን፣ ሳይንሳዊ ጥያቄን፣ ሥነ ጽሑፍን እና ማህበራዊ ጥናትን ማሳደግ።",
+        "caption": "መሠረታዊ የትምህርት ደረጃ"
+      },
+      "two": {
+        "label": "ምሰሶ ሁለት",
+        "title": "ባህላዊ ቅርስ እና ዓለም አቀፍ ዜግነት",
+        "body": "የኢትዮጵያን የማህበረሰብ፣ የጽናት እና የምሁርነት ወግ እያከበሩ ተመራቂዎችን ለዩኒቨርሲቲ መንገዶች እና ለዜግነት አስተዋጽኦ ማዘጋጀት።",
+        "caption": "ዓለም አቀፍ አመለካከት እና የማህበረሰብ ሥር"
+      }
+    },
+    "honor": {
+      "tabs": {
+        "honor": "የትምህርት ታማኝነት እና ክብር",
+        "leadership": "የተማሪ አመራር",
+        "stewardship": "የማህበረሰብ አገልግሎት እና ጥበቃ"
+      },
+      "panels": {
+        "honor": {
+          "title": "“ታማኝነት፣ መከባበር እና የአእምሮ ሐቀኝነት”",
+          "body": "በ Abyssinia Academy ያለ እያንዳንዱ ተማሪ ለሥነ ምግባራዊ ምሁርነት ይተጋል—ራሱን የቻለ አስተሳሰብ፣ ለተለያዩ አመለካከቶች መከባበር እና በእያንዳንዱ ክፍል የግል ኃላፊነት።",
+          "points": [
+            "ሐቀኛ እና ኦሪጅናል የትምህርት ሥራ ቁርጠኝነት",
+            "በተማሪዎች ማህበረሰብ መካከል የጋራ መከባበር",
+            "ለትምህርት ታማኝነት ግልጽ የሆኑ ግምቶች"
+          ],
+          "badge": "የታማኝነት ቃል ኪዳን",
+          "note": "በእያንዳንዱ ዓመት ተማሪዎች መካከል የጋራ መተማመን እና ባህሪ ግንባታ ባህል።"
+        },
+        "leadership": {
+          "title": "የተማሪ አመራር እና የጋራ ኃላፊነት",
+          "body": "የአመራር ዕድሎች ተማሪዎች እኩዮቻቸውን እንዲያገለግሉ፣ የግቢ ሕይወትን እንዲደግፉ እና ለሁለተኛ ደረጃ ትምህርት ቤት የሚመጥን ጥበቃ እንዲለማመዱ ይጋብዛሉ።",
+          "points": [
+            "በግቢ ሕይወት እና በእኩዮች ድጋፍ የተማሪ ድምፅ",
+            "በተለያዩ የክፍል ደረጃዎች መካከል የጋራ ፕሮጀክቶች",
+            "ከክፍል ወደ ክፍል አብሮ የሚያድግ አማካሪነት"
+          ],
+          "badge": "የተማሪ አመራር",
+          "note": "በኃላፊነት እና በአገልግሎት የሚቀረጽ ባህሪ።"
+        },
+        "stewardship": {
+          "title": "የማህበረሰብ አገልግሎት እና ጥበቃ",
+          "body": "የዜግነት ኃላፊነት በዕድሜ ተስማሚ በሆነ አገልግሎት እና በአካዳሚው ዙሪያ ላለው ማህበረሰብ እንክብካቤ ይለማል።",
+          "points": [
+            "በአካባቢው ማህበረሰብ ፍላጎት ላይ የተመሠረተ አገልግሎት",
+            "ለባህላዊ ቅርስ እና ለጋራ ቦታዎች መከባበር",
+            "ከግቢ ባሻገር የሚዘልቁ የጥበቃ ልምዶች"
+          ],
+          "badge": "የዜግነት ኃላፊነት",
+          "note": "በታማኝነት እና በእንክብካቤ ማበርከትን መማር።"
+        }
+      }
+    },
+    "departments": {
+      "eyebrow": "የሥርዓተ ትምህርት ዘርፎች",
+      "title": "የትምህርት ክፍሎች",
+      "focusLabel": "ትኩረት",
+      "viewProgram": "ፕሮግራሙን ይመልከቱ",
+      "items": [
+        {
+          "eyebrow": "የፊዚካል እና የሕይወት ሳይንሶች",
+          "title": "የተፈጥሮ ሳይንስ እና STEM",
+          "body": "ፊዚክስ፣ ኬሚስትሪ፣ ባዮሎጂ እና የአካባቢ ሳይንሶች ከላቦራቶሪ ልምምድ እና በጥያቄ ከሚመራ ችግር አፈታት ጋር።",
+          "aside": "በሁለተኛ ደረጃ ዑደት ውስጥ የላቦራቶሪ ልምምድ እና ሳይንሳዊ ምርመራ።",
+          "meta": "ክፍል 9–12"
+        },
+        {
+          "eyebrow": "የቁጥር ዘርፎች",
+          "title": "ሒሳብ እና ኮምፒውተር ጥናት",
+          "body": "ከአልጀብራ፣ ትሪጎኖሜትሪ፣ ካልኩለስ እና ስታቲስቲክስ ጋር እንዲሁም የፕሮግራሚንግ መሠረቶች እና ስሌታዊ አስተሳሰብ እድገት።",
+          "aside": "ለዩኒቨርሲቲ ዝግጅት የቁጥር አመክንዮ እና የኮምፒውተር ጥናት።",
+          "meta": "ክፍል 9–12"
+        },
+        {
+          "eyebrow": "ሰብአዊነት እና ማህበራዊ ምርመራ",
+          "title": "ሰብአዊነት፣ ማህበራዊ ሳይንስ እና ቋንቋዎች",
+          "body": "የኢትዮጵያ እና የሰፊው አፍሪካ ታሪክ፣ ጂኦግራፊ፣ ሲቪክስ፣ ሥነ ጽሑፍ እና የንግግር ጥበብ በአማርኛ እና በእንግሊዝኛ።",
+          "aside": "ትንታኔያዊ ጽሑፍ፣ የዜግነት ግንዛቤ እና የቋንቋ ብቃት።",
+          "meta": "አማርኛ እና እንግሊዝኛ"
+        },
+        {
+          "eyebrow": "ውበታዊ አገላለጽ",
+          "title": "ፈጠራዊ ጥበባት እና ሙዚቃ",
+          "body": "የኢትዮጵያን ባህላዊ አገላለጽ ከዘመናዊ ፈጠራዊ ልምምድ ጋር የሚያከብሩ ምስላዊ ጥበባት እና ሙዚቃ።",
+          "aside": "ፈጠራዊ ልምምድ እንደ ሚዛናዊ የሁለተኛ ደረጃ ትምህርት አካል።",
+          "meta": "ስቱዲዮ እና ትርኢት"
+        }
+      ]
+    },
+    "tenets": {
+      "eyebrow": "የ Abyssinia ልዩነት",
+      "title": "የተማሪ ሕይወት አራት መርሆዎች",
+      "description": "አእምሮን ለማሳደግ፣ ወዳጅነትን ለማጎልበት እና ሥነ ምግባራዊ ዓላማን ለማስረጽ የተነደፈ አካባቢ።",
+      "items": [
+        {
+          "title": "ትብብር እና ጥያቄ ላይ የተመሠረቱ ክፍሎች",
+          "body": "ክፍሎች ውይይትን፣ በፕሮጀክት ላይ የተመሠረተ ምርመራን እና የተዋቀረ ክርክርን ያጎላሉ፤ ተማሪዎችም በማስረጃ መከራከርን ይማራሉ።",
+          "caption": "ንቁ እና ተሳታፊ የትምህርት ባህል"
+        },
+        {
+          "title": "ቁርጠኛ እና አማካሪ መምህራን",
+          "body": "የትምህርት ዘርፍ ባለሙያዎች ተማሪዎችን በተዋቀረ የትምህርት ምክር እና በክፍል ውስጥ አማካሪነት ይመራሉ።",
+          "caption": "ለእያንዳንዱ የተበጀ የትምህርት ምክር"
+        },
+        {
+          "title": "እንቅስቃሴ ያላቸው የግቢ ማህበራት እና ስፖርት",
+          "body": "ክለቦች፣ ስፖርት እና ባህላዊ ማህበራት የክፍል ትምህርትን በቡድን ሥራ እና በፈጠራ አገላለጽ ያሟላሉ።",
+          "caption": "ከሥርዓተ ትምህርት ውጭ የተማሪ ሕይወት"
+        },
+        {
+          "title": "የዩኒቨርሲቲ እና የሙያ ምክር",
+          "body": "መመሪያው የብሔራዊ ዩኒቨርሲቲ መንገዶችን እና ለከፍተኛ ትምህርት ማመልከቻዎች ዝግጅትን ይደግፋል።",
+          "caption": "ለከፍተኛ ትምህርት ዝግጅት"
+        }
+      ],
+      "gallery": [
+        "የትብብር ትምህርት",
+        "የግቢ ስፖርት",
+        "የደጋ ግቢ"
+      ]
+    },
+    "bulletin": {
+      "eyebrow": "የግቢ ዜና እና መልእክቶች",
+      "title": "የቅርብ ጊዜ ዜና",
+      "archiveLink": "የመግለጫ ማህደሮችን ያስሱ →",
+      "emptyTitle": "ታሪኮች እዚህ ይታያሉ",
+      "emptyBody": "የታተሙ የአካዳሚ ዜናዎች ሲኖሩ እዚህ ይታያሉ።",
+      "visitBlogs": "ሁሉንም ልጥፎች ይመልከቱ",
+      "prev": "ቀዳሚ ዜና",
+      "next": "ቀጣይ ዜና",
+      "pages": "የዜና ገጾች",
+      "goToPage": "ወደ ዜና ገጽ {{page}} ይሂዱ"
+    },
+    "admissions": {
+      "eyebrow": "መግቢያ",
+      "title": "ቤተሰብዎ ሲዘጋጅ እኛ ዝግጁ ነን።",
+      "description": "ለ{{grades}} መግቢያ ክፍት ነው። ስለ ተማሪዎ ትንሽ ይንገሩን — ቀጣይ እርምጃዎችን በግልጽ እንመልሳለን።",
+      "ctaPrimary": "ጥያቄ ይጀምሩ",
+      "ctaSecondary": "ጥያቄ ይጠይቁ",
+      "steps": [
+        {
+          "title": "ይጠይቁ",
+          "description": "የመስመር ላይ ጥያቄ ያስገቡ ወይም መረጃ ይጠይቁ።"
+        },
+        {
+          "title": "ይገመገሙ",
+          "description": "እንደ አስፈላጊነቱ የምደባ ግምገማ እና ቃለ መጠይቅ ያጠናቅቁ።"
+        },
+        {
+          "title": "ይመዝገቡ",
+          "description": "የመግቢያ ማሳወቂያ ይቀበሉ እና ማህበረሰቡን ይቀላቀሉ።"
+        }
+      ],
+      "nextSteps": {
+        "label": "ቀጣይ እርምጃዎች",
+        "title": "ከመግቢያ ጽሕፈት ቤት ጋር ይነጋገሩ",
+        "body": "የአሁኑ የማመልከቻ ጊዜዎች፣ የግምገማ ቀናት እና የክፍያ ጥቅሶች በቀጥታ በመግቢያ ጽሕፈት ቤት ይረጋገጣሉ—እስኪረጋገጡ እዚህ አይታተሙም።"
+      },
+      "submitInquiry": "የመግቢያ ጥያቄ ያስገቡ →",
+      "contactSchool": "ትምህርት ቤቱን ያግኙ"
+    },
+    "inquiry": {
+      "eyebrow": "ይፋዊ የመግቢያ መዝገብ",
+      "title": "የመግቢያ መረጃ ይጠይቁ",
+      "description": "የሥርዓተ ትምህርት መረጃ እና የመግቢያ መመሪያ ለመጠየቅ ይህን ቅጽ ይሙሉ።",
+      "form": {
+        "guardianName": "የወላጅ / አሳዳጊ ሙሉ ስም (አማራጭ)",
+        "email": "የኢሜይል አድራሻ",
+        "phone": "ስልክ ቁጥር",
+        "grade": "የሚገባው ተማሪ ክፍል",
+        "gradePlaceholder": "የመግቢያ ክፍል ይምረጡ",
+        "grade9": "ክፍል 9",
+        "grade10": "ክፍል 10",
+        "grade11": "ክፍል 11",
+        "grade12": "ክፍል 12",
+        "newsletterLabel": "አዎ፣ ስለ ግቢ ጉብኝት ቀናት፣ የመግቢያ ፈተና መርሐግብሮች እና የትምህርት ቤት ማስታወቂያዎች እንድታሳውቁኝ እፈልጋለሁ።",
+        "newsletterDescription": "ግላዊነትዎን እናከብራለን። በማንኛውም ጊዜ መሰረዝ ይችላሉ።",
+        "confidentiality": "ሁሉም የተማሪ መረጃ በጥብቅ ምስጢራዊነት ይያዛል።",
+        "submit": "የመግቢያ ጥያቄ ያስገቡ →",
+        "studentName": "የወደፊት ተማሪ ሙሉ ስም",
+        "academicYear": "የትምህርት ዘመን",
+        "message": "የጥያቄ መልእክት",
+        "messagePlaceholder": "ስለሚጠይቁት መረጃ ወይም ጉብኝት ይንገሩን።"
+      }
+    },
+    "events": {
+      "eyebrow": "የትምህርት መዝገብ",
+      "title": "መጪ የቅጥር ስብሰባዎች",
+      "viewAll": "ሁሉንም ዝግጅቶች ይመልከቱ →",
+      "emptyTitle": "ምንም መጪ ዝግጅቶች አልተዘረዘሩም",
+      "emptyBody": "ከአካዳሚው የቀን መቁጠሪያ የታተሙ ዝግጅቶች እዚህ ይታያሉ።"
+    },
+    "portals": {
+      "badge": "አንድ መድረክ። ሦስት ተሞክሮዎች።",
+      "title": "እያንዳንዱ ባለድርሻ የራሱ ፖርታል አለው",
+      "subtitle": "አስተዳዳሪዎች፣ መምህራን እና ተማሪዎች እያንዳንዳቸው የተስተካከለ የስራ ቦታ ያገኛሉ — የወላጅ ፖርታል የለም።",
+      "setupBadge": "ቀላል ማዋቀር",
+      "cards": {
+        "admin": {
+          "title": "የአስተዳዳሪ ኃላፊነቶች",
+          "description": "ትምህርት ቤቱን ያስኬዱ፡ ሰዎች፣ አካዳሚክ፣ ክፍያ፣ ማስታወቂያ እና ድረ-ገጽ።",
+          "features": [
+            "መምህራን፣ ተማሪዎች እና ምዝገባ ያስተዳድሩ",
+            "የትምህርት ዓመት፣ ክፍሎች እና ትምህርቶች ያዋቅሩ",
+            "አቴንዳንስ፣ ተግባራት እና ፈተናዎችን ይቆጣጠሩ",
+            "ክፍያ ይመድቡ እና ክፍያ ይመዝግቡ",
+            "ማስታወቂያ እና የድረ-ገጽ ይዘት ያትሙ"
+          ],
+          "cta": "የአስተዳዳሪ አጠቃላይ እይታ"
+        },
+        "teacher": {
+          "title": "የመምህር ኃላፊነቶች",
+          "description": "በአስተዳዳሪ ከተመደቡ ክፍሎች እና ትምህርቶች ጋር ብቻ ይስሩ።",
+          "features": [
+            "የተመደቡ ክፍሎች እና ተማሪዎችን ይመልከቱ",
+            "ዕለታዊ አቴንዳንስ ይመዝግቡ",
+            "ተግባራት ይፍጠሩ እና ይገምግሙ",
+            "ለትምህርቶችዎ የፈተና ውጤት ያስገቡ",
+            "የማስተማር መገለጫዎን ያዘምኑ"
+          ],
+          "cta": "የመምህር አጠቃላይ እይታ"
+        },
+        "student": {
+          "title": "የተማሪ ኃላፊነቶች",
+          "description": "የራስዎን ምዝገባ ይከተሉ፡ ክፍሎች፣ ሥራ፣ ውጤት እና ማስታወቂያ።",
+          "features": [
+            "የተመዘገቡ ክፍሎች እና ትምህርቶችን ይመልከቱ",
+            "የግል አቴንዳንስ ያረጋግጡ",
+            "ተግባራት ያስረክቡ",
+            "የታተሙ የፈተና ውጤቶችን ይመልከቱ",
+            "ክፍያ እና ማስታወቂያ ይከታተሉ"
+          ],
+          "cta": "የተማሪ አጠቃላይ እይታ"
+        }
+      }
+    },
+    "sms": {
+      "steps": {
+        "badge": "ቀላል ማዋቀር",
+        "title": "በ3 ደረጃዎች ይጀምሩ",
+        "subtitle": "ለአቢሲኒያ አካዳሚ — ከ9–12ኛ ክፍል በአዲስ አበባ።",
+        "items": [
+          {
+            "title": "የትምህርት ዓመቱን ያዋቅሩ",
+            "body": "ጊዜያት፣ ከ9–12ኛ ክፍል፣ ክፍል ክፍፍሎችና ትምህርቶችን ያዘጋጁ።",
+            "icon": "apartment"
+          },
+          {
+            "title": "ሠራተኞችና ተማሪዎችን ያክሉ",
+            "body": "የመምህርና ተማሪ መለያዎችን ይፍጠሩ፣ ተማሪዎችን ወደ ክፍሎች ያስመዝግቡ።",
+            "icon": "group"
+          },
+          {
+            "title": "በፖርታሎች ላይ ይጀምሩ",
+            "body": "መምህራን መገኘትና ሥራ ይመዘግባሉ፤ ተማሪዎች ያስረክባሉና ውጤት ያያሉ።",
+            "icon": "bolt"
+          }
+        ]
+      },
+      "modules": {
+        "badge": "የመድረክ ሞጁሎች",
+        "title": "ትምህርት ቤትዎ የሚያስፈልገው ሁሉ",
+        "subtitle": "ለሁለተኛ ደረጃ አስተዳደር ኃይለኛ ሞጁሎች — ያለ የወላጅ ፖርታል።",
+        "items": [
+          {
+            "title": "የተማሪ አስተዳደር",
+            "body": "ተማሪዎችን በምዝገባና አካዳሚ ታሪክ ያስተዳድሩ።",
+            "icon": "person"
+          },
+          {
+            "title": "የመገኘት ክትትል",
+            "body": "በፍጥነት መገኘት ይመዝግቡና አዝማሚያዎችን ይከታተሉ።",
+            "icon": "event_available"
+          },
+          {
+            "title": "ቤት ሥራና ተግባራት",
+            "body": "በዲጂታል ይመድቡ፤ ተማሪዎች ያስረክባሉ።",
+            "icon": "edit_note"
+          },
+          {
+            "title": "ውጤቶችና ፈተናዎች",
+            "body": "ነጥቦችን ይመዝግቡና ውጤት ያትሙ።",
+            "icon": "grade"
+          },
+          {
+            "title": "ማስታወቂያዎች",
+            "body": "ለመምህራን፣ ተማሪዎች ወይም ክፍሎች ያትሙ።",
+            "icon": "campaign"
+          },
+          {
+            "title": "የክፍያ አስተዳደር",
+            "body": "ክፍያዎችንና ቀሪ ሂሳብን ይከታተሉ።",
+            "icon": "payments"
+          },
+          {
+            "title": "አካዳሚ ሪፖርቶች",
+            "body": "የትምህርት ቤትና የተማሪ ሪፖርቶችን ያመነጩ።",
+            "icon": "analytics"
+          },
+          {
+            "title": "የመርሐግብር ገንቢ",
+            "body": "የክፍል መርሐግብሮችን ያትሙ።",
+            "icon": "calendar_month"
+          },
+          {
+            "title": "የድረ-ገጽ CMS",
+            "body": "የሕዝብ ድረ-ገጹን ከSMS ጋር ያዘምኑ።",
+            "icon": "language"
+          }
+        ]
+      },
+      "local": {
+        "badge": "የኢትዮጵያ ትምህርት",
+        "title": "ትምህርት ቤታችን እንደሚሠራ የተነደፈ",
+        "subtitle": "ለአቢሲኒያ አካዳሚ ሁለተኛ ደረጃ ሞዴል በአዲስ አበባ።",
+        "points": [
+          "እንግሊዝኛ፣ አማርኛና አፋን ኦሮሞ የሕዝብ በይነገጽ",
+          "ከ9–12ኛ ክፍል መዋቅር",
+          "የአካባቢ ክፍያ ሂደቶች",
+          "አስተዳዳሪ፣ መምህርና ተማሪ ፖርታሎች ብቻ",
+          "ደህንነቱ የተጠበቀ መዳረሻ",
+          "ለሞባይል ምቹ"
+        ],
+        "cards": [
+          {
+            "title": "ባለብዙ ቋንቋ",
+            "body": "EN · አማ · Afaan Oromoo",
+            "icon": "translate"
+          },
+          {
+            "title": "አካባቢያዊ መዋቅር",
+            "body": "ከ9–12ኛ ክፍል",
+            "icon": "school"
+          },
+          {
+            "title": "የETB ክፍያ",
+            "body": "የትምህርት ክፍያ ክትትል",
+            "icon": "payments"
+          },
+          {
+            "title": "ደህንነት",
+            "body": "በሚና ላይ የተመሠረተ መዳረሻ",
+            "icon": "verified_user"
+          },
+          {
+            "title": "ትንታኔ",
+            "body": "የመገኘትና አፈጻጸም ግንዛቤ",
+            "icon": "insights"
+          }
+        ]
+      },
+      "security": {
+        "badge": "ደህንነት",
+        "title": "ከፍተኛ ደረጃ ደህንነትና አስተማማኝነት",
+        "subtitle": "የትምህርት ቤት መዝገቦች ጥንቃቄ የሚገባቸው ናቸው።",
+        "items": [
+          {
+            "title": "JWT ማረጋገጫ",
+            "body": "ለእያንዳንዱ ፖርታል የተፈረሙ ቶከኖች።",
+            "icon": "key"
+          },
+          {
+            "title": "በሚና ላይ መዳረሻ",
+            "body": "ለአስተዳዳሪ፣ መምህርና ተማሪ የተለየ ፈቃድ።",
+            "icon": "admin_panel_settings"
+          },
+          {
+            "title": "የመምህር ወሰን",
+            "body": "መምህራን የተመደቡ ክፍሎች ብቻ።",
+            "icon": "lock_person"
+          },
+          {
+            "title": "የተማሪ ግላዊነት",
+            "body": "ተማሪ ሌላ ተማሪ አያይም።",
+            "icon": "privacy_tip"
+          },
+          {
+            "title": "የኦዲት መዝገብ",
+            "body": "አስፈላጊ እርምጃዎች ይመዘገባሉ።",
+            "icon": "history"
+          },
+          {
+            "title": "የተረጋገጠ ሰቀላ",
+            "body": "የፋይል ፊርማና መጠን ገደቦች።",
+            "icon": "upload_file"
+          }
+        ]
+      },
+      "why": {
+        "badge": "ለምን አቢሲኒያ አካዳሚ",
+        "title": "ለምን የተገናኘ መድረካችን አስፈላጊ ነው",
+        "items": [
+          {
+            "title": "የአስተዳደር ጊዜ ማስቀረት",
+            "icon": "trending_up"
+          },
+          {
+            "title": "ግልጽ የመምህር ሥራ",
+            "icon": "groups"
+          },
+          {
+            "title": "መገኘትን ማቃለል",
+            "icon": "calendar_month"
+          },
+          {
+            "title": "አካዳሚ መዝገቦችን ማደራጀት",
+            "icon": "folder"
+          },
+          {
+            "title": "ማስታወቂያዎችን ማዕከላዊ ማድረግ",
+            "icon": "forum"
+          },
+          {
+            "title": "ከየትኛውም ቦታ መዳረሻ",
+            "icon": "public"
+          },
+          {
+            "title": "ወረቀት መቀነስ",
+            "icon": "description"
+          },
+          {
+            "title": "ከ9–12 ጋር ማደግ",
+            "icon": "layers"
+          }
+        ]
+      },
+      "faq": {
+        "badge": "ተደጋጋሚ ጥያቄዎች",
+        "title": "ተደጋጋሚ ጥያቄዎች",
+        "items": [
+          {
+            "question": "የወላጅ ፖርታል አለ?",
+            "answer": "አይደለም። ፖርታሎቹ አስተዳዳሪ፣ መምህር እና ተማሪ ብቻ ናቸው።"
+          },
+          {
+            "question": "የሕዝብ ድረ-ገጹ ባለብዙ ቋንቋ ነው?",
+            "answer": "አዎ። እንግሊዝኛ፣ አማርኛ እና አፋን ኦሮሞ ይደገፋሉ።"
+          },
+          {
+            "question": "መምህር ሁሉንም ተማሪ ያያል?",
+            "answer": "አይደለም። የተመደቡ ክፍሎችና ትምህርቶች ብቻ።"
+          },
+          {
+            "question": "መረጃ ደህንነቱ የተጠበቀ ነው?",
+            "answer": "አዎ። ማረጋገጫ፣ ፈቃዶች፣ ኦዲት እና የሰቀላ ማረጋገጫ አሉ።"
+          },
+          {
+            "question": "ይህ የሕዝብ ድረ-ገጹን ይተካል?",
+            "answer": "አይደለም። የተፈቀደው ድረ-ገጽና CMS ይቀጥላሉ።"
+          },
+          {
+            "question": "የቅጂ መብቱ የማን ነው?",
+            "answer": "© አቢሲኒያ አካዳሚ። መብቱ በሙሉ የተጠበቀ ነው።"
+          }
+        ]
+      },
+      "cta": {
+        "eyebrow": "ይጀምሩ",
+        "title": "የካምፓስ ክዋኔዎችን ለማዘመን ዝግጁ ነዎት?",
+        "subtitle": "የመረጃ ጥቅል ይጠይቁ ወይም መግቢያን ያግኙ። የመምህር እና የተማሪ መግቢያ አሁን ዝግጁ ነው — ከራስጌው ላይ መግባትን ይጠቀሙ።",
+        "primary": "የመረጃ ጥቅል ይጠይቁ",
+        "secondary": "ያግኙን",
+        "cardEyebrow": "የካምፓስ መድረክ",
+        "cardBody": "ሁለተኛ ደረጃ · ከ9–12ኛ · አዲስ አበባ፣ ኢትዮጵያ።",
+        "copyrightNote": "© አቢሲኒያ አካዳሚ። መብቱ በሙሉ የተጠበቀ ነው።"
+      }
+    },
+    "statsBar": {
+      "ariaLabel": "ትምህርት ቤቱ በአጭሩ",
+      "intro": "ሰዎች፣ ታሪኮች እና የባለቤትነት ዓመታት — ማህበረሰባችን በአጭሩ።",
+      "items": [
+        {
+          "key": "established",
+          "label": "ከዚህ ጀምሮ ቤተሰቦችን እናገለግላለን",
+          "value": "2010"
+        },
+        {
+          "key": "students",
+          "label": "የዚህ ዓመት ተማሪዎች",
+          "value": "1,200+"
+        },
+        {
+          "key": "staff",
+          "label": "መምህራንና ሠራተኞች",
+          "value": "85+"
+        },
+        {
+          "key": "alumni",
+          "label": "በዓለም የሚገኙ ድሮ ተማሪዎች",
+          "value": "3,500+"
+        },
+        {
+          "key": "partners",
+          "label": "የማህበረሰብ አጋሮች",
+          "value": "12"
+        }
+      ]
+    },
+    "subjectsSection": {
+      "title": "ተማሪዎች እዚህ የሚማሩት",
+      "intro": "ከአማርኛና እንግሊዝኛ እስከ ሳይንስ ላቦራቶሪዎችና ICT — በትዕግሥት፣ በፍላጎት እና በእውነተኛ ውይይት የሚሰጡ ትምህርቶች።"
+    },
+    "community": {
+      "quote": "እርስ በርሳችን እንጠባበቃለን። የተለያዩ ታሪኮች፣ አንድ ግቢ — እና ምንም ተማሪ እንዳይቀር የጋራ ቃል ኪዳን።",
+      "attribution": "— የ Abyssinia Academy ማህበረሰብ"
+    },
+    "team": {
+      "title": "ቀኑን የሚመሩ ሰዎች",
+      "intro": "አመራርና እንክብካቤ በሚያገኟቸው ፊቶች ይጀምራል — በግድግዳ ላይ በሚጻፉ ማዕረጎች ብቻ አይደለም።",
+      "members": [
+        {
+          "name": "የትምህርት ቤት ኃላፊ",
+          "role": "ለመማርና ለባለቤትነት ድምፅ ያስቀምጣል",
+          "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "ምክትል ኃላፊ — ትምህርት",
+          "role": "ማስተማር አሳቢና ጥብቅ እንዲሆን ይጠብቃል",
+          "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "የተማሪዎች ዲን",
+          "role": "በግቢ ሕይወት ከተማሪዎች ጋር ይሄዳል",
+          "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "የመግቢያ ዳይሬክተር",
+          "role": "ቤተሰቦችን ወደ ውይይቱ ይቀበላል",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=480&q=80"
+        }
+      ]
+    },
+    "facilities": {
+      "title": "Community Facilities and Services",
+      "body": "Students enjoy classrooms, science labs, library resources, sports grounds, and counseling services that support academic excellence and wellbeing.",
+      "viewMore": "View More"
+    },
+    "numbers": {
+      "title": "By the Numbers",
+      "items": [
+        {
+          "value": "1,200+",
+          "title": "Students",
+          "body": "Scholars across Grades 9–12 in day and residential pathways."
+        },
+        {
+          "value": "85+",
+          "title": "Faculty & Staff",
+          "body": "Teachers and support staff dedicated to secondary formation."
+        },
+        {
+          "value": "13",
+          "title": "Core Subjects",
+          "body": "National curriculum subjects spanning sciences, languages, and ICT."
+        },
+        {
+          "value": "24",
+          "title": "Clubs & Teams",
+          "body": "Sports, arts, debate, STEM, and community service opportunities."
+        }
+      ]
+    },
+    "campusMemory": "In memory of our campus journey",
+    "admissionSection": {
+      "title": "Admission at Abyssinia Academy",
+      "body": "Our admission process is designed to identify talented and motivated students who are ready to thrive in a supportive learning environment.",
+      "cards": {
+        "admission": "Admission",
+        "social": "Social Science Students",
+        "natural": "Natural Science Students"
+      }
+    },
+    "upcomingEvents": {
+      "title": "Upcoming Events",
+      "viewAll": "View All"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "የተቋም አጠቃላይ እይታ",
+      "title": "ስለ Abyssinia Academy",
+      "subtitle": "የሁለተኛ ደረጃ ተቋም ({{grades}})",
+      "tagline": "በአዲስ አበባ ልብ ውስጥ የአእምሮ ጥብቅነት፣ ባህላዊ ቅርስ እና ሥነ ምግባራዊ አመራርን እናሳድጋለን።",
+      "paragraph1": "Abyssinia Academy ከፍተኛ ደረጃ ያለው ምሁርነት ከሥነ ምግባራዊ ባህሪ እና ከሀገራዊ ግዴታ ተለይቶ መታየት እንደሌለበት በሚል እምነት የተመሠረተ ራሱን የቻለ የኢትዮጵያ የሁለተኛ ደረጃ ተቋም ({{grades}}) ነው። በአዲስ አበባ የሚገኘው አካዳሚው ጥብቅ የተፈጥሮ ሳይንስን እና ሒሳብን ከሥነ ጽሑፍ፣ ታሪክ እና የዜግነት ሥነ ምግባር ሰብአዊ ምርመራ ጋር በሚያጣምር ፈታኝ ሥርዓተ ትምህርት ምሁራንን ያዘጋጃል።",
+      "paragraph2": "የትምህርት አቋራጮችን እና በቃል የመድገም ተገዥነትን አንቀበልም። ምሁራኖቻችን በትኩረት ማንበብን፣ መደምደሚያዎችን በዘዴ መሞገትን፣ አመለካከቶችን በአማርኛ እና በእንግሊዝኛ መግለጽን እንዲሁም ለዩኒቨርሲቲ ትምህርት እየተዘጋጁ የሀገራችንን ታሪካዊ ቅርስ ማክበርን ይማራሉ።",
+      "matrix": {
+        "title": "የአካዳሚው ማጠቃለያ",
+        "cycleLabel": "የትምህርት ዑደት",
+        "cycleValue": "{{grades}} ሁለተኛ ደረጃ ዑደት",
+        "mediumLabel": "የትምህርት ቋንቋ",
+        "mediumValue": "ሁለት ቋንቋ (አማርኛ እና እንግሊዝኛ)",
+        "frameworkLabel": "የማስተማር ማዕቀፍ",
+        "frameworkValue": "ብሔራዊ የሁለተኛ ደረጃ ማዕቀፍ እና ዝግጅት",
+        "locationLabel": "የግቢው አድራሻ",
+        "locationPending": "{{location}} [አድራሻ ገና አልተወሰነም]",
+        "accreditationLabel": "እውቅና እና የተቋም ፈቃድ",
+        "accreditationValue": "በይፋዊ ተቆጣጣሪ ግምገማ ላይ ነው / ሲጠየቅ ይረጋገጣል"
+      },
+      "imageLabel": "የግቢ ትምህርት",
+      "imageCaption": "በ Abyssinia Academy የሁለተኛ ደረጃ የትምህርት ሕይወት አካል ሆነው በሳይንስ እና በሰብአዊነት ሴሚናሮች የሚሳተፉ ምሁራን።"
+    },
+    "story": {
+      "eyebrow": "የተቋም ዕድገት",
+      "title": "ታሪካችን እና የትምህርት ቅርሳችን",
+      "paragraph1": "የ Abyssinia Academy መሠረት የተነሳው በኢትዮጵያውያን መምህራን የጋራ እምነት ነው፤ አዲስ አበባ ከክፍል 9 እስከ 12 ያሉ ወጣቶችን የአእምሮ እና የሥነ ምግባር ብስለት የሚያሳድግ የተሰጠ የሁለተኛ ደረጃ ተቋም ያስፈልጋታል የሚል።",
+      "paragraph2": "አካዳሚው በዋና የሁለተኛ ደረጃ ትምህርት፣ በሥነ ሥርዓት የተመሠረቱ የጥናት ቦታዎች፣ በላቦራቶሪ ልምምዶች እና በመምህር-ተማሪ ትኩረት ባለው አማካሪነት አካባቢ ላይ ያተኩራል።",
+      "milestones": [
+        {
+          "phase": "የምሥረታ ደረጃ",
+          "marker": "ምሥረታ እና ቻርተር",
+          "note": "ታሪካዊ የቻርተር መዛግብት ሊረጋገጡ ነው",
+          "title": "የሁለተኛ ደረጃ ማዕቀፍ መመሥረት",
+          "body": "በአዲስ አበባ ያሉ ወጣቶችን ለማገልገል የተነደፈውን የአራት ዓመት የሁለተኛ ደረጃ ዑደት መክፈት፤ የትምህርት መግቢያን፣ የዜግነት ኃላፊነትን እና የዝግጅት ምሁርነትን ያጎላል።"
+        },
+        {
+          "phase": "የትምህርት ደረጃዎች",
+          "marker": "የሥርዓተ ትምህርት ማዕቀፍ",
+          "note": "ከመደበኛ የትምህርት ሚኒስቴር ማዕቀፎች ጋር የተጣጣመ",
+          "title": "ሥርዓተ ትምህርት እና የትምህርት ደረጃዎች",
+          "body": "የብሔራዊ የሁለተኛ ደረጃ ማዕቀፎችን በሒሳብ፣ በፊዚካል እና በተፈጥሮ ሳይንሶች ማዋሃድ፣ ከእንግሊዝኛ እና ከአማርኛ ሁለት ቋንቋ ትምህርት ጋር።"
+        },
+        {
+          "phase": "የግቢ አካባቢ",
+          "marker": "የግቢ ልማት",
+          "note": "የተቋማት ዝርዝር ሲጠየቅ ይቀርባል",
+          "title": "የክፍል እና የጥናት ተቋማት",
+          "body": "ለትብብር ምርመራ እና ትኩረት ላለው የከፍተኛ ክፍል ጥናት የተነደፉ የሁለተኛ ደረጃ ክፍሎችን፣ የጥናት ቦታዎችን እና የሳይንስ መማሪያ ቦታዎችን ማልማት።"
+        },
+        {
+          "phase": "የተማሪ ቡድኖች",
+          "marker": "ቀጣይ ምስረታ",
+          "note": "የቡድን ዝርዝሮች በመግቢያ ጽሕፈት ቤት ይረጋገጣሉ",
+          "title": "የሁለተኛ ደረጃ ትምህርት እና የዩኒቨርሲቲ ዝግጅት",
+          "body": "የሁለተኛ ደረጃ ቡድኖችን በብሔራዊ የፈተና ደረጃዎች እና በከፍተኛ ትምህርት የዝግጅት ሥርዓተ ትምህርት መሠረት ያለማቋረጥ ማዘጋጀት።"
+        }
+      ],
+      "archiveNote": "ማስታወሻ፦ ታሪካዊ ማህደር እና አስተዳደራዊ መዛግብት በአካዳሚው ጽሕፈት ቤት ይጠበቃሉ እና ሲጠየቁ ይቀርባሉ።"
+    },
+    "missionVision": {
+      "eyebrow": "ዓላማ",
+      "title": "ተልእኮአችን እና ራዕያችን",
+      "mission": {
+        "label": "ተልእኮ",
+        "title": "ጥብቅ፣ በጥያቄ የሚመራ የትምህርት ምስረታ",
+        "body": "“የትንተና ግልጽነትን፣ ሥነ ምግባራዊ ባህሪን እና ባህላዊ ጥበቃን የሚያሳድግ ጥብቅና በጥያቄ የሚመራ የሁለተኛ ደረጃ ትምህርት መስጠት፤ ተማሪዎች ለኢትዮጵያ ማህበረሰብ እና ለሰፊው ዓለም ትርጉም ያለው አስተዋጽኦ እንዲያበረክቱ ማስታጠቅ።”"
+      },
+      "vision": {
+        "label": "ራዕይ",
+        "title": "አርአያ የሆነ የኢትዮጵያ ምሁርነት ሞዴል",
+        "body": "“ወግ እና ወደ ፊት የሚመለከት ምሁርነት የሚገናኙበት አርአያ የሆነ የኢትዮጵያ የሁለተኛ ደረጃ ተቋም ሆኖ መቆም፤ በርኅራኄ፣ በትሕትና እና በአእምሯዊ ዓላማ የሚመሩ አሳቢ ምሁራንን ማስመረቅ።”"
+      }
+    },
+    "values": {
+      "eyebrow": "የባህሪ ምስረታ",
+      "title": "ዋና እሴቶቻችን",
+      "description": "እሴቶች በላቦራቶሪ፣ በፈተና አዳራሽ እና በማህበረሰብ ተሳትፎ ተነሳሽነቶች ውስጥ ይተገበራሉ።",
+      "items": [
+        {
+          "title": "ታማኝነት እና የአእምሮ ሐቀኝነት",
+          "body": "ለእውነተኛ ምሁርነት፣ ራስን ችሎ ችግር ለመፍታት እና ለፈተና ሐቀኝነት የማይደራደር ቁርጠኝነት።"
+        },
+        {
+          "title": "የትምህርት ልቀት እና ጥያቄ",
+          "body": "ከላዩ ላይ ሸምድዶ ከመያዝ ይልቅ ጽንሰ ሐሳባዊ ጥልቀትን ማስቀደም—መረጃን መመርመር፣ መላምቶችን መጠየቅ እና የሒሳብ ብቃትን መከታተል።"
+        },
+        {
+          "title": "ኃላፊነት እና የዜግነት ጥበቃ",
+          "body": "ለጋራ ጥበቃ እና ለአዲስ አበባ ማህበረሰብ ተቋማት አገልግሎት ንቁ ግዴታ።"
+        },
+        {
+          "title": "መከባበር እና ርኅራኄ",
+          "body": "የእያንዳንዱን የክፍል ጓደኛ እና የሠራተኛ ክብር ማረጋገጥ—በትዕግሥት ማዳመጥ እና በትህትና መናገር።"
+        },
+        {
+          "title": "ባህላዊ ቅርስ እና ኩራት",
+          "body": "ለኢትዮጵያ ቋንቋዊ ቅርስ፣ ለታሪክ አጻጻፍ እና ለማህበረሰባዊ ውርስ ከጥብቅ ዓለም አቀፍ ሳይንስ ጋር ሥር የሰደደ አክብሮት።"
+        },
+        {
+          "title": "የዕድሜ ልክ ፍላጎት እና መገረም",
+          "body": "ከፈተናዎች ባሻገር ለንባብ፣ ለሙከራዎች፣ ለሥነ ጽሑፍ አድናቆት እና ለአሳቢ ውይይት ያለውን ፍላጎት ማስቀጠል።"
+        }
+      ]
+    },
+    "governance": {
+      "eyebrow": "አስተዳደር",
+      "title": "አመራር እና አስተዳደር",
+      "description": "Abyssinia Academy ለትምህርት ጥራት፣ ለተቋማዊ ግልጽነት እና ለሕፃናት ጥበቃ በተሰጠ የአስተዳደር ሞዴል ይሰራል። የተሰየሙ ኃላፊዎች የሚታተሙት ሲረጋገጡ ብቻ ነው።",
+      "items": [
+        {
+          "title": "የትምህርት ቤቱ ሀላፊ ጽሕፈት ቤት",
+          "body": "ለትምህርት ጥራት፣ ለጥበቃ እና ለትምህርት ቤት ባህል ተቋማዊ አመራር።"
+        },
+        {
+          "title": "የትምህርት ክፍል ኃላፊዎች",
+          "body": "በሒሳብ፣ ሳይንሶች፣ ቋንቋዎች፣ ማህበራዊ ሳይንሶች፣ አይሲቲ እና ጥበባት የትምህርት ዘርፍ አመራር።"
+        },
+        {
+          "title": "የተማሪ ድጋፍ እና ጥበቃ",
+          "body": "ለተማሪ ደህንነት እና ለሕፃናት ጥበቃ የተሰጡ የእንክብካቤ ማዕቀፎች።"
+        },
+        {
+          "title": "የወላጅ እና የማህበረሰብ ግንኙነት",
+          "body": "ለቤተሰብ ግንኙነት እና ከአካዳሚው ጋር ለማህበረሰብ ተሳትፎ የሚሆኑ መንገዶች።"
+        }
+      ]
+    },
+    "environment": {
+      "eyebrow": "ግቢ",
+      "title": "የመማሪያ አካባቢያችን",
+      "items": [
+        {
+          "title": "የሁለተኛ ደረጃ ክፍሎች እና ላቦራቶሪዎች",
+          "body": "ለማስተማር፣ ለላቦራቶሪ ልምምድ እና በጥያቄ ለሚመራ የሁለተኛ ደረጃ ኮርስ ሥራ የሚሆኑ ቦታዎች።"
+        },
+        {
+          "title": "የጥናት እና የንባብ ቦታዎች",
+          "body": "ለንባብ፣ ለምርምር እና ለሚቆጣጠር ጥናት የሚሆኑ ጸጥ ያሉ እና የትብብር ቦታዎች።"
+        },
+        {
+          "title": "የውጪ መዝናኛ ሜዳዎች",
+          "body": "ስፖርትን፣ መዝናኛን እና የግቢ ማህበረሰብ ሕይወትን የሚደግፉ የውጪ ቦታዎች።"
+        }
+      ]
+    },
+    "community": {
+      "eyebrow": "አጋርነት",
+      "title": "ማህበረሰብ እና ቤተሰብ ተሳትፎ",
+      "body": "ቤተሰቦች በሁለተኛ ደረጃ ምስረታ አጋሮች ናቸው። አካዳሚው ለትምህርት እድገት፣ ለግቢ ሕይወት እና ለመግቢያ መመሪያ የግንኙነት መንገዶችን ይጠብቃል።",
+      "familyTitle": "የቤተሰብ ግንኙነት",
+      "familyBody": "የእድገት ስብሰባዎች፣ የመግለጫ ዝማኔዎች እና ከትምህርት ሠራተኞች ጋር ቀጥተኛ ግንኙነት አሳዳጊዎችን በትምህርት ዓመቱ ሁሉ ያሳውቃል።",
+      "cta": {
+        "title": "በ Abyssinia Academy የትምህርት ሕይወትን ያግኙ",
+        "body": "በባህሪያት ገጽ ፕሮግራሞችን ይመልከቱ፣ ወይም ለ{{grades}} መግቢያ ጥያቄዎች ካሉዎት መግቢያ ጽሕፈት ቤትን ያግኙ።",
+        "explore": "የትምህርት ፕሮግራሞችን ይመልከቱ",
+        "inquire": "በመግቢያ ጽሕፈት ቤት ይጠይቁ"
+      }
+    },
+    "stats": {
+      "established": "Established",
+      "students": "Students",
+      "staff": "Staff",
+      "alumni": "Alumni pathways",
+      "grades": "Grade levels"
+    },
+    "shaping": {
+      "eyebrow": "Our promise",
+      "title": "Shaping the Future",
+      "body": "At Abyssinia Academy we nurture the next generation of leaders, innovators, and thinkers. Through a rigorous academic program, modern facilities, and holistic development, we prepare students to excel in higher education and life beyond the classroom.",
+      "commitmentTitle": "Our Commitment",
+      "commitments": [
+        {
+          "title": "Excellence in Education",
+          "body": "Strong academic foundation across sciences, arts, and languages."
+        },
+        {
+          "title": "Innovation & Technology",
+          "body": "Hands-on labs, ICT, and digital learning tools."
+        },
+        {
+          "title": "Character & Leadership",
+          "body": "Clubs, sports, and community service to build confidence and responsibility."
+        },
+        {
+          "title": "Global Readiness",
+          "body": "Skills and knowledge to thrive in the 21st century."
+        }
+      ],
+      "quote": "Abyssinia Academy — Where Today's Learners Become Tomorrow's Leaders"
+    },
+    "campusLife": {
+      "eyebrow": "Daily life",
+      "title": "Campus Life",
+      "items": [
+        {
+          "title": "Starting the Day",
+          "body": "Students arrive with purpose — morning gatherings, first lessons, and a calm start to focused learning."
+        },
+        {
+          "title": "Friendships in Bloom",
+          "body": "Courtyards and study commons fill with conversation, teamwork, and friendships that last beyond graduation."
+        },
+        {
+          "title": "Action on the Field",
+          "body": "Sports and recreation build sportsmanship, energy, and healthy competition after class."
+        },
+        {
+          "title": "A Successful Day Ends",
+          "body": "As the day closes, scholars leave with new skills, shared stories, and readiness for tomorrow."
+        }
+      ],
+      "readMore": "Learn more"
+    },
+    "subjects": {
+      "eyebrow": "Curriculum",
+      "title": "Discover a Study Area That Will Transform Your Future",
+      "gradeRange": "Grade 9 – Grade 12",
+      "items": [
+        {
+          "name": "Amharic",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "English",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "Mathematics",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "Physics",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Chemistry",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Biology",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Geography",
+          "note": "Grade 9 – Grade 12 (Social Science focus in 11–12)"
+        },
+        {
+          "name": "IT",
+          "note": "Grade 9 – Grade 12"
+        }
+      ]
+    },
+    "whyStudy": {
+      "eyebrow": "Academics",
+      "title": "Why Study at Abyssinia Academy?",
+      "sightsTitle": "Set Your Sights on the Future",
+      "sightsBody": "We prepare every scholar for university pathways and responsible citizenship through innovative learning, holistic development, and a proven academic culture.",
+      "highlights": [
+        {
+          "title": "Innovative Learning",
+          "body": "Hands-on labs, digital tools, and inquiry-led classrooms."
+        },
+        {
+          "title": "Holistic Development",
+          "body": "Sports, arts, clubs, and leadership beyond the timetable."
+        },
+        {
+          "title": "Path to Success",
+          "body": "Consistent preparation for national exams and higher education."
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Strong Academic Foundation",
+          "body": "Sciences, mathematics, social sciences, Amharic, English, and ICT across {{grades}}."
+        },
+        {
+          "title": "Experienced Faculty",
+          "body": "Dedicated teachers who give individual attention and high expectations."
+        },
+        {
+          "title": "Holistic Development",
+          "body": "Debate, science clubs, arts, sports, and student leadership."
+        },
+        {
+          "title": "Proven Track Record",
+          "body": "A culture of examination readiness and alumni pathways to higher study."
+        }
+      ]
+    },
+    "tour": {
+      "eyebrow": "Visit",
+      "title": "Take a Virtual Tour of Our Campus",
+      "body": "Explore classrooms, labs, library spaces, and recreation areas — and see where your academic journey begins.",
+      "points": [
+        "Modern classrooms and science labs",
+        "Computer and ICT labs",
+        "Library and resource centers",
+        "Sports fields and recreation areas",
+        "Arts and cultural spaces"
+      ],
+      "cta": "View campus"
+    },
+    "readMore": "Read More",
+    "campusBlock": {
+      "title": "Abyssinia Academy's Campus",
+      "body": "A vibrant environment for students to learn, grow, and connect — classrooms, labs, grounds, and community spaces designed for academic excellence."
+    }
+  },
+  "blogs": {
+    "eyebrow": "የአካዳሚ መግለጫ",
+    "title": "ብሎጋችን",
+    "description": "ከትምህርት ዓለም የመጡ ግንዛቤዎች፣ ታሪኮች እና ዝማኔዎች",
+    "listLabel": "የብሎግ ጽሑፎች",
+    "featuredTitle": "ተለይተው የቀረቡ ጽሑፎች",
+    "recentTitle": "የቅርብ ጊዜ ጽሑፎች",
+    "searchLabel": "ጽሑፎችን ፈልግ",
+    "searchPlaceholder": "ጽሑፎችን ፈልግ...",
+    "searchSubmit": "ፈልግ",
+    "paginationLabel": "የብሎግ ገጾች",
+    "newsletter": {
+      "title": "ለጋዜጣችን ይመዝገቡ",
+      "blurb": "የቅርብ ጊዜ ጽሑፎችን እና ግንዛቤዎችን በቀጥታ ወደ ኢሜይልዎ ያግኙ።"
+    },
+    "placeholder": {
+      "date": "የሕትመት ቀን",
+      "title": "የጽሑፍ ርዕስ",
+      "excerpt": "የአጭር ቅንጭብ ቦታ — ለታተሙ ልጥፎች የተያዘ።",
+      "read": "አንብብ"
+    },
+    "empty": {
+      "title": "እስካሁን የታተሙ ልጥፎች የሉም",
+      "description": "በቅርቡ ይመልከቱ። በአካዳሚው CMS ሲታተሙ እዚህ ይታያሉ።"
+    },
+    "loading": "ልጥፎች በመጫን ላይ…",
+    "emptyShort": "እስካሁን የታተሙ ልጥፎች የሉም። በቅርቡ ይመልከቱ።",
+    "loadError": "ብሎጎችን አሁን መጫን አልተቻለም። ልጥፎችን ለማየት የኋላ ክፍል API ያስጀምሩ።",
+    "categoriesLabel": "ምድቦች",
+    "allCategories": "ሁሉም",
+    "readMore": "Read More",
+    "unpublished": "ቀን አይገኝም",
+    "prevPage": "ቀዳሚ",
+    "nextPage": "ቀጣይ",
+    "pageStatus": "ገጽ {{page}} ከ {{totalPages}}",
+    "popular": "Popular Posts"
+  },
+  "register": {
+    "banner": {
+      "title": "Register your interest",
+      "description": "Admissions are open for {{grades}}. Share a few details and our office will guide you through the next steps."
+    },
+    "help": "Prefer to talk first?",
+    "formTitle": "Student Registration Form",
+    "formSubtitle": "Admissions inquiry for {{grades}}. Our office will guide the next steps.",
+    "reset": "Reset"
+  },
+  "contact": {
+    "banner": {
+      "eyebrow": "ያግኙን",
+      "title": "ያግኙን",
+      "description": "ስለ መግቢያ፣ ትምህርት ወይም የግቢ ሕይወት ጥያቄ አለዎት? መልእክት ይላኩልን — ጽሕፈት ቤታችን በቅርቡ ይመልስልዎታል።"
+    },
+    "info": {
+      "badge": "የመገኛ መረጃ",
+      "title": "ከእርስዎ መስማት እንፈልጋለን",
+      "description": "ስለ መግቢያ፣ ሥርዓተ ትምህርት፣ የግቢ ጉብኝት ወይም አጠቃላይ መረጃ ቢጠይቁ — ማንኛውንም ጥያቄ ለመመለስ ዝግጁ ነን።",
+      "email": "ኢሜይል",
+      "admissionsOffice": "የመግቢያ ጽሕፈት ቤት",
+      "address": "አድራሻ",
+      "pending": "የተረጋገጠ ስልክ፣ ኢሜይል እና የመንገድ አድራሻ በ <code>SITE.contact</code> ከተረጋገጠ በኋላ እዚህ ይታያል። {{location}} ለጊዜው የታተመው የአድራሻ መስመር ነው።"
+    },
+    "visit": {
+      "title": "የግቢ ጉብኝት እያሰቡ ነው?",
+      "body": "ጉብኝት ይጠይቁ፤ ክፍሎችን፣ ላቦራቶሪዎችን እና የግቢ ቦታዎችን እናሳይዎታለን — ለወደፊት ቤተሰቦች የተዘጋጀ።",
+      "cta": "ጉብኝት ይጠይቁ"
+    },
+    "form": {
+      "title": "መልእክት ይላኩልን",
+      "name": "ሙሉ ስም",
+      "phone": "ስልክ ቁጥር (አማራጭ)",
+      "email": "ኢሜይል",
+      "subject": "ርዕስ",
+      "subjectPlaceholder": "መግቢያ፣ የግቢ ጉብኝት፣ አጠቃላይ ጥያቄ…",
+      "message": "መልእክት",
+      "messagePlaceholder": "እንዴት ልንረዳዎት እንችላለን?",
+      "submit": "መልእክት ላክ"
+    }
+  },
+  "events": {
+    "eyebrow": "የቅጥር ሕይወት",
+    "title": "ዝግጅቶች",
+    "description": "ከአቢሲኒያ አካዳሚ የታተሙ የቅጥር እና የትምህርት ዝግጅቶች።",
+    "loading": "ዝግጅቶች በመጫን ላይ…",
+    "loadError": "ዝግጅቶችን አሁን መጫን አልተቻለም።",
+    "readMore": "ዝርዝር →",
+    "empty": {
+      "title": "እስካሁን የታተሙ ዝግጅቶች የሉም",
+      "description": "በአካዳሚው CMS ሲታተሙ እዚህ ይታያሉ።"
+    },
+    "tabs": {
+      "happening": "Happening",
+      "upcoming": "Upcoming",
+      "expired": "Expired"
+    }
+  },
+  "eventDetail": {
+    "eyebrow": "ዝግጅት",
+    "backToList": "← ወደ ዝግጅቶች ተመለስ",
+    "loading": "ዝግጅት በመጫን ላይ…",
+    "loadError": "ይህን ዝግጅት አሁን መጫን አልተቻለም።",
+    "notFoundTitle": "ዝግጅቱ አልተገኘም",
+    "notFoundDescription": "ይህ ዝግጅት አይገኝም ወይም አልታተመም።"
+  },
+  "cms": {
+    "eyebrow": "የአካዳሚ ገጽ",
+    "loading": "ገጽ በመጫን ላይ…",
+    "loadError": "ይህን ገጽ አሁን መጫን አልተቻለም።",
+    "notFoundTitle": "ገጹ አልተገኘም",
+    "notFoundDescription": "ይህ የይዘት ገጽ አይገኝም ወይም አልታተመም።"
+  },
+  "newsletterPages": {
+    "confirm": {
+      "title": "ምዝገባን አረጋግጥ",
+      "description": "የAbyssinia Bulletin ምዝገባዎን እያረጋገጥን ነው።",
+      "loading": "ምዝገባዎን በማረጋገጥ ላይ…",
+      "missingToken": "ይህ የማረጋገጫ አገናኝ ቶከን የለውም። ከኢሜልዎ ያገኙትን አገናኝ እንደገና ይክፈቱ።",
+      "failed": "ይህን ምዝገባ ማረጋገጥ አልተቻለም። አገናኙ ልክ ያልሆነ ወይም ጊዜው ያለፈበት ሊሆን ይችላል።"
+    },
+    "unsubscribe": {
+      "title": "ከምዝገባ ውጣ",
+      "description": "ከAbyssinia Bulletin የመውጣት ጥያቄዎን እያሰናዳን ነው።",
+      "loading": "ምዝገባዎን በማዘመን ላይ…",
+      "missingToken": "ይህ የመውጣት አገናኝ ቶከን የለውም። ከኢሜልዎ ያገኙትን አገናኝ እንደገና ይክፈቱ።",
+      "failed": "አሁን ከምዝገባ መውጣት አልተቻለም። ቆይተው እንደገና ይሞክሩ።"
+    }
+  },
+  "forms": {
+    "admissions": {
+      "submitFailed": "የመግቢያ ጥያቄን ማስገባት አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "contact": {
+      "submitFailed": "መልእክትዎን መላክ አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "demoRequest": {
+      "submitFailed": "የማሳያ ጥያቄ ማስገባት አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "newsletter": {
+      "submitFailed": "የዜና መጽሔት ምዝገባ ማስገባት አልተቻለም። እባክዎ እንደገና ይሞክሩ።",
+      "followUpFailed": "የመግቢያ ጥያቄ ተቀምጧል፣ ነገር ግን የዜና መጽሔት ምዝገባ አልተሳካም።",
+      "confirmHint": "የማረጋገጫ መልእክት ከተላከ ምዝገባውን ለማረጋገጥ ኢሜልዎን ይፈትሹ።"
+    }
+  },
+  "amharicBook": {
+    "kicker": "የመጀመሪያ አማርኛዬ",
+    "titleHighlight": "ፊደላት",
+    "subtitle": "በእንግሊዝኛ ትርጉም ያለ የስዕል መጽሐፍ",
+    "coverAlt": "የመጀመሪያ አማርኛ ፊደላት የስዕል መጽሐፍ ሽፋን",
+    "blurb": "ለቤተሰቦች የምናጋራው ደስተኛ የፊደል መግቢያ — ፊደል ይንኩ፣ ቃል ይገናኙ፣ አማርኛ አለምን አንድ ድምጽ በአንድ እንዴት እንደሚከፍት ይመልከቱ።",
+    "familyLabel": "የፊደል ቤተሰብ",
+    "selectFidel": "ፊደል {{char}} ይምረጡ"
+  },
+  "academicsPage": {
+    "title": "Major & Program",
+    "nav": {
+      "overview": "Overview",
+      "outcomes": "Learning outcomes",
+      "programs": "Programs",
+      "amharic": "የአማርኛ መጽሐፍ",
+      "streams": "Streams",
+      "entry": "Entry requirements",
+      "apply": "How to apply"
+    },
+    "amharic": {
+      "title": "አማርኛ — ቋንቋ በልብ",
+      "body": "በ Abyssinia የሁለተኛ ደረጃ አማርኛ ንግግር፣ ሥነ ጽሑፍ እና ግልጽ አገላለጽ ያሳድጋል። ፊደልንም ደስተኛ እናደርገዋለን — ይህ የስዕል መጽሐፍ ለቤተሰቦች ሞቅ ያለ መግቢያ እና ለእያንዳንዱ ተማሪ አስደሳች ማደስ ነው።"
+    },
+    "overview": {
+      "title": "Overview",
+      "p1": "Abyssinia Academy delivers quality secondary education for {{grades}}, aligned with the Ethiopian Ministry of Education curriculum and focused on readiness for national examinations and higher education.",
+      "p2": "Students build strong foundations across sciences, languages, and social studies, then choose preparatory streams that match their university pathways."
+    },
+    "outcomesTitle": "Learning Outcomes",
+    "outcomes": [
+      "Strong academic knowledge across core secondary subjects",
+      "Critical thinking and problem-solving habits",
+      "Clear communication in Amharic and English",
+      "Confident use of digital technology and ICT tools",
+      "Collaboration, leadership, and civic responsibility",
+      "Preparation for national exams and university entry"
+    ],
+    "programs": {
+      "title": "Programs Offered",
+      "secondaryTitle": "Secondary School Program (Grades 9–10)",
+      "secondaryBody": "Foundational secondary curriculum preparing students for the national Grade 10 examination and stream selection."
+    },
+    "grade9Subjects": [
+      "English",
+      "Amharic",
+      "Mathematics",
+      "Biology",
+      "Chemistry",
+      "Physics",
+      "History",
+      "Geography",
+      "Civics & Ethical Education",
+      "Information and Communication Technology (ICT)",
+      "Physical Education",
+      "Economics",
+      "Business"
+    ],
+    "streams": {
+      "title": "Stream",
+      "naturalTitle": "Natural Science Stream",
+      "naturalBody": "Prepares students for science- and technology-based university programs.",
+      "socialTitle": "Social Science Stream",
+      "socialBody": "Prepares students for social sciences, business, and humanities pathways."
+    },
+    "naturalSubjects": [
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Technical Drawing",
+      "English",
+      "ICT",
+      "Civics & Ethical Education"
+    ],
+    "socialSubjects": [
+      "Mathematics",
+      "History",
+      "Geography",
+      "Economics",
+      "Business",
+      "English",
+      "ICT",
+      "Civics & Ethical Education"
+    ],
+    "pathwaysTitle": "Future University Pathways",
+    "pathways": [
+      "Medicine and Health Sciences",
+      "Engineering",
+      "Computer Science & IT",
+      "Business, Law, and Social Sciences"
+    ],
+    "entry": {
+      "title": "Entry Requirements",
+      "grade9Title": "Secondary School (Grade 9)",
+      "grade9a": "Completion of primary education",
+      "grade9b": "Placement based on regional or national examination results",
+      "grade11Title": "Preparatory School (Grade 11)",
+      "grade11a": "Successful completion of Grade 10",
+      "grade11b": "Passing the Ethiopian General Secondary School Leaving Certificate Examination (EGSLCE)",
+      "grade11c": "Stream placement based on academic performance"
+    },
+    "apply": {
+      "title": "How to Apply",
+      "body": "Your application will require certified copies of academic records and guidance from the admissions office.",
+      "step1": "Obtain an application form from the school administration",
+      "step2": "Submit previous academic records",
+      "step3": "Complete placement and registration requirements",
+      "step4": "Enroll and begin your academic journey",
+      "cta": "Apply Now"
+    }
+  },
+  "admissionPage": {
+    "howToApplyTitle": "Detail About How to Apply",
+    "howToApply": {
+      "p1": "Admissions are open for {{grades}}. We review every applicant carefully — academic records, character, and readiness to join our learning community — rather than using a single formula.",
+      "p2": "Share your details through the inquiry form below. Our Admissions Office will guide you through assessment dates, required documents, and enrollment steps."
+    },
+    "faqTitle": "Admission Questions",
+    "faqLeft": [
+      {
+        "question": "What does submitting an inquiry mean, and what's next?",
+        "answer": "An inquiry tells our office you are interested. We will contact you with the next steps for assessment, documentation, and enrollment for Grades 9–12."
+      },
+      {
+        "question": "I missed a reply deadline. Can I still continue?",
+        "answer": "Contact the Admissions Office as soon as possible. Late replies are reviewed case by case when capacity remains."
+      },
+      {
+        "question": "Can I appeal or reapply?",
+        "answer": "Yes. You may request guidance on appeals or reapplication windows from Admissions after a decision is issued."
+      }
+    ],
+    "faqRight": [
+      {
+        "question": "My status is unqualified. What does that mean?",
+        "answer": "It usually means required criteria or documents were not met for this cycle. Admissions can explain options for the next intake."
+      },
+      {
+        "question": "If my status is qualified, am I accepted?",
+        "answer": "Qualified means you meet academic criteria. Final acceptance depends on placement capacity, interview (if required), and completed enrollment steps."
+      },
+      {
+        "question": "I submitted documents late. What should I do?",
+        "answer": "Email or visit Admissions with your reference details. We will confirm whether your file can be restored or resubmitted."
+      }
+    ],
+    "processTitle": "The Application Process",
+    "process": [
+      {
+        "title": "Start Online Inquiry",
+        "body": "Complete the admissions interest form with student and guardian contact details."
+      },
+      {
+        "title": "Submit The Form",
+        "body": "Send your inquiry so our office can open a file and reply with next steps."
+      },
+      {
+        "title": "Review The Submission",
+        "body": "Admissions reviews your details and confirms assessment or visit guidance."
+      },
+      {
+        "title": "Gather Necessary Documents",
+        "body": "Prepare academic records, identification, and any required certificates."
+      },
+      {
+        "title": "Interviewing Process",
+        "body": "Attend placement assessment or interview when invited by the school."
+      },
+      {
+        "title": "Last Decision",
+        "body": "Receive the admissions decision and complete enrollment to begin the term."
+      }
+    ],
+    "thingsTitle": "Things to Know First",
+    "thingsBody": "Abyssinia Academy uses a clear admissions pathway for secondary entry. Prepare accurate contact details and academic history before you apply.",
+    "youWillNeed": "You will need:",
+    "needs": [
+      {
+        "text": "Student full name and intended grade (9–12)"
+      },
+      {
+        "text": "Parent/guardian contact email and phone"
+      },
+      {
+        "text": "Previous school academic records (certified copies)"
+      },
+      {
+        "text": "Willingness to complete placement requirements"
+      }
+    ],
+    "whereTitle": "Where to Apply?",
+    "applyNow": "Apply Now"
+  }
+}

@@ -1,0 +1,44 @@
+const express = require('express');
+const teachersRoutes = require('./teachers.routes');
+const studentsRoutes = require('./students.routes');
+const academicYearsRoutes = require('./academic-years.routes');
+const gradeLevelsRoutes = require('./grade-levels.routes');
+const sectionsRoutes = require('./sections.routes');
+const subjectsRoutes = require('./subjects.routes');
+const classOfferingsRoutes = require('./class-offerings.routes');
+const teachingAssignmentsRoutes = require('./teaching-assignments.routes');
+const enrollmentsRoutes = require('./enrollments.routes');
+const attendanceRoutes = require('./attendance.routes');
+const assignmentsRoutes = require('./assignments.routes');
+const examinationsRoutes = require('./examinations.routes');
+const gradebookRoutes = require('./gradebook.routes');
+const feesRoutes = require('./fees.routes');
+const studentFeesRoutes = require('./student-fees.routes');
+const announcementsRoutes = require('./announcements.routes');
+const timetablesRoutes = require('./timetables.routes');
+const learningMaterialsRoutes = require('./learning-materials.routes');
+const reportsRoutes = require('./reports.routes');
+
+const router = express.Router();
+
+router.use('/teachers', teachersRoutes);
+router.use('/students', studentsRoutes);
+router.use('/academic-years', academicYearsRoutes);
+router.use('/grade-levels', gradeLevelsRoutes);
+router.use('/sections', sectionsRoutes);
+router.use('/subjects', subjectsRoutes);
+router.use('/class-offerings', classOfferingsRoutes);
+router.use('/teaching-assignments', teachingAssignmentsRoutes);
+router.use('/enrollments', enrollmentsRoutes);
+router.use('/attendance', attendanceRoutes);
+router.use('/assignments', assignmentsRoutes);
+router.use('/examinations', examinationsRoutes);
+router.use('/gradebook', gradebookRoutes);
+router.use('/fees', feesRoutes);
+router.use('/student-fees', studentFeesRoutes);
+router.use('/announcements', announcementsRoutes);
+router.use('/timetables', timetablesRoutes);
+router.use('/learning-materials', learningMaterialsRoutes);
+router.use('/reports', reportsRoutes);
+
+module.exports = router;

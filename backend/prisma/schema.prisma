@@ -1,0 +1,1267 @@
+// High School Website Platform — core database schema (MySQL + Prisma 7)
+// Credentials belong in environment variables / prisma.config.cjs, not here.
+
+generator client {
+  // Keep JavaScript client generation (no TypeScript toolchain required).
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum PublicationStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum BlogPostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ContactMessageStatus {
+  NEW
+  READ
+  REPLIED
+  ARCHIVED
+}
+
+enum NewsletterStatus {
+  PENDING
+  ACTIVE
+  UNSUBSCRIBED
+}
+
+enum EventStatus {
+  DRAFT
+  PUBLISHED
+  CANCELLED
+  ARCHIVED
+}
+
+enum AdmissionInquiryStatus {
+  NEW
+  CONTACTED
+  UNDER_REVIEW
+  CLOSED
+}
+
+enum EnrollmentStatus {
+  ACTIVE
+  TRANSFERRED
+  WITHDRAWN
+  COMPLETED
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+  EXCUSED
+}
+
+enum SubmissionStatus {
+  SUBMITTED
+  GRADED
+  RETURNED
+  LATE
+}
+
+enum FeePaymentStatus {
+  UNPAID
+  PARTIAL
+  PAID
+  WAIVED
+}
+
+enum AnnouncementAudience {
+  ALL
+  TEACHERS
+  STUDENTS
+  CLASS
+}
+
+enum Weekday {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+enum LearningMaterialCategory {
+  NOTES
+  HANDOUT
+  SLIDES
+  WORKSHEET
+  ASSIGNMENT_RESOURCE
+  OTHER
+}
+
+enum AuditActorType {
+  ADMIN
+  TEACHER
+  STUDENT
+  SYSTEM
+}
+
+// ---------------------------------------------------------------------------
+// Administrator management
+// ---------------------------------------------------------------------------
+
+model Role {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique @db.VarChar(100)
+  slug        String   @unique @db.VarChar(100)
+  description String?  @db.VarChar(500)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  admins Admin[]
+
+  @@map("roles")
+}
+
+model Admin {
+  id           Int       @id @default(autoincrement())
+  email        String    @unique @db.VarChar(255)
+  passwordHash String    @map("password_hash") @db.VarChar(255)
+  firstName    String    @map("first_name") @db.VarChar(100)
+  lastName     String    @map("last_name") @db.VarChar(100)
+  isActive     Boolean   @default(true) @map("is_active")
+  // Incremented on logout so previously issued JWTs become invalid.
+  tokenVersion Int       @default(0) @map("token_version")
+  lastLoginAt  DateTime? @map("last_login_at")
+  deletedAt    DateTime? @map("deleted_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  roleId Int  @map("role_id")
+  role   Role @relation(fields: [roleId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  pagesCreated       Page[]               @relation("PageCreatedBy")
+  pagesUpdated       Page[]               @relation("PageUpdatedBy")
+  blogPosts          BlogPost[]           @relation("BlogPostAuthor")
+  contactMessages    ContactMessage[]     @relation("ContactMessageHandledBy")
+  eventsCreated      Event[]              @relation("EventCreatedBy")
+  mediaUploads       MediaAsset[]         @relation("MediaUploadedBy")
+  settingsUpdated    WebsiteSetting[]     @relation("SettingUpdatedBy")
+  auditLogs          AuditLog[]           @relation("AuditLogAdmin")
+  announcements      Announcement[]       @relation("AnnouncementCreatedBy")
+  feePaymentsRecorded FeePayment[]        @relation("FeePaymentRecordedBy")
+  timetablesCreated  Timetable[]          @relation("TimetableCreatedBy")
+  learningMaterialsArchived LearningMaterial[] @relation("LearningMaterialArchivedBy")
+  notifications      Notification[]       @relation("NotificationAdminRecipient")
+  conversationParticipants ConversationParticipant[] @relation("ConversationParticipantAdmin")
+  messagesSent       Message[]            @relation("MessageSentByAdmin")
+
+  @@index([roleId])
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("admins")
+}
+
+// ---------------------------------------------------------------------------
+// Website pages
+// ---------------------------------------------------------------------------
+
+model Page {
+  id          Int               @id @default(autoincrement())
+  title       String            @db.VarChar(255)
+  slug        String            @unique @db.VarChar(255)
+  content     String            @db.LongText
+  status      PublicationStatus @default(DRAFT)
+  publishedAt DateTime?         @map("published_at")
+  deletedAt   DateTime?         @map("deleted_at")
+  createdAt   DateTime          @default(now()) @map("created_at")
+  updatedAt   DateTime          @updatedAt @map("updated_at")
+
+  createdById Int?   @map("created_by_id")
+  updatedById Int?   @map("updated_by_id")
+  createdBy   Admin? @relation("PageCreatedBy", fields: [createdById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  updatedBy   Admin? @relation("PageUpdatedBy", fields: [updatedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([publishedAt])
+  @@index([deletedAt])
+  @@index([createdById])
+  @@index([updatedById])
+  @@map("pages")
+}
+
+// ---------------------------------------------------------------------------
+// Blog management
+// ---------------------------------------------------------------------------
+
+model BlogCategory {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(150)
+  slug        String    @unique @db.VarChar(150)
+  description String?   @db.VarChar(500)
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  posts BlogPost[]
+
+  @@index([deletedAt])
+  @@map("blog_categories")
+}
+
+model BlogPost {
+  id          Int            @id @default(autoincrement())
+  title       String         @db.VarChar(255)
+  slug        String         @unique @db.VarChar(255)
+  excerpt     String?        @db.VarChar(500)
+  content     String         @db.LongText
+  status      BlogPostStatus @default(DRAFT)
+  publishedAt DateTime?      @map("published_at")
+  deletedAt   DateTime?      @map("deleted_at")
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+
+  authorId        Int  @map("author_id")
+  categoryId      Int? @map("category_id")
+  featuredImageId Int? @map("featured_image_id")
+
+  author        Admin         @relation("BlogPostAuthor", fields: [authorId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  category      BlogCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  featuredImage MediaAsset?   @relation("BlogPostFeaturedImage", fields: [featuredImageId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([publishedAt])
+  @@index([authorId])
+  @@index([categoryId])
+  @@index([featuredImageId])
+  @@index([deletedAt])
+  @@map("blog_posts")
+}
+
+// ---------------------------------------------------------------------------
+// Contact messages
+// ---------------------------------------------------------------------------
+
+model ContactMessage {
+  id        Int                  @id @default(autoincrement())
+  name      String               @db.VarChar(150)
+  email     String               @db.VarChar(255)
+  phone     String?              @db.VarChar(50)
+  subject   String               @db.VarChar(255)
+  message   String               @db.Text
+  status    ContactMessageStatus @default(NEW)
+  createdAt DateTime             @default(now()) @map("created_at")
+  updatedAt DateTime             @updatedAt @map("updated_at")
+
+  handledById Int?   @map("handled_by_id")
+  handledBy   Admin? @relation("ContactMessageHandledBy", fields: [handledById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([email])
+  @@index([createdAt])
+  @@index([handledById])
+  @@map("contact_messages")
+}
+
+// ---------------------------------------------------------------------------
+// Newsletter
+// ---------------------------------------------------------------------------
+
+model NewsletterSubscriber {
+  id                         Int              @id @default(autoincrement())
+  email                      String           @unique @db.VarChar(255)
+  status                     NewsletterStatus @default(PENDING)
+  confirmationTokenHash      String?          @unique @map("confirmation_token_hash") @db.VarChar(64)
+  confirmationTokenExpiresAt DateTime?        @map("confirmation_token_expires_at")
+  confirmedAt                DateTime?        @map("confirmed_at")
+  unsubscribeTokenHash       String?          @unique @map("unsubscribe_token_hash") @db.VarChar(64)
+  unsubscribedAt             DateTime?        @map("unsubscribed_at")
+  deletedAt                  DateTime?        @map("deleted_at")
+  createdAt                  DateTime         @default(now()) @map("created_at")
+  updatedAt                  DateTime         @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([deletedAt])
+  @@map("newsletter_subscribers")
+}
+
+// ---------------------------------------------------------------------------
+// Admissions inquiries (inquiry inbox only — not a full enrollment system)
+// ---------------------------------------------------------------------------
+
+model AdmissionInquiry {
+  id               Int                     @id @default(autoincrement())
+  studentName      String                  @map("student_name") @db.VarChar(150)
+  guardianName     String?                 @map("guardian_name") @db.VarChar(150)
+  email            String                  @db.VarChar(255)
+  phone            String                  @db.VarChar(50)
+  gradeApplyingFor String                  @map("grade_applying_for") @db.VarChar(50)
+  academicYear     String                  @map("academic_year") @db.VarChar(20)
+  message          String                  @db.Text
+  status           AdmissionInquiryStatus  @default(NEW)
+  deletedAt        DateTime?               @map("deleted_at")
+  createdAt        DateTime                @default(now()) @map("created_at")
+  updatedAt        DateTime                @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([email])
+  @@index([phone])
+  @@index([gradeApplyingFor])
+  @@index([academicYear])
+  @@index([createdAt])
+  @@index([deletedAt])
+  @@map("admission_inquiries")
+}
+
+// ---------------------------------------------------------------------------
+// School events
+// ---------------------------------------------------------------------------
+
+model Event {
+  id          Int         @id @default(autoincrement())
+  title       String      @db.VarChar(255)
+  slug        String      @unique @db.VarChar(255)
+  description String      @db.Text
+  location    String?     @db.VarChar(255)
+  startsAt    DateTime    @map("starts_at")
+  endsAt      DateTime?   @map("ends_at")
+  status      EventStatus @default(DRAFT)
+  publishedAt DateTime?   @map("published_at")
+  deletedAt   DateTime?   @map("deleted_at")
+  createdAt   DateTime    @default(now()) @map("created_at")
+  updatedAt   DateTime    @updatedAt @map("updated_at")
+
+  createdById     Int? @map("created_by_id")
+  featuredImageId Int? @map("featured_image_id")
+
+  createdBy     Admin?      @relation("EventCreatedBy", fields: [createdById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  featuredImage MediaAsset? @relation("EventFeaturedImage", fields: [featuredImageId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([status])
+  @@index([startsAt])
+  @@index([endsAt])
+  @@index([publishedAt])
+  @@index([deletedAt])
+  @@index([createdById])
+  @@index([featuredImageId])
+  @@map("events")
+}
+
+// ---------------------------------------------------------------------------
+// Media management (metadata only — no binary file storage in MySQL)
+// ---------------------------------------------------------------------------
+
+model MediaAsset {
+  id            Int       @id @default(autoincrement())
+  /** Cryptographically random public identifier used in public content URLs (not sequential). */
+  publicId      String    @unique @map("public_id") @db.VarChar(64)
+  fileName      String    @map("file_name") @db.VarChar(255)
+  originalName  String    @map("original_name") @db.VarChar(255)
+  mimeType      String    @map("mime_type") @db.VarChar(100)
+  fileSize      Int       @map("file_size")
+  storagePath   String    @map("storage_path") @db.VarChar(500)
+  altText       String?   @map("alt_text") @db.VarChar(255)
+  description   String?   @db.VarChar(500)
+  isGalleryImage Boolean  @default(false) @map("is_gallery_image")
+  sortOrder     Int       @default(0) @map("sort_order")
+  deletedAt     DateTime? @map("deleted_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  uploadedById Int?   @map("uploaded_by_id")
+  uploadedBy   Admin? @relation("MediaUploadedBy", fields: [uploadedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  blogPostsAsFeatured BlogPost[] @relation("BlogPostFeaturedImage")
+  eventsAsFeatured    Event[]    @relation("EventFeaturedImage")
+
+  @@index([mimeType])
+  @@index([isGalleryImage])
+  @@index([sortOrder])
+  @@index([uploadedById])
+  @@index([deletedAt])
+  @@index([createdAt])
+  @@map("media_assets")
+}
+
+// ---------------------------------------------------------------------------
+// Website settings (key/value configuration)
+// ---------------------------------------------------------------------------
+
+model WebsiteSetting {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique @db.VarChar(100)
+  value     String   @db.Text
+  group     String?  @db.VarChar(100)
+  label     String?  @db.VarChar(150)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  updatedById Int?   @map("updated_by_id")
+  updatedBy   Admin? @relation("SettingUpdatedBy", fields: [updatedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([group])
+  @@index([updatedById])
+  @@map("website_settings")
+}
+
+// ---------------------------------------------------------------------------
+// Audit logs
+// ---------------------------------------------------------------------------
+
+model AuditLog {
+  id         Int      @id @default(autoincrement())
+  action     String   @db.VarChar(100)
+  entityType String?  @map("entity_type") @db.VarChar(100)
+  entityId   String?  @map("entity_id") @db.VarChar(100)
+  metadata   Json?
+  ipAddress  String?  @map("ip_address") @db.VarChar(45)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  // Existing admin FK preserved; optional polymorphic actor for SMS identities.
+  actorType AuditActorType? @map("actor_type")
+  actorId   Int?            @map("actor_id")
+
+  adminId   Int?     @map("admin_id")
+  admin     Admin?   @relation("AuditLogAdmin", fields: [adminId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  teacherId Int?     @map("teacher_id")
+  teacher   Teacher? @relation("AuditLogTeacher", fields: [teacherId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  studentId Int?     @map("student_id")
+  student   Student? @relation("AuditLogStudent", fields: [studentId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([adminId])
+  @@index([teacherId])
+  @@index([studentId])
+  @@index([actorType, actorId])
+  @@index([action])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
+
+// ---------------------------------------------------------------------------
+// School Management System — Phase 2 identity + academic structure
+// Three actors only: Admin (existing), Teacher, Student. No Parent.
+// ---------------------------------------------------------------------------
+
+model Teacher {
+  id           Int       @id @default(autoincrement())
+  email        String    @unique @db.VarChar(255)
+  passwordHash String    @map("password_hash") @db.VarChar(255)
+  firstName    String    @map("first_name") @db.VarChar(100)
+  lastName     String    @map("last_name") @db.VarChar(100)
+  employeeCode String?   @unique @map("employee_code") @db.VarChar(50)
+  phone        String?   @db.VarChar(50)
+  isActive     Boolean   @default(true) @map("is_active")
+  tokenVersion Int       @default(0) @map("token_version")
+  lastLoginAt  DateTime? @map("last_login_at")
+  deletedAt    DateTime? @map("deleted_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  homeroomClasses     ClassOffering[]      @relation("ClassHomeroomTeacher")
+  teachingAssignments TeachingAssignment[]
+  auditLogs           AuditLog[]           @relation("AuditLogTeacher")
+  attendanceRecorded  AttendanceRecord[]   @relation("AttendanceRecordedBy")
+  assignmentsCreated  Assignment[]         @relation("AssignmentCreatedBy")
+  submissionsGraded   AssignmentSubmission[] @relation("SubmissionGradedBy")
+  examResultsEntered  ExamResult[]         @relation("ExamResultEnteredBy")
+  examinationsSubmitted Examination[]      @relation("ExaminationSubmittedBy")
+  timetableEntries    TimetableEntry[]
+  learningMaterials   LearningMaterial[]
+  notifications       Notification[]       @relation("NotificationTeacherRecipient")
+  conversationParticipants ConversationParticipant[] @relation("ConversationParticipantTeacher")
+  messagesSent        Message[]            @relation("MessageSentByTeacher")
+
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("teachers")
+}
+
+model Student {
+  id            Int       @id @default(autoincrement())
+  email         String    @unique @db.VarChar(255)
+  passwordHash  String    @map("password_hash") @db.VarChar(255)
+  firstName     String    @map("first_name") @db.VarChar(100)
+  lastName      String    @map("last_name") @db.VarChar(100)
+  studentCode   String    @unique @map("student_code") @db.VarChar(50)
+  dateOfBirth   DateTime? @map("date_of_birth") @db.Date
+  gender        String?   @db.VarChar(30)
+  phone         String?   @db.VarChar(50)
+  guardianName  String?   @map("guardian_name") @db.VarChar(150)
+  guardianPhone String?   @map("guardian_phone") @db.VarChar(50)
+  isActive      Boolean   @default(true) @map("is_active")
+  tokenVersion  Int       @default(0) @map("token_version")
+  lastLoginAt   DateTime? @map("last_login_at")
+  deletedAt     DateTime? @map("deleted_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  enrollments  Enrollment[]
+  auditLogs    AuditLog[]              @relation("AuditLogStudent")
+  attendance   AttendanceRecord[]
+  submissions  AssignmentSubmission[]
+  examResults  ExamResult[]
+  studentFees  StudentFee[]
+  notifications Notification[]         @relation("NotificationStudentRecipient")
+  conversationParticipants ConversationParticipant[] @relation("ConversationParticipantStudent")
+  messagesSent Message[]               @relation("MessageSentByStudent")
+
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("students")
+}
+
+model AcademicYear {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(100)
+  code      String    @unique @db.VarChar(50)
+  startsOn  DateTime  @map("starts_on") @db.Date
+  endsOn    DateTime  @map("ends_on") @db.Date
+  isCurrent Boolean   @default(false) @map("is_current")
+  deletedAt DateTime? @map("deleted_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  terms           AcademicTerm[]
+  classOfferings  ClassOffering[]
+  enrollments     Enrollment[]
+  studentFees     StudentFee[]
+  examinations    Examination[]
+  timetables      Timetable[]
+  learningMaterials LearningMaterial[]
+
+  @@index([isCurrent])
+  @@index([deletedAt])
+  @@map("academic_years")
+}
+
+model AcademicTerm {
+  id             Int       @id @default(autoincrement())
+  academicYearId Int       @map("academic_year_id")
+  name           String    @db.VarChar(100)
+  sequence       Int
+  startsOn       DateTime  @map("starts_on") @db.Date
+  endsOn         DateTime  @map("ends_on") @db.Date
+  deletedAt      DateTime? @map("deleted_at")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+
+  academicYear        AcademicYear         @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  teachingAssignments TeachingAssignment[]
+  examinations        Examination[]
+  studentFees         StudentFee[]
+  timetables          Timetable[]
+  learningMaterials   LearningMaterial[]
+
+  @@unique([academicYearId, sequence])
+  @@index([academicYearId])
+  @@index([deletedAt])
+  @@map("academic_terms")
+}
+
+model GradeLevel {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(100)
+  code      String    @unique @db.VarChar(20)
+  sortOrder Int       @default(0) @map("sort_order")
+  deletedAt DateTime? @map("deleted_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  classOfferings ClassOffering[]
+
+  @@index([sortOrder])
+  @@index([deletedAt])
+  @@map("grade_levels")
+}
+
+model Section {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(100)
+  code      String    @unique @db.VarChar(20)
+  deletedAt DateTime? @map("deleted_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  classOfferings ClassOffering[]
+
+  @@index([deletedAt])
+  @@map("sections")
+}
+
+model Subject {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(150)
+  code        String    @unique @db.VarChar(50)
+  description String?   @db.VarChar(500)
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  teachingAssignments TeachingAssignment[]
+  assignments         Assignment[]
+  examinations        Examination[]
+  timetableEntries    TimetableEntry[]
+  learningMaterials   LearningMaterial[]
+
+  @@index([deletedAt])
+  @@map("subjects")
+}
+
+model ClassOffering {
+  id                Int       @id @default(autoincrement())
+  academicYearId    Int       @map("academic_year_id")
+  gradeLevelId      Int       @map("grade_level_id")
+  sectionId         Int       @map("section_id")
+  name              String    @db.VarChar(150)
+  homeroomTeacherId Int?      @map("homeroom_teacher_id")
+  deletedAt         DateTime? @map("deleted_at")
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime  @updatedAt @map("updated_at")
+
+  academicYear        AcademicYear         @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  gradeLevel          GradeLevel           @relation(fields: [gradeLevelId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  section             Section              @relation(fields: [sectionId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  homeroomTeacher     Teacher?             @relation("ClassHomeroomTeacher", fields: [homeroomTeacherId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  teachingAssignments TeachingAssignment[]
+  enrollments         Enrollment[]
+  attendanceRecords   AttendanceRecord[]
+  assignments         Assignment[]
+  examinations        Examination[]
+  announcements       Announcement[]
+  timetables          Timetable[]
+  learningMaterials   LearningMaterial[]
+
+  @@unique([academicYearId, gradeLevelId, sectionId])
+  @@index([academicYearId])
+  @@index([gradeLevelId])
+  @@index([sectionId])
+  @@index([homeroomTeacherId])
+  @@index([deletedAt])
+  @@map("class_offerings")
+}
+
+model TeachingAssignment {
+  id              Int       @id @default(autoincrement())
+  teacherId       Int       @map("teacher_id")
+  classOfferingId Int       @map("class_offering_id")
+  subjectId       Int       @map("subject_id")
+  academicTermId  Int?      @map("academic_term_id")
+  /// NULL-safe unique companion: "YEAR" when academicTermId is null, else term id string.
+  termScopeKey    String    @map("term_scope_key") @db.VarChar(40)
+  isPrimary       Boolean   @default(false) @map("is_primary")
+  deletedAt       DateTime? @map("deleted_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  teacher       Teacher        @relation(fields: [teacherId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  classOffering ClassOffering  @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  subject       Subject        @relation(fields: [subjectId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicTerm  AcademicTerm?  @relation(fields: [academicTermId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@unique([teacherId, classOfferingId, subjectId, termScopeKey])
+  @@index([teacherId])
+  @@index([classOfferingId])
+  @@index([subjectId])
+  @@index([academicTermId])
+  @@index([deletedAt])
+  @@map("teaching_assignments")
+}
+
+model Enrollment {
+  id              Int              @id @default(autoincrement())
+  studentId       Int              @map("student_id")
+  classOfferingId Int              @map("class_offering_id")
+  academicYearId  Int              @map("academic_year_id")
+  status          EnrollmentStatus @default(ACTIVE)
+  enrolledAt      DateTime         @default(now()) @map("enrolled_at")
+  leftAt          DateTime?        @map("left_at")
+  /// Active uniqueness key: studentId:classOfferingId while live; rewritten on soft-delete.
+  activeScopeKey  String           @unique @map("active_scope_key") @db.VarChar(80)
+  deletedAt       DateTime?        @map("deleted_at")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+
+  student       Student       @relation(fields: [studentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  classOffering ClassOffering @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicYear  AcademicYear  @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@index([studentId])
+  @@index([classOfferingId])
+  @@index([academicYearId])
+  @@index([status])
+  @@index([deletedAt])
+  @@map("enrollments")
+}
+
+// ---------------------------------------------------------------------------
+// SMS operations: attendance, assignments, exams, fees, announcements
+// ---------------------------------------------------------------------------
+
+model AttendanceRecord {
+  id              Int              @id @default(autoincrement())
+  studentId       Int              @map("student_id")
+  classOfferingId Int              @map("class_offering_id")
+  attendanceDate  DateTime         @map("attendance_date") @db.Date
+  status          AttendanceStatus @default(PRESENT)
+  notes           String?          @db.VarChar(500)
+  recordedById    Int?             @map("recorded_by_id")
+  deletedAt       DateTime?        @map("deleted_at")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+
+  student       Student       @relation(fields: [studentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  classOffering ClassOffering @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  recordedBy    Teacher?      @relation("AttendanceRecordedBy", fields: [recordedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@unique([studentId, classOfferingId, attendanceDate], map: "attendance_student_class_date_key")
+  @@index([classOfferingId, attendanceDate], map: "attendance_class_date_idx")
+  @@index([studentId])
+  @@index([deletedAt])
+  @@map("attendance_records")
+}
+
+model Assignment {
+  id              Int       @id @default(autoincrement())
+  title           String    @db.VarChar(255)
+  description     String?   @db.Text
+  classOfferingId Int       @map("class_offering_id")
+  subjectId       Int       @map("subject_id")
+  teacherId       Int       @map("teacher_id")
+  dueAt           DateTime? @map("due_at")
+  maxScore        Decimal   @default(100) @map("max_score") @db.Decimal(8, 2)
+  isPublished     Boolean   @default(true) @map("is_published")
+  deletedAt       DateTime? @map("deleted_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  classOffering ClassOffering          @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  subject       Subject                @relation(fields: [subjectId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  teacher       Teacher                @relation("AssignmentCreatedBy", fields: [teacherId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  submissions   AssignmentSubmission[]
+
+  @@index([classOfferingId])
+  @@index([subjectId])
+  @@index([teacherId])
+  @@index([dueAt])
+  @@index([deletedAt])
+  @@map("assignments")
+}
+
+model AssignmentSubmission {
+  id           Int              @id @default(autoincrement())
+  assignmentId Int              @map("assignment_id")
+  studentId    Int              @map("student_id")
+  content      String?          @db.Text
+  status       SubmissionStatus @default(SUBMITTED)
+  score        Decimal?         @db.Decimal(8, 2)
+  feedback     String?          @db.Text
+  submittedAt  DateTime         @default(now()) @map("submitted_at")
+  gradedAt     DateTime?        @map("graded_at")
+  gradedById   Int?             @map("graded_by_id")
+  deletedAt    DateTime?        @map("deleted_at")
+  createdAt    DateTime         @default(now()) @map("created_at")
+  updatedAt    DateTime         @updatedAt @map("updated_at")
+
+  assignment Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  student    Student    @relation(fields: [studentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  gradedBy   Teacher?   @relation("SubmissionGradedBy", fields: [gradedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@unique([assignmentId, studentId], map: "submission_assignment_student_key")
+  @@index([studentId])
+  @@index([status])
+  @@index([deletedAt])
+  @@map("assignment_submissions")
+}
+
+enum ExamMarksStatus {
+  DRAFT
+  SUBMITTED
+}
+
+enum GradeWeightMode {
+  RELATIVE
+  PERCENT
+}
+
+/// Configurable letter-grade scale for gradebook calculations.
+model GradingScale {
+  id                  Int             @id @default(autoincrement())
+  name                String          @db.VarChar(100)
+  description         String?         @db.VarChar(500)
+  isDefault           Boolean         @default(false) @map("is_default")
+  weightMode          GradeWeightMode @default(RELATIVE) @map("weight_mode")
+  treatMissingAsZero  Boolean         @default(false) @map("treat_missing_as_zero")
+  decimalPlaces       Int             @default(2) @map("decimal_places")
+  deletedAt           DateTime?       @map("deleted_at")
+  createdAt           DateTime        @default(now()) @map("created_at")
+  updatedAt           DateTime        @updatedAt @map("updated_at")
+
+  boundaries GradeBoundary[]
+
+  @@index([isDefault])
+  @@index([deletedAt])
+  @@map("grading_scales")
+}
+
+model GradeBoundary {
+  id             Int     @id @default(autoincrement())
+  gradingScaleId Int     @map("grading_scale_id")
+  letter         String  @db.VarChar(5)
+  minPercent     Decimal @map("min_percent") @db.Decimal(5, 2)
+  maxPercent     Decimal @map("max_percent") @db.Decimal(5, 2)
+  remark         String? @db.VarChar(255)
+  sortOrder      Int     @default(0) @map("sort_order")
+
+  gradingScale GradingScale @relation(fields: [gradingScaleId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@index([gradingScaleId])
+  @@map("grade_boundaries")
+}
+
+/// Assessment categories (classwork, quiz, midterm, …) with configurable default weights.
+model AssessmentCategory {
+  id            Int       @id @default(autoincrement())
+  code          String    @unique @db.VarChar(50)
+  name          String    @db.VarChar(100)
+  description   String?   @db.VarChar(500)
+  defaultWeight Decimal   @default(1) @map("default_weight") @db.Decimal(8, 2)
+  sortOrder     Int       @default(0) @map("sort_order")
+  isActive      Boolean   @default(true) @map("is_active")
+  deletedAt     DateTime? @map("deleted_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  examinations Examination[]
+
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("assessment_categories")
+}
+
+model Examination {
+  id              Int             @id @default(autoincrement())
+  name            String          @db.VarChar(255)
+  examType        String          @default("MIDTERM") @map("exam_type") @db.VarChar(50)
+  classOfferingId Int             @map("class_offering_id")
+  subjectId       Int             @map("subject_id")
+  academicYearId  Int             @map("academic_year_id")
+  academicTermId  Int?            @map("academic_term_id")
+  examDate        DateTime?       @map("exam_date") @db.Date
+  maxScore        Decimal         @default(100) @map("max_score") @db.Decimal(8, 2)
+  categoryId      Int?            @map("category_id")
+  weight          Decimal         @default(1) @map("weight") @db.Decimal(8, 2)
+  marksStatus     ExamMarksStatus @default(DRAFT) @map("marks_status")
+  submittedAt     DateTime?       @map("submitted_at")
+  submittedById   Int?            @map("submitted_by_id")
+  isPublished     Boolean         @default(false) @map("is_published")
+  deletedAt       DateTime?       @map("deleted_at")
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+
+  classOffering ClassOffering       @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  subject       Subject             @relation(fields: [subjectId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicYear  AcademicYear        @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicTerm  AcademicTerm?       @relation(fields: [academicTermId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  category      AssessmentCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  submittedBy   Teacher?            @relation("ExaminationSubmittedBy", fields: [submittedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  results       ExamResult[]
+
+  @@index([classOfferingId])
+  @@index([subjectId])
+  @@index([academicYearId])
+  @@index([academicTermId])
+  @@index([categoryId])
+  @@index([marksStatus])
+  @@index([deletedAt])
+  @@map("examinations")
+}
+
+model ExamResult {
+  id          Int       @id @default(autoincrement())
+  examId      Int       @map("exam_id")
+  studentId   Int       @map("student_id")
+  score       Decimal   @db.Decimal(8, 2)
+  gradeLetter String?   @map("grade_letter") @db.VarChar(5)
+  remarks     String?   @db.VarChar(500)
+  enteredById Int?      @map("entered_by_id")
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  exam      Examination @relation(fields: [examId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  student   Student     @relation(fields: [studentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  enteredBy Teacher?    @relation("ExamResultEnteredBy", fields: [enteredById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@unique([examId, studentId], map: "exam_result_exam_student_key")
+  @@index([studentId])
+  @@index([deletedAt])
+  @@map("exam_results")
+}
+
+model FeeStructure {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(150)
+  description String?   @db.VarChar(500)
+  amount      Decimal   @db.Decimal(12, 2)
+  currency    String    @default("ETB") @db.VarChar(10)
+  isActive    Boolean   @default(true) @map("is_active")
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  studentFees StudentFee[]
+
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("fee_structures")
+}
+
+model StudentFee {
+  id             Int              @id @default(autoincrement())
+  studentId      Int              @map("student_id")
+  feeStructureId Int              @map("fee_structure_id")
+  academicYearId Int              @map("academic_year_id")
+  academicTermId Int?             @map("academic_term_id")
+  amountDue      Decimal          @map("amount_due") @db.Decimal(12, 2)
+  amountPaid     Decimal          @default(0) @map("amount_paid") @db.Decimal(12, 2)
+  status         FeePaymentStatus @default(UNPAID)
+  dueDate        DateTime?        @map("due_date") @db.Date
+  notes          String?          @db.VarChar(500)
+  deletedAt      DateTime?        @map("deleted_at")
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime         @updatedAt @map("updated_at")
+
+  student      Student      @relation(fields: [studentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  feeStructure FeeStructure @relation(fields: [feeStructureId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicYear AcademicYear @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicTerm AcademicTerm? @relation(fields: [academicTermId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  payments     FeePayment[]
+
+  @@index([studentId])
+  @@index([feeStructureId])
+  @@index([academicYearId])
+  @@index([status])
+  @@index([deletedAt])
+  @@map("student_fees")
+}
+
+model FeePayment {
+  id              Int       @id @default(autoincrement())
+  studentFeeId    Int       @map("student_fee_id")
+  amount          Decimal   @db.Decimal(12, 2)
+  paymentMethod   String?   @map("payment_method") @db.VarChar(50)
+  reference       String?   @db.VarChar(100)
+  paidAt          DateTime  @default(now()) @map("paid_at")
+  recordedById    Int?      @map("recorded_by_id")
+  notes           String?   @db.VarChar(500)
+  deletedAt       DateTime? @map("deleted_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  studentFee StudentFee @relation(fields: [studentFeeId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  recordedBy Admin?     @relation("FeePaymentRecordedBy", fields: [recordedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([studentFeeId])
+  @@index([paidAt])
+  @@index([deletedAt])
+  @@map("fee_payments")
+}
+
+model Announcement {
+  id              Int                  @id @default(autoincrement())
+  title           String               @db.VarChar(255)
+  body            String               @db.Text
+  audience        AnnouncementAudience @default(ALL)
+  classOfferingId Int?                 @map("class_offering_id")
+  isPublished     Boolean              @default(false) @map("is_published")
+  publishedAt     DateTime?            @map("published_at")
+  createdById     Int                  @map("created_by_id")
+  deletedAt       DateTime?            @map("deleted_at")
+  createdAt       DateTime             @default(now()) @map("created_at")
+  updatedAt       DateTime             @updatedAt @map("updated_at")
+
+  classOffering ClassOffering? @relation(fields: [classOfferingId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  createdBy     Admin          @relation("AnnouncementCreatedBy", fields: [createdById], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@index([audience])
+  @@index([classOfferingId])
+  @@index([isPublished])
+  @@index([deletedAt])
+  @@map("announcements")
+}
+
+// ---------------------------------------------------------------------------
+// SMS timetable module
+// ---------------------------------------------------------------------------
+
+model Classroom {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(150)
+  code      String    @unique @db.VarChar(50)
+  capacity  Int?
+  deletedAt DateTime? @map("deleted_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  timetableEntries TimetableEntry[]
+
+  @@index([deletedAt])
+  @@map("classrooms")
+}
+
+/// Weekly timetable container for one class offering within a year (and optional term).
+model Timetable {
+  id              Int       @id @default(autoincrement())
+  academicYearId  Int       @map("academic_year_id")
+  academicTermId  Int?      @map("academic_term_id")
+  /// "YEAR" when academicTermId is null, else the term id as string.
+  termScopeKey    String    @map("term_scope_key") @db.VarChar(40)
+  classOfferingId Int       @map("class_offering_id")
+  title           String?   @db.VarChar(255)
+  isPublished     Boolean   @default(false) @map("is_published")
+  publishedAt     DateTime? @map("published_at")
+  createdById     Int       @map("created_by_id")
+  deletedAt       DateTime? @map("deleted_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  academicYear  AcademicYear   @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicTerm  AcademicTerm?  @relation(fields: [academicTermId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  classOffering ClassOffering  @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  createdBy     Admin          @relation("TimetableCreatedBy", fields: [createdById], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  entries       TimetableEntry[]
+
+  @@unique([classOfferingId, termScopeKey])
+  @@index([academicYearId])
+  @@index([academicTermId])
+  @@index([classOfferingId])
+  @@index([isPublished])
+  @@index([deletedAt])
+  @@map("timetables")
+}
+
+model TimetableEntry {
+  id          Int       @id @default(autoincrement())
+  timetableId Int       @map("timetable_id")
+  dayOfWeek   Weekday   @map("day_of_week")
+  /// Local wall-clock time as HH:mm (24h).
+  startTime   String    @map("start_time") @db.Char(5)
+  endTime     String    @map("end_time") @db.Char(5)
+  subjectId   Int       @map("subject_id")
+  teacherId   Int       @map("teacher_id")
+  classroomId Int?      @map("classroom_id")
+  isActive    Boolean   @default(true) @map("is_active")
+  notes       String?   @db.VarChar(500)
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  timetable Timetable  @relation(fields: [timetableId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  subject   Subject    @relation(fields: [subjectId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  teacher   Teacher    @relation(fields: [teacherId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  classroom Classroom? @relation(fields: [classroomId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([timetableId])
+  @@index([dayOfWeek])
+  @@index([teacherId, dayOfWeek])
+  @@index([classroomId, dayOfWeek])
+  @@index([subjectId])
+  @@index([isActive])
+  @@index([deletedAt])
+  @@map("timetable_entries")
+}
+
+// ---------------------------------------------------------------------------
+// SMS learning materials module
+// ---------------------------------------------------------------------------
+
+/// Teacher-uploaded class resource. File bytes live on disk via storage.service;
+/// only metadata is stored in MySQL.
+model LearningMaterial {
+  id              Int                       @id @default(autoincrement())
+  title           String                    @db.VarChar(255)
+  description     String?                   @db.VarChar(2000)
+  category        LearningMaterialCategory  @default(OTHER)
+  academicYearId  Int                       @map("academic_year_id")
+  academicTermId  Int?                      @map("academic_term_id")
+  classOfferingId Int                       @map("class_offering_id")
+  subjectId       Int                       @map("subject_id")
+  teacherId       Int                       @map("teacher_id")
+  /// Stored file basename (from storage key).
+  fileName        String                    @map("file_name") @db.VarChar(255)
+  originalName    String                    @map("original_name") @db.VarChar(255)
+  mimeType        String                    @map("mime_type") @db.VarChar(120)
+  fileSize        Int                       @map("file_size")
+  /// Relative key under MEDIA_STORAGE_PATH (never absolute).
+  storagePath     String                    @map("storage_path") @db.VarChar(500)
+  isPublished     Boolean                   @default(false) @map("is_published")
+  publishedAt     DateTime?                 @map("published_at")
+  archivedAt      DateTime?                 @map("archived_at")
+  archivedById    Int?                      @map("archived_by_id")
+  deletedAt       DateTime?                 @map("deleted_at")
+  createdAt       DateTime                  @default(now()) @map("created_at")
+  updatedAt       DateTime                  @updatedAt @map("updated_at")
+
+  academicYear  AcademicYear   @relation(fields: [academicYearId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  academicTerm  AcademicTerm?  @relation(fields: [academicTermId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  classOffering ClassOffering  @relation(fields: [classOfferingId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  subject       Subject        @relation(fields: [subjectId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  teacher       Teacher        @relation(fields: [teacherId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  archivedBy    Admin?         @relation("LearningMaterialArchivedBy", fields: [archivedById], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([academicYearId])
+  @@index([academicTermId])
+  @@index([classOfferingId])
+  @@index([subjectId])
+  @@index([teacherId])
+  @@index([category])
+  @@index([isPublished])
+  @@index([archivedAt])
+  @@index([deletedAt])
+  @@index([createdAt])
+  @@map("learning_materials")
+}
+
+// ---------------------------------------------------------------------------
+// Notifications module
+// ---------------------------------------------------------------------------
+
+enum NotificationRecipientType {
+  ADMIN
+  TEACHER
+  STUDENT
+}
+
+enum NotificationCategory {
+  ACADEMIC
+  ATTENDANCE
+  TIMETABLE
+  LEARNING_MATERIAL
+  ANNOUNCEMENT
+  ADMINISTRATION
+  MESSAGING
+}
+
+/// Persisted in-app notifications. Polymorphic recipient via type + id FKs.
+model Notification {
+  id                 Int                       @id @default(autoincrement())
+  recipientType      NotificationRecipientType @map("recipient_type")
+  /// Stable recipient key: ADMIN:1 | TEACHER:2 | STUDENT:3 (MySQL-safe uniqueness).
+  recipientScopeKey  String                    @map("recipient_scope_key") @db.VarChar(40)
+  adminId            Int?                      @map("admin_id")
+  teacherId          Int?                      @map("teacher_id")
+  studentId          Int?                      @map("student_id")
+  title              String                    @db.VarChar(255)
+  message            String                    @db.VarChar(1000)
+  category           NotificationCategory
+  /// Idempotency key per recipient. Unique with scope; use event-specific values.
+  dedupeKey          String                    @map("dedupe_key") @db.VarChar(191)
+  entityType         String?                   @map("entity_type") @db.VarChar(100)
+  entityId           String?                   @map("entity_id") @db.VarChar(100)
+  actionPath         String?                   @map("action_path") @db.VarChar(500)
+  isRead             Boolean                   @default(false) @map("is_read")
+  readAt             DateTime?                 @map("read_at")
+  archivedAt         DateTime?                 @map("archived_at")
+  deletedAt          DateTime?                 @map("deleted_at")
+  createdAt          DateTime                  @default(now()) @map("created_at")
+  updatedAt          DateTime                  @updatedAt @map("updated_at")
+
+  admin   Admin?   @relation("NotificationAdminRecipient", fields: [adminId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  teacher Teacher? @relation("NotificationTeacherRecipient", fields: [teacherId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  student Student? @relation("NotificationStudentRecipient", fields: [studentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@unique([recipientScopeKey, dedupeKey], map: "notification_recipient_dedupe_key")
+  @@index([recipientType, adminId, isRead, createdAt])
+  @@index([recipientType, teacherId, isRead, createdAt])
+  @@index([recipientType, studentId, isRead, createdAt])
+  @@index([recipientScopeKey, isRead, createdAt])
+  @@index([category])
+  @@index([archivedAt])
+  @@index([deletedAt])
+  @@index([createdAt])
+  @@map("notifications")
+}
+
+// ---------------------------------------------------------------------------
+// Direct messaging (1:1 conversations between Admin / Teacher / Student)
+// ---------------------------------------------------------------------------
+
+enum MessagingActorType {
+  ADMIN
+  TEACHER
+  STUDENT
+}
+
+/// One-to-one conversation. pairKey is a sorted "TYPE:id|TYPE:id" uniqueness key.
+model Conversation {
+  id            Int       @id @default(autoincrement())
+  pairKey       String    @unique @map("pair_key") @db.VarChar(80)
+  lastMessageAt DateTime? @map("last_message_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  participants ConversationParticipant[]
+  messages     Message[]
+
+  @@index([lastMessageAt])
+  @@map("conversations")
+}
+
+model ConversationParticipant {
+  id                  Int                 @id @default(autoincrement())
+  conversationId      Int                 @map("conversation_id")
+  participantType     MessagingActorType  @map("participant_type")
+  /// ADMIN:1 | TEACHER:2 | STUDENT:3
+  participantScopeKey String              @map("participant_scope_key") @db.VarChar(40)
+  adminId             Int?                @map("admin_id")
+  teacherId           Int?                @map("teacher_id")
+  studentId           Int?                @map("student_id")
+  lastReadAt          DateTime?           @map("last_read_at")
+  createdAt           DateTime            @default(now()) @map("created_at")
+  updatedAt           DateTime            @updatedAt @map("updated_at")
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  admin        Admin?       @relation("ConversationParticipantAdmin", fields: [adminId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  teacher      Teacher?     @relation("ConversationParticipantTeacher", fields: [teacherId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  student      Student?     @relation("ConversationParticipantStudent", fields: [studentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@unique([conversationId, participantScopeKey], map: "conversation_participant_unique")
+  @@index([participantScopeKey, lastReadAt])
+  @@index([adminId])
+  @@index([teacherId])
+  @@index([studentId])
+  @@index([conversationId])
+  @@map("conversation_participants")
+}
+
+model Message {
+  id             Int                @id @default(autoincrement())
+  conversationId Int                @map("conversation_id")
+  senderType     MessagingActorType @map("sender_type")
+  senderScopeKey String             @map("sender_scope_key") @db.VarChar(40)
+  adminId        Int?               @map("admin_id")
+  teacherId      Int?               @map("teacher_id")
+  studentId      Int?               @map("student_id")
+  body           String             @db.VarChar(2000)
+  createdAt      DateTime           @default(now()) @map("created_at")
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  admin        Admin?       @relation("MessageSentByAdmin", fields: [adminId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  teacher      Teacher?     @relation("MessageSentByTeacher", fields: [teacherId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  student      Student?     @relation("MessageSentByStudent", fields: [studentId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([conversationId, createdAt])
+  @@index([senderScopeKey])
+  @@index([createdAt])
+  @@map("messages")
+}

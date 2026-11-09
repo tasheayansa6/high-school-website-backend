@@ -1,0 +1,46 @@
+# Keep secrets and deps out of the repo root
+backend/node_modules/
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/.env.local
+backend/.env.*.local
+backend/storage/uploads/**
+!backend/storage/uploads/.gitkeep
+backend/coverage/
+backend/logs/
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/playwright-report/
+frontend/test-results/
+frontend/.env
+frontend/.env.*
+frontend/.env.local
+frontend/.env.*.local
+!frontend/.env.example
+
+# Credential / key material (never commit)
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+credentials.json
+**/service-account*.json
+.env.production
+.env.staging
+.env.development.local
+
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# Database backups must never enter Git (store outside the repo).
+*.sql
+*.sql.gz
+*.sql.gz.sha256
+*.sql.gz.meta.json
+**/abyssinia-academy-db-backups/
+backend/backups/

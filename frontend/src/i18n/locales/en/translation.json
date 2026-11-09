@@ -1,0 +1,1552 @@
+{
+  "common": {
+    "siteName": "Abyssinia Academy",
+    "tagline": "Addis Ababa • Ethiopia",
+    "locationLine": "Addis Ababa, Ethiopia",
+    "location": "Addis Ababa",
+    "country": "Ethiopia",
+    "description": "Nurturing intellectual leadership, scientific curiosity, and moral integrity in secondary education across Grades 9 through 12.",
+    "gradesLabel": "Grades 9–12",
+    "studentsImageAlt": "Abyssinia Academy students",
+    "loading": "Loading…",
+    "loadingPage": "Loading page…",
+    "somethingWrong": "Something went wrong",
+    "tryAgain": "Try again",
+    "returnHome": "Return home",
+    "contactUs": "Contact us",
+    "contactSchool": "Contact the School",
+    "exploreAcademicPrograms": "Explore Academic Programs",
+    "submitAdmissionsInquiry": "Submit Admissions Inquiry →",
+    "email": "Email",
+    "admissionsOffice": "Admissions Office",
+    "focus": "Focus",
+    "pleaseWait": "Please wait…"
+  },
+  "languages": {
+    "select": "Select language",
+    "listLabel": "Languages",
+    "en": "English",
+    "am": "አማርኛ",
+    "om": "Afaan Oromoo"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "aboutOverview": "Overview",
+    "aboutStory": "Our Story",
+    "aboutMission": "Mission & Vision",
+    "aboutCampus": "Campus Life",
+    "academics": "Academics",
+    "academicsOverview": "Overview",
+    "academicsSubjects": "Subjects",
+    "academicsWhy": "Why Study Here",
+    "admission": "Admission",
+    "blogs": "News",
+    "news": "News",
+    "contact": "Contact",
+    "primary": "Primary",
+    "mobilePrimary": "Mobile primary",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "events": "Events",
+    "search": "Search news",
+    "login": "Login"
+  },
+  "signin": {
+    "help": "Need help? Contact your school administrator.",
+    "signIn": "Sign In",
+    "signingIn": "Signing in…",
+    "forgotPassword": "Forgot your password? Contact the school administrator to reset it.",
+    "errors": {
+      "generic": "Unable to sign in. Please try again."
+    },
+    "identify": {
+      "title": "School Sign-in",
+      "subtitle": "Choose Teacher or Student to continue.",
+      "label": "I am signing in as",
+      "helper": "Accounts are created by the school. Staff use the admin sign-in link provided by the school.",
+      "continue": "Continue"
+    },
+    "roles": {
+      "admin": {
+        "title": "Admin"
+      },
+      "teacher": {
+        "title": "Teacher"
+      },
+      "student": {
+        "title": "Student"
+      }
+    },
+    "welcomeBack": "Welcome back!",
+    "welcomeSubtitle": "Log in to continue your journey and get things done.",
+    "loginToAccount": "Log in to your account",
+    "happyToSeeYou": "We're happy to see you again!",
+    "studentCodeLogin": "Student code",
+    "keepSignedIn": "Keep me signed in",
+    "resetPassword": "Forgot your password?",
+    "admissionsPrompt": "Don't have an account?",
+    "authMethod": {
+      "label": "Sign-in method",
+      "email": "Email",
+      "code": "Code",
+      "detectedEmail": "Detected: Email",
+      "detectedStudentCode": "Detected: Student code"
+    },
+    "credentials": {
+      "adminSubtitle": "Sign in to manage your school",
+      "teacherSubtitle": "Sign in to your teaching account",
+      "studentSubtitle": "Sign in to access your personalized dashboard"
+    },
+    "fields": {
+      "email": "Email",
+      "emailPlaceholder": "e.g. you@school.edu.et",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "loginCode": "Login code",
+      "loginCodePlaceholder": "Enter your student code",
+      "loginCodeHelper": "Use the student code issued by your school admin.",
+      "studentIdentifier": "Email or student code",
+      "studentIdentifierPlaceholder": "e.g. 0909 or you@school.edu.et",
+      "studentIdentifierHelper": "Given to you by your school admin."
+    },
+    "switch": {
+      "staffPrompt": "Not admin?",
+      "otherPrompt": "Wrong portal?",
+      "chooseRole": "Choose role"
+    }
+  },
+  "footer": {
+    "brandTagline": "Secondary education in Addis Ababa",
+    "explore": "Explore",
+    "columns": {
+      "platform": "Explore",
+      "resources": "Campus",
+      "support": "Admissions"
+    },
+    "resources": {
+      "contactSales": "Contact the School",
+      "ourStory": "Our Story"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "portals": "Sign in",
+    "portalLinks": {
+      "admin": "Admin sign-in",
+      "teacher": "Teacher sign-in",
+      "student": "Student sign-in",
+      "admissions": "Admissions Inquiry"
+    },
+    "newsletter": {
+      "title": "Stay close to campus",
+      "blurb": "Occasional notes on student work, celebrations, and invitations — never a flood of mail.",
+      "emailLabel": "Your email",
+      "emailPlaceholder": "family@example.com",
+      "subscribe": "Join the list",
+      "notice": "We confirm by email first, so you stay in control."
+    },
+    "contact": {
+      "admissionsOffice": "Admissions Office",
+      "inquiries": "Inquiries",
+      "administration": "Administration"
+    },
+    "copyright": "© {{year}} Abyssinia Academy. All rights reserved."
+  },
+  "errors": {
+    "boundary": {
+      "title": "Something went wrong",
+      "message": "An unexpected error occurred while rendering this page. You can return to the home page and continue browsing.",
+      "returnHome": "Return home"
+    }
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Page not found",
+    "description": "The page you requested does not exist or may have moved. Use the navigation or return home.",
+    "returnHome": "Return home",
+    "contactUs": "Contact us"
+  },
+  "blogDetail": {
+    "eyebrow": "Academy Bulletin",
+    "fallbackTitle": "Article",
+    "description": "Article detail",
+    "backToList": "← Back to blogs",
+    "loading": "Loading article…",
+    "loadError": "Unable to load this article right now.",
+    "notFoundTitle": "Article not found",
+    "notFoundDescription": "This post is unavailable or has not been published."
+  },
+  "home": {
+    "scrollNav": {
+      "ariaLabel": "Page sections",
+      "top": "Top",
+      "stats": "At a glance",
+      "shaping": "Shaping the Future",
+      "subjects": "Subjects",
+      "campus": "Campus Life",
+      "news": "Latest News",
+      "admission": "Admission"
+    },
+    "campusLifeIntro": "Ordinary days become lasting memories — mornings in class, friendships on the grounds, and evenings that close with quiet pride.",
+    "hero": {
+      "badge": "Built for Ethiopian Schools",
+      "title": "A place to grow into who you are becoming.",
+      "description": "At Abyssinia Academy, students are known by name. We teach with care, challenge with purpose, and walk beside every learner from Grade 9 through 12.",
+      "ctaPrimary": "Meet our school",
+      "ctaSecondary": "Talk with us",
+      "scrollDown": "Continue",
+      "tablistLabel": "Role work previews (not sign-in)",
+      "dotsLabel": "Show role work preview",
+      "openPortal": "Preview {{portal}} work",
+      "tabs": {
+        "admin": "Admin",
+        "teacher": "Teacher",
+        "student": "Student"
+      },
+      "trust": [
+        {
+          "icon": "translate",
+          "label": "English & Amharic"
+        },
+        {
+          "icon": "cloud",
+          "label": "Secure Hosting"
+        },
+        {
+          "icon": "backup",
+          "label": "Daily Backups"
+        }
+      ],
+      "previews": {
+        "admin": {
+          "title": "Admin Workspace",
+          "subtitle": "Run the whole school",
+          "nav": [
+            "Teachers & students",
+            "Classes & enrollments",
+            "Attendance",
+            "Assignments & exams",
+            "Fees",
+            "Reports & site"
+          ],
+          "stats": [
+            {
+              "label": "Active students",
+              "value": "1,245"
+            },
+            {
+              "label": "Open fee balances",
+              "value": "86"
+            }
+          ],
+          "rows": [
+            "Publish announcements to classes",
+            "Assign tuition & record payments",
+            "Review attendance & exam reports"
+          ]
+        },
+        "teacher": {
+          "title": "Teacher Workspace",
+          "subtitle": "Teach your assigned classes",
+          "nav": [
+            "My classes",
+            "My students",
+            "Attendance",
+            "Assignments",
+            "Exam results",
+            "Profile"
+          ],
+          "stats": [
+            {
+              "label": "Assigned classes",
+              "value": "4"
+            },
+            {
+              "label": "Submissions to grade",
+              "value": "12"
+            }
+          ],
+          "rows": [
+            "Mark Grade 9A attendance",
+            "Publish homework for Physics",
+            "Enter midterm scores"
+          ]
+        },
+        "student": {
+          "title": "Student Workspace",
+          "subtitle": "Your academic hub",
+          "nav": [
+            "My classes",
+            "Subjects",
+            "Attendance",
+            "Assignments",
+            "Exam results",
+            "Fees & notices"
+          ],
+          "stats": [
+            {
+              "label": "Assignments due",
+              "value": "3"
+            },
+            {
+              "label": "Fee balance",
+              "value": "ETB 2k"
+            }
+          ],
+          "rows": [
+            "Submit Math homework",
+            "View published exam results",
+            "Read school announcements"
+          ]
+        }
+      }
+    },
+    "intro": {
+      "eyebrow": "Our Commitment & Values",
+      "heading": "A tradition of academic rigor rooted in ethical responsibility and innovation.",
+      "curriculum": "Our curriculum unites rigorous STEM education, language fluency in Amharic and English, and humanities that honor Ethiopian and global perspectives.",
+      "holistic": {
+        "title": "Holistic Education",
+        "body": "Integrated national curriculum enriched with leadership and inquiry."
+      },
+      "language": {
+        "title": "Language Mastery",
+        "body": "Academic English fluency alongside rich Amharic rhetoric."
+      },
+      "imageLabel": "Campus Life",
+      "quote": "Our institutional commitment is to cultivate reflective scholars who honor cultural heritage while acquiring analytical mastery to serve their communities with integrity.",
+      "attribution": "Abyssinia Academy, {{location}}"
+    },
+    "pillars": {
+      "eyebrow": "Institutional Principles",
+      "title": "The Dual Pillars of Abyssinia Academy",
+      "one": {
+        "label": "Pillar One",
+        "title": "Academic Rigor & Intellectual Curiosity",
+        "body": "Fostering analytical problem-solving, scientific inquiry, literature, and social study so graduates lead with insight in higher education.",
+        "caption": "Foundational Academic Standard"
+      },
+      "two": {
+        "label": "Pillar Two",
+        "title": "Cultural Heritage & Global Citizenship",
+        "body": "Honoring Ethiopian traditions of community, perseverance, and scholarship while preparing graduates for university pathways and civic contribution.",
+        "caption": "Global Outlook & Community Roots"
+      }
+    },
+    "honor": {
+      "tabs": {
+        "honor": "Academic Integrity & Honor",
+        "leadership": "Student Leadership",
+        "stewardship": "Community Service & Stewardship"
+      },
+      "panels": {
+        "honor": {
+          "title": "“Integrity, Respect, and Intellectual Honesty”",
+          "body": "Every student at Abyssinia Academy commits to ethical scholarship—independent thinking, respect for diverse viewpoints, and personal responsibility in every classroom.",
+          "points": [
+            "Commitment to honest original academic work",
+            "Mutual respect across the student community",
+            "Clear expectations for academic integrity"
+          ],
+          "badge": "Integrity Covenant",
+          "note": "A tradition of mutual trust and character building in every cohort."
+        },
+        "leadership": {
+          "title": "Student Leadership & Shared Responsibility",
+          "body": "Leadership opportunities invite students to serve peers, support campus life, and practice stewardship appropriate to secondary school.",
+          "points": [
+            "Student voice in campus life and peer support",
+            "Collaborative projects across year groups",
+            "Mentorship that grows with each grade"
+          ],
+          "badge": "Student Leadership",
+          "note": "Character formed through responsibility and service."
+        },
+        "stewardship": {
+          "title": "Community Service & Stewardship",
+          "body": "Civic responsibility is cultivated through age-appropriate service and care for the community around the academy.",
+          "points": [
+            "Service rooted in local community needs",
+            "Respect for cultural heritage and shared spaces",
+            "Habits of stewardship that extend beyond campus"
+          ],
+          "badge": "Civic Responsibility",
+          "note": "Learning to contribute with integrity and care."
+        }
+      }
+    },
+    "departments": {
+      "eyebrow": "Curricular Disciplines",
+      "title": "The Academic Departments",
+      "focusLabel": "Focus",
+      "viewProgram": "View Program",
+      "items": [
+        {
+          "eyebrow": "Physical & Life Sciences",
+          "title": "Natural Sciences & STEM",
+          "body": "Physics, chemistry, biology, and environmental sciences with laboratory practice and inquiry-led problem-solving.",
+          "aside": "Laboratory practice and scientific investigation across the secondary cycle.",
+          "meta": "Grades 9–12"
+        },
+        {
+          "eyebrow": "Quantitative Disciplines",
+          "title": "Mathematics & Computer Studies",
+          "body": "Progression through algebra, trigonometry, calculus, and statistics alongside programming foundations and computational thinking.",
+          "aside": "Quantitative reasoning and computer studies for university preparation.",
+          "meta": "Grades 9–12"
+        },
+        {
+          "eyebrow": "Humanities & Social Inquiry",
+          "title": "Humanities, Social Sciences & Languages",
+          "body": "Ethiopian and broader African history, geography, civics, literature, and rhetoric in Amharic and English.",
+          "aside": "Analytical writing, civic understanding, and language mastery.",
+          "meta": "Amharic & English"
+        },
+        {
+          "eyebrow": "Aesthetic Expression",
+          "title": "Creative Arts & Music",
+          "body": "Visual arts and music that honor Ethiopian cultural expression alongside contemporary creative practice.",
+          "aside": "Creative practice as part of a balanced secondary education.",
+          "meta": "Studio & performance"
+        }
+      ]
+    },
+    "tenets": {
+      "eyebrow": "The Abyssinia Difference",
+      "title": "Four Tenets of Student Life",
+      "description": "An environment designed to elevate intellect, foster camaraderie, and instill moral purpose.",
+      "items": [
+        {
+          "title": "Collaborative, Inquiry-Led Classrooms",
+          "body": "Classes emphasize discussion, project-based investigation, and structured debate so students learn to argue with evidence.",
+          "caption": "Active & Engaged Learning Culture"
+        },
+        {
+          "title": "Dedicated & Mentoring Faculty",
+          "body": "Subject specialists guide students through structured academic advising and classroom mentorship.",
+          "caption": "Individualized Academic Advising"
+        },
+        {
+          "title": "Vibrant Campus Societies & Athletics",
+          "body": "Clubs, athletics, and cultural societies complement classroom learning with teamwork and creative expression.",
+          "caption": "Co-Curricular Student Life"
+        },
+        {
+          "title": "University & Career Counseling",
+          "body": "Guidance supports national university pathways and preparation for higher education applications.",
+          "caption": "Higher Education Preparation"
+        }
+      ],
+      "gallery": [
+        "Collaborative Learning",
+        "Campus Athletics",
+        "Highland Campus"
+      ]
+    },
+    "statsBar": {
+      "ariaLabel": "School at a glance",
+      "intro": "People, stories, and years of belonging — a quick look at our community.",
+      "items": [
+        {
+          "key": "established",
+          "label": "Serving families since",
+          "value": "2010"
+        },
+        {
+          "key": "students",
+          "label": "Students this year",
+          "value": "1,200+"
+        },
+        {
+          "key": "staff",
+          "label": "Teachers & staff",
+          "value": "85+"
+        },
+        {
+          "key": "alumni",
+          "label": "Alumni in the world",
+          "value": "3,500+"
+        },
+        {
+          "key": "partners",
+          "label": "Community partners",
+          "value": "12"
+        }
+      ]
+    },
+    "subjectsSection": {
+      "title": "What students study here",
+      "intro": "From Amharic and English to science labs and ICT — subjects taught with patience, curiosity, and real conversation."
+    },
+    "community": {
+      "quote": "We look out for one another. Different stories, one campus — and a shared promise to leave no learner behind.",
+      "attribution": "— The Abyssinia Academy community"
+    },
+    "team": {
+      "title": "People who guide the day",
+      "intro": "Leadership and care begin with faces you can meet — not just titles on a wall.",
+      "members": [
+        {
+          "name": "Head of School",
+          "role": "Sets the tone for learning and belonging",
+          "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "Deputy Head — Academics",
+          "role": "Keeps teaching thoughtful and rigorous",
+          "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "Dean of Students",
+          "role": "Walks with students through campus life",
+          "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "Director of Admissions",
+          "role": "Welcomes families into the conversation",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=480&q=80"
+        }
+      ]
+    },
+    "facilities": {
+      "title": "Community Facilities and Services",
+      "body": "Students enjoy classrooms, science labs, library resources, sports grounds, and counseling services that support academic excellence and wellbeing.",
+      "viewMore": "View More"
+    },
+    "numbers": {
+      "title": "By the Numbers",
+      "items": [
+        {
+          "value": "1,200+",
+          "title": "Students",
+          "body": "Scholars across Grades 9–12 in day and residential pathways."
+        },
+        {
+          "value": "85+",
+          "title": "Faculty & Staff",
+          "body": "Teachers and support staff dedicated to secondary formation."
+        },
+        {
+          "value": "13",
+          "title": "Core Subjects",
+          "body": "National curriculum subjects spanning sciences, languages, and ICT."
+        },
+        {
+          "value": "24",
+          "title": "Clubs & Teams",
+          "body": "Sports, arts, debate, STEM, and community service opportunities."
+        }
+      ]
+    },
+    "campusMemory": "In memory of our campus journey",
+    "admissionSection": {
+      "title": "Finding your place here",
+      "body": "Whether you are exploring streams or ready to apply, we will help your family take the next step with clarity and kindness.",
+      "cards": {
+        "admission": "Start an inquiry",
+        "social": "Social Science pathway",
+        "natural": "Natural Science pathway"
+      }
+    },
+    "upcomingEvents": {
+      "title": "Coming up on campus",
+      "viewAll": "See all events"
+    },
+    "bulletin": {
+      "eyebrow": "Campus News & Dispatches",
+      "title": "Stories from campus",
+      "archiveLink": "Browse Bulletin Archives →",
+      "emptyTitle": "Fresh stories are on the way",
+      "emptyBody": "When our community publishes news, you will find it here first.",
+      "visitBlogs": "Browse all stories",
+      "prev": "Previous news",
+      "next": "Next news",
+      "pages": "News pages",
+      "goToPage": "Go to news page {{page}}"
+    },
+    "admissions": {
+      "eyebrow": "Admissions",
+      "title": "Ready when your family is.",
+      "description": "Admissions are open for {{grades}}. Tell us a little about your student — we will reply with next steps, not a maze of forms.",
+      "ctaPrimary": "Begin an inquiry",
+      "ctaSecondary": "Ask a question",
+      "steps": [
+        {
+          "title": "Inquire",
+          "description": "Submit an online inquiry or request information."
+        },
+        {
+          "title": "Assess",
+          "description": "Complete placement assessment and interview as required."
+        },
+        {
+          "title": "Enroll",
+          "description": "Receive admissions notification and join the community."
+        }
+      ],
+      "nextSteps": {
+        "label": "Next Steps",
+        "title": "Speak with Admissions",
+        "body": "Current application windows, assessment dates, and fee quotations are confirmed directly by the Admissions Office—not published here until verified."
+      },
+      "submitInquiry": "Submit Admissions Inquiry →",
+      "contactSchool": "Contact the School"
+    },
+    "inquiry": {
+      "eyebrow": "Official Admissions Registry",
+      "title": "Request Admissions Information",
+      "description": "Complete this inquiry form to request curriculum information and admissions guidance.",
+      "form": {
+        "guardianName": "Parent / Guardian Full Name (optional)",
+        "email": "Contact Email Address",
+        "phone": "Phone Number",
+        "grade": "Prospective Student Grade",
+        "gradePlaceholder": "Select Entry Grade",
+        "grade9": "Grade 9",
+        "grade10": "Grade 10",
+        "grade11": "Grade 11",
+        "grade12": "Grade 12",
+        "newsletterLabel": "Yes, keep me informed about campus visit dates, admissions testing schedules, and school announcements.",
+        "newsletterDescription": "We respect your privacy. Unsubscribe anytime.",
+        "confidentiality": "All student information is treated with strict confidentiality.",
+        "submit": "Submit Admissions Inquiry →",
+        "studentName": "Prospective Student Full Name",
+        "academicYear": "Academic Year",
+        "message": "Inquiry Message",
+        "messagePlaceholder": "Tell us about the information or visit you are requesting."
+      }
+    },
+    "events": {
+      "eyebrow": "The Academic Ledger",
+      "title": "Upcoming Campus Gatherings",
+      "viewAll": "View all events →",
+      "emptyTitle": "No upcoming events listed",
+      "emptyBody": "Published events from the academy calendar will appear here."
+    },
+    "portals": {
+      "badge": "One Platform. Three Experiences.",
+      "title": "What Each Role Does",
+      "subtitle": "A clear view of admin, teacher, and student responsibilities — display only, not sign-in.",
+      "setupBadge": "Simple Setup",
+      "cards": {
+        "admin": {
+          "title": "Admin responsibilities",
+          "description": "Operate the school: people, academics, fees, announcements, and the public website.",
+          "features": [
+            "Manage teachers, students & enrollments",
+            "Set academic years, classes & subjects",
+            "Oversee attendance, assignments & exams",
+            "Assign fees and record payments",
+            "Publish announcements & website content"
+          ],
+          "cta": "Admin overview"
+        },
+        "teacher": {
+          "title": "Teacher responsibilities",
+          "description": "Work only with classes and subjects assigned by the admin.",
+          "features": [
+            "View assigned classes and students",
+            "Mark daily attendance",
+            "Create and grade assignments",
+            "Enter exam results for your subjects",
+            "Update your teaching profile"
+          ],
+          "cta": "Teacher overview"
+        },
+        "student": {
+          "title": "Student responsibilities",
+          "description": "Follow your own enrollment: classes, work, results, and school notices.",
+          "features": [
+            "See enrolled classes and subjects",
+            "Check personal attendance",
+            "Submit assignments",
+            "View published exam results",
+            "Track fees and announcements"
+          ],
+          "cta": "Student overview"
+        }
+      }
+    },
+    "sms": {
+      "steps": {
+        "badge": "Simple Setup",
+        "title": "Up and Running in 3 Steps",
+        "subtitle": "Structured for Abyssinia Academy operations — Grades 9–12 in Addis Ababa.",
+        "items": [
+          {
+            "title": "Configure the academic year",
+            "body": "Set terms, grades 9–12, sections, and subjects for the campus.",
+            "icon": "apartment"
+          },
+          {
+            "title": "Add staff & students",
+            "body": "Create teacher and student accounts, then enroll learners into classes.",
+            "icon": "group"
+          },
+          {
+            "title": "Go live in the portals",
+            "body": "Teachers take attendance and assign work; students submit and view results.",
+            "icon": "bolt"
+          }
+        ]
+      },
+      "modules": {
+        "badge": "Platform Modules",
+        "title": "Everything Your School Needs",
+        "subtitle": "Powerful modules for secondary school management — without a parent portal.",
+        "items": [
+          {
+            "title": "Student Management",
+            "body": "Register and manage students with enrollment and academic history.",
+            "icon": "person"
+          },
+          {
+            "title": "Attendance Tracking",
+            "body": "Take attendance quickly and monitor trends with clear reports.",
+            "icon": "event_available"
+          },
+          {
+            "title": "Homework & Assignments",
+            "body": "Assign work digitally. Students submit; teachers review.",
+            "icon": "edit_note"
+          },
+          {
+            "title": "Grades & Exams",
+            "body": "Record scores, publish results, and monitor performance.",
+            "icon": "grade"
+          },
+          {
+            "title": "School Announcements",
+            "body": "Publish updates to teachers, students, or specific classes.",
+            "icon": "campaign"
+          },
+          {
+            "title": "Fee Management",
+            "body": "Track payments, outstanding balances, and collection reports.",
+            "icon": "payments"
+          },
+          {
+            "title": "Academic Reports",
+            "body": "Generate school-wide and per-student reports when you need them.",
+            "icon": "analytics"
+          },
+          {
+            "title": "Timetable Builder",
+            "body": "Publish class timetables teachers and students can follow instantly.",
+            "icon": "calendar_month"
+          },
+          {
+            "title": "Website CMS",
+            "body": "Keep the public Abyssinia Academy site updated alongside SMS tools.",
+            "icon": "language"
+          }
+        ]
+      },
+      "local": {
+        "badge": "Ethiopian Education",
+        "title": "Designed Around How Our School Actually Works",
+        "subtitle": "Built for Abyssinia Academy’s secondary model in Addis Ababa — bilingual public site, grade structure, and school-owned portals.",
+        "points": [
+          "English, Amharic & Afaan Oromoo public interface",
+          "Grades 9–12 academic structure",
+          "Local fee workflows (ETB-ready)",
+          "Admin, teacher, and student portals only",
+          "Secure cloud access",
+          "Mobile-friendly layouts"
+        ],
+        "cards": [
+          {
+            "title": "Multilingual site",
+            "body": "EN · አማ · Afaan Oromoo for public pages.",
+            "icon": "translate"
+          },
+          {
+            "title": "Local structure",
+            "body": "Secondary cycle Grades 9–12.",
+            "icon": "school"
+          },
+          {
+            "title": "ETB payments",
+            "body": "School fee tracking for campus finance.",
+            "icon": "payments"
+          },
+          {
+            "title": "Secure & private",
+            "body": "Role-based access; students see only their data.",
+            "icon": "verified_user"
+          },
+          {
+            "title": "Analytics",
+            "body": "Attendance and performance insights for leadership.",
+            "icon": "insights"
+          }
+        ]
+      },
+      "security": {
+        "badge": "Security",
+        "title": "Enterprise-Grade Security & Reliability",
+        "subtitle": "Your school’s academic records deserve careful protection.",
+        "items": [
+          {
+            "title": "JWT authentication",
+            "body": "Signed tokens with logout invalidation for each portal actor.",
+            "icon": "key"
+          },
+          {
+            "title": "Role-based access",
+            "body": "Separate permissions for admin, teacher, and student.",
+            "icon": "admin_panel_settings"
+          },
+          {
+            "title": "Scoped teacher data",
+            "body": "Teachers only reach assigned classes and subjects.",
+            "icon": "lock_person"
+          },
+          {
+            "title": "Student privacy",
+            "body": "Learners cannot view another student’s private records.",
+            "icon": "privacy_tip"
+          },
+          {
+            "title": "Audit logging",
+            "body": "Sensitive admin actions are recorded for accountability.",
+            "icon": "history"
+          },
+          {
+            "title": "Validated uploads",
+            "body": "File signatures and size limits protect media and submissions.",
+            "icon": "upload_file"
+          }
+        ]
+      },
+      "why": {
+        "badge": "Why Abyssinia Academy",
+        "title": "Why Our Connected Platform Matters",
+        "items": [
+          {
+            "title": "Save administrative time",
+            "icon": "trending_up"
+          },
+          {
+            "title": "Clear teacher workflows",
+            "icon": "groups"
+          },
+          {
+            "title": "Simplify attendance",
+            "icon": "calendar_month"
+          },
+          {
+            "title": "Organize academic records",
+            "icon": "folder"
+          },
+          {
+            "title": "Centralize announcements",
+            "icon": "forum"
+          },
+          {
+            "title": "Access data anywhere",
+            "icon": "public"
+          },
+          {
+            "title": "Reduce paper processes",
+            "icon": "description"
+          },
+          {
+            "title": "Grow with Grades 9–12",
+            "icon": "layers"
+          }
+        ]
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "Is there a parent portal?",
+            "answer": "No. Abyssinia Academy’s school management portals are Admin, Teacher, and Student only."
+          },
+          {
+            "question": "Does the public website stay bilingual?",
+            "answer": "Yes. The public site supports English, Amharic, and Afaan Oromoo. Portal interfaces may expand languages over time."
+          },
+          {
+            "question": "Can teachers see all students?",
+            "answer": "No. Teachers only access classes and subjects they are assigned to teach."
+          },
+          {
+            "question": "Is school data secured?",
+            "answer": "Yes. Authentication, role checks, ownership rules, audit logs, and upload validation protect records."
+          },
+          {
+            "question": "Does this replace the public website?",
+            "answer": "No. The approved public site and CMS remain. Portals extend operations alongside marketing pages."
+          },
+          {
+            "question": "Who owns the copyright?",
+            "answer": "© Abyssinia Academy. All rights reserved. The platform brand and content belong to Abyssinia Academy."
+          }
+        ]
+      },
+      "cta": {
+        "eyebrow": "Get started",
+        "title": "Ready to modernize campus operations?",
+        "subtitle": "Request an information packet or contact admissions. Teacher and student sign-in are ready now — use Sign in from the header.",
+        "primary": "Request an Information Packet",
+        "secondary": "Contact Us",
+        "cardEyebrow": "Campus platform",
+        "cardBody": "Secondary School · Grades 9–12 · Addis Ababa, Ethiopia. Educating leaders of character, scholarship, and purpose.",
+        "copyrightNote": "© Abyssinia Academy. All rights reserved."
+      }
+    }
+  },
+  "amharicBook": {
+    "kicker": "My First Amharic",
+    "titleHighlight": "Alphabets",
+    "subtitle": "Picture Book with English Translations",
+    "coverAlt": "Cover of My First Amharic Alphabets picture book",
+    "blurb": "A joyful fidel starter we share with families — tap a letter, meet a word, and hear how Amharic opens the world one sound at a time.",
+    "familyLabel": "Letter family",
+    "selectFidel": "Select letter {{char}}"
+  },
+  "academicsPage": {
+    "title": "Major & Program",
+    "nav": {
+      "overview": "Overview",
+      "outcomes": "Learning outcomes",
+      "programs": "Programs",
+      "amharic": "Amharic book",
+      "streams": "Streams",
+      "entry": "Entry requirements",
+      "apply": "How to apply"
+    },
+    "amharic": {
+      "title": "Amharic — language with heart",
+      "body": "Secondary Amharic at Abyssinia grows rhetoric, literature, and clear expression. We also keep fidel joyful — this picture book is a warm doorway for families and a playful refresher for every learner."
+    },
+    "overview": {
+      "title": "Overview",
+      "p1": "Abyssinia Academy delivers quality secondary education for {{grades}}, aligned with the Ethiopian Ministry of Education curriculum and focused on readiness for national examinations and higher education.",
+      "p2": "Students build strong foundations across sciences, languages, and social studies, then choose preparatory streams that match their university pathways."
+    },
+    "outcomesTitle": "Learning Outcomes",
+    "outcomes": [
+      "Strong academic knowledge across core secondary subjects",
+      "Critical thinking and problem-solving habits",
+      "Clear communication in Amharic and English",
+      "Confident use of digital technology and ICT tools",
+      "Collaboration, leadership, and civic responsibility",
+      "Preparation for national exams and university entry"
+    ],
+    "programs": {
+      "title": "Programs Offered",
+      "secondaryTitle": "Secondary School Program (Grades 9–10)",
+      "secondaryBody": "Foundational secondary curriculum preparing students for the national Grade 10 examination and stream selection."
+    },
+    "grade9Subjects": [
+      "English",
+      "Amharic",
+      "Mathematics",
+      "Biology",
+      "Chemistry",
+      "Physics",
+      "History",
+      "Geography",
+      "Civics & Ethical Education",
+      "Information and Communication Technology (ICT)",
+      "Physical Education",
+      "Economics",
+      "Business"
+    ],
+    "streams": {
+      "title": "Stream",
+      "naturalTitle": "Natural Science Stream",
+      "naturalBody": "Prepares students for science- and technology-based university programs.",
+      "socialTitle": "Social Science Stream",
+      "socialBody": "Prepares students for social sciences, business, and humanities pathways."
+    },
+    "naturalSubjects": [
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Technical Drawing",
+      "English",
+      "ICT",
+      "Civics & Ethical Education"
+    ],
+    "socialSubjects": [
+      "Mathematics",
+      "History",
+      "Geography",
+      "Economics",
+      "Business",
+      "English",
+      "ICT",
+      "Civics & Ethical Education"
+    ],
+    "pathwaysTitle": "Future University Pathways",
+    "pathways": [
+      "Medicine and Health Sciences",
+      "Engineering",
+      "Computer Science & IT",
+      "Business, Law, and Social Sciences"
+    ],
+    "entry": {
+      "title": "Entry Requirements",
+      "grade9Title": "Secondary School (Grade 9)",
+      "grade9a": "Completion of primary education",
+      "grade9b": "Placement based on regional or national examination results",
+      "grade11Title": "Preparatory School (Grade 11)",
+      "grade11a": "Successful completion of Grade 10",
+      "grade11b": "Passing the Ethiopian General Secondary School Leaving Certificate Examination (EGSLCE)",
+      "grade11c": "Stream placement based on academic performance"
+    },
+    "apply": {
+      "title": "How to Apply",
+      "body": "Your application will require certified copies of academic records and guidance from the admissions office.",
+      "step1": "Obtain an application form from the school administration",
+      "step2": "Submit previous academic records",
+      "step3": "Complete placement and registration requirements",
+      "step4": "Enroll and begin your academic journey",
+      "cta": "Apply Now"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Institutional Overview",
+      "title": "About Abyssinia Academy",
+      "subtitle": "Secondary Institution ({{grades}})",
+      "tagline": "Cultivating intellectual rigor, cultural heritage, and ethical leadership in the heart of Addis Ababa.",
+      "paragraph1": "Abyssinia Academy is an independent Ethiopian secondary institution ({{grades}}) founded on the conviction that high-level scholarship must remain inseparable from ethical character and national duty. Situated in Addis Ababa, the Academy prepares scholars through a demanding curriculum that pairs rigorous natural sciences and mathematics with humane inquiry in literature, history, and civic ethics.",
+      "paragraph2": "We reject educational short-cuts and rote compliance. Our scholars are taught to read deliberately, challenge conclusions methodically, articulate viewpoints in both Amharic and English, and honor the historical legacy of our homeland while preparing for university study.",
+      "matrix": {
+        "title": "Academy Matrix",
+        "cycleLabel": "Academic Cycle",
+        "cycleValue": "{{grades}} Secondary Cycle",
+        "mediumLabel": "Medium of Study",
+        "mediumValue": "Dual Language (Amharic & English)",
+        "frameworkLabel": "Pedagogical Framework",
+        "frameworkValue": "National Secondary Framework & Prep",
+        "locationLabel": "Campus Location",
+        "locationPending": "{{location}} [Address TBD]",
+        "accreditationLabel": "Accreditation & Institutional Licensing",
+        "accreditationValue": "Under official regulatory review / verified upon inquiry"
+      },
+      "imageLabel": "Campus Learning",
+      "imageCaption": "Scholars engaged in science and humanities seminars as part of secondary academic life at Abyssinia Academy."
+    },
+    "story": {
+      "eyebrow": "Institutional Evolution",
+      "title": "Our Story & Academic Heritage",
+      "paragraph1": "The foundation of Abyssinia Academy emerged from a conviction shared by Ethiopian educators: that Addis Ababa required a dedicated secondary institution committed to the intellectual and ethical maturation of adolescents in Grades 9 through 12.",
+      "paragraph2": "The Academy focuses on core secondary instruction, disciplined study commons, laboratory practices, and an attentive educator-to-student mentor environment.",
+      "milestones": [
+        {
+          "phase": "Founding Phase",
+          "marker": "Founding & Charter",
+          "note": "Historical charter records to be verified",
+          "title": "Establishment of Secondary Framework",
+          "body": "Inauguration of the four-year secondary cycle designed to serve adolescents across Addis Ababa, emphasizing academic admission, civic responsibility, and preparatory scholarship."
+        },
+        {
+          "phase": "Academic Standards",
+          "marker": "Curriculum Framework",
+          "note": "Aligned to standard MoE frameworks",
+          "title": "Curriculum & Academic Standards",
+          "body": "Integration of national secondary frameworks across mathematics, physical and natural sciences, alongside dual-language instruction in English and Amharic."
+        },
+        {
+          "phase": "Campus Environment",
+          "marker": "Campus Development",
+          "note": "Facility inventory available upon request",
+          "title": "Classroom & Study Facilities",
+          "body": "Development of secondary classrooms, study commons, and science learning spaces designed for collaborative inquiry and focused senior study."
+        },
+        {
+          "phase": "Student Cohorts",
+          "marker": "Ongoing Formation",
+          "note": "Cohort details confirmed by Admissions",
+          "title": "Secondary Education & University Preparation",
+          "body": "Continuous preparation of secondary cohorts under national examination standards and higher education preparatory syllabi."
+        }
+      ],
+      "archiveNote": "Note: Historical archive and administrative records are maintained at the Academy Secretariat and available upon inquiry."
+    },
+    "missionVision": {
+      "eyebrow": "Purpose",
+      "title": "Our Mission & Vision",
+      "mission": {
+        "label": "Mission",
+        "title": "Rigorous, Inquiry-Led Academic Formation",
+        "body": "“To provide rigorous, inquiry-led secondary education that nurtures analytical clarity, ethical character, and cultural stewardship, equipping students to contribute meaningfully to Ethiopian society and the wider world.”"
+      },
+      "vision": {
+        "label": "Vision",
+        "title": "Exemplary Model of Ethiopian Scholarship",
+        "body": "“To stand as an exemplary Ethiopian secondary institution where tradition and forward-looking scholarship meet, graduating reflective scholars who lead with empathy, humility, and intellectual purpose.”"
+      }
+    },
+    "values": {
+      "eyebrow": "Character Formation",
+      "title": "Our Core Values",
+      "description": "Values are practiced in the laboratory, the examination hall, and community engagement initiatives.",
+      "items": [
+        {
+          "title": "Integrity & Intellectual Honesty",
+          "body": "Uncompromising commitment to truthful scholarship, independent problem solving, and examination honesty."
+        },
+        {
+          "title": "Academic Excellence & Inquiry",
+          "body": "Prioritizing conceptual depth over superficial memorization—interrogating data, questioning hypotheses, and pursuing mathematical mastery."
+        },
+        {
+          "title": "Responsibility & Civic Stewardship",
+          "body": "Active obligation toward mutual guardianship and service to the community institutions of Addis Ababa."
+        },
+        {
+          "title": "Respect & Empathy",
+          "body": "Affirming the dignity of every classmate and staff member—listening with patience and speaking with civility."
+        },
+        {
+          "title": "Cultural Heritage & Pride",
+          "body": "Rooted respect for Ethiopian linguistic heritage, historiography, and communal legacies alongside rigorous universal science."
+        },
+        {
+          "title": "Lifelong Curiosity & Wonder",
+          "body": "Sustaining appetite for reading, experiments, literary appreciation, and thoughtful discourse beyond examinations."
+        }
+      ]
+    },
+    "governance": {
+      "eyebrow": "Stewardship",
+      "title": "Leadership & Governance",
+      "description": "Abyssinia Academy operates under a governance model committed to educational quality, institutional transparency, and child safeguarding. Named office-holders are published only when verified.",
+      "items": [
+        {
+          "title": "Office of the Head of School",
+          "body": "Institutional leadership for academic quality, safeguarding, and school culture."
+        },
+        {
+          "title": "Academic Department Heads",
+          "body": "Subject leadership across mathematics, sciences, languages, social sciences, ICT, and arts."
+        },
+        {
+          "title": "Student Support & Safeguarding",
+          "body": "Pastoral care frameworks committed to student wellbeing and child safeguarding."
+        },
+        {
+          "title": "Parent & Community Liaison",
+          "body": "Channels for family communication and community engagement with the academy."
+        }
+      ]
+    },
+    "environment": {
+      "eyebrow": "Campus",
+      "title": "Our Learning Environment",
+      "items": [
+        {
+          "title": "Secondary Classrooms & Labs",
+          "body": "Spaces for instruction, laboratory practice, and inquiry-led secondary coursework."
+        },
+        {
+          "title": "Study & Reading Commons",
+          "body": "Quiet and collaborative areas for reading, research, and supervised study."
+        },
+        {
+          "title": "Outdoor Recreation Grounds",
+          "body": "Outdoor areas supporting athletics, recreation, and campus community life."
+        }
+      ]
+    },
+    "community": {
+      "eyebrow": "Partnership",
+      "title": "Community & Family Engagement",
+      "body": "Families are partners in secondary formation. The academy maintains communication channels for academic progress, campus life, and admissions guidance.",
+      "familyTitle": "Family Communication",
+      "familyBody": "Progress conferences, bulletin updates, and direct liaison with academic staff keep guardians informed throughout the school year.",
+      "cta": {
+        "title": "Discover Academic Life at Abyssinia Academy",
+        "body": "Explore programs on the Feature page, or reach Admissions with questions about entry for {{grades}}.",
+        "explore": "Explore Academic Programs",
+        "inquire": "Inquire with Admissions"
+      }
+    },
+    "readMore": "Read More",
+    "campusBlock": {
+      "title": "Abyssinia Academy's Campus",
+      "body": "A vibrant environment for students to learn, grow, and connect — classrooms, labs, grounds, and community spaces designed for academic excellence."
+    },
+    "stats": {
+      "established": "Established",
+      "students": "Students",
+      "staff": "Staff",
+      "alumni": "Alumni pathways",
+      "grades": "Grade levels"
+    },
+    "shaping": {
+      "eyebrow": "What we believe",
+      "title": "Shaping the future, one student at a time",
+      "body": "We do not chase slogans. We teach well, listen carefully, and help young people leave Grade 12 with confidence — ready for university, work, and the communities that raised them.",
+      "commitmentTitle": "How we show up",
+      "commitments": [
+        {
+          "title": "Teaching that sticks",
+          "body": "Clear lessons in languages, sciences, and the arts — with room to ask questions."
+        },
+        {
+          "title": "Tools for today",
+          "body": "Labs, ICT, and projects that feel useful, not decorative."
+        },
+        {
+          "title": "Character in practice",
+          "body": "Clubs, sport, and service that build courage and kindness together."
+        },
+        {
+          "title": "Ready for the wider world",
+          "body": "Habits of thought that travel beyond our campus gates."
+        }
+      ],
+      "quote": "Where today’s learners become tomorrow’s leaders — with roots still in Addis Ababa."
+    },
+    "campusLife": {
+      "eyebrow": "Daily life",
+      "title": "Campus Life",
+      "items": [
+        {
+          "title": "Starting the Day",
+          "body": "Students arrive with purpose — morning gatherings, first lessons, and a calm start to focused learning."
+        },
+        {
+          "title": "Friendships in Bloom",
+          "body": "Courtyards and study commons fill with conversation, teamwork, and friendships that last beyond graduation."
+        },
+        {
+          "title": "Action on the Field",
+          "body": "Sports and recreation build sportsmanship, energy, and healthy competition after class."
+        },
+        {
+          "title": "A Successful Day Ends",
+          "body": "As the day closes, scholars leave with new skills, shared stories, and readiness for tomorrow."
+        }
+      ],
+      "readMore": "Learn more"
+    },
+    "subjects": {
+      "eyebrow": "Curriculum",
+      "title": "Discover a Study Area That Will Transform Your Future",
+      "gradeRange": "Grade 9 – Grade 12",
+      "items": [
+        {
+          "name": "Amharic",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "English",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "Mathematics",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "Physics",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Chemistry",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Biology",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Geography",
+          "note": "Grade 9 – Grade 12 (Social Science focus in 11–12)"
+        },
+        {
+          "name": "IT",
+          "note": "Grade 9 – Grade 12"
+        }
+      ]
+    },
+    "whyStudy": {
+      "eyebrow": "Academics",
+      "title": "Why Study at Abyssinia Academy?",
+      "sightsTitle": "Set Your Sights on the Future",
+      "sightsBody": "We prepare every scholar for university pathways and responsible citizenship through innovative learning, holistic development, and a proven academic culture.",
+      "highlights": [
+        {
+          "title": "Innovative Learning",
+          "body": "Hands-on labs, digital tools, and inquiry-led classrooms."
+        },
+        {
+          "title": "Holistic Development",
+          "body": "Sports, arts, clubs, and leadership beyond the timetable."
+        },
+        {
+          "title": "Path to Success",
+          "body": "Consistent preparation for national exams and higher education."
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Strong Academic Foundation",
+          "body": "Sciences, mathematics, social sciences, Amharic, English, and ICT across {{grades}}."
+        },
+        {
+          "title": "Experienced Faculty",
+          "body": "Dedicated teachers who give individual attention and high expectations."
+        },
+        {
+          "title": "Holistic Development",
+          "body": "Debate, science clubs, arts, sports, and student leadership."
+        },
+        {
+          "title": "Proven Track Record",
+          "body": "A culture of examination readiness and alumni pathways to higher study."
+        }
+      ]
+    },
+    "tour": {
+      "eyebrow": "Visit",
+      "title": "Take a Virtual Tour of Our Campus",
+      "body": "Explore classrooms, labs, library spaces, and recreation areas — and see where your academic journey begins.",
+      "points": [
+        "Modern classrooms and science labs",
+        "Computer and ICT labs",
+        "Library and resource centers",
+        "Sports fields and recreation areas",
+        "Arts and cultural spaces"
+      ],
+      "cta": "View campus"
+    }
+  },
+  "blogs": {
+    "eyebrow": "Academy Bulletin",
+    "title": "Our Blog",
+    "description": "Insights, stories, and updates from the world of education",
+    "listLabel": "Blog articles",
+    "featuredTitle": "Featured Articles",
+    "recentTitle": "Recent Articles",
+    "searchLabel": "Search articles",
+    "searchPlaceholder": "Search articles...",
+    "searchSubmit": "Search",
+    "paginationLabel": "Blog pages",
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "blurb": "Get the latest articles and insights delivered straight to your inbox."
+    },
+    "placeholder": {
+      "date": "Publication date",
+      "title": "Article title",
+      "excerpt": "Excerpt area — reserved for published posts.",
+      "read": "Read More"
+    },
+    "empty": {
+      "title": "No published posts yet",
+      "description": "Check back soon. When posts are published in the academy CMS, they will appear here."
+    },
+    "loading": "Loading posts…",
+    "emptyShort": "No published posts yet. Check back soon.",
+    "loadError": "Unable to load blogs right now. Start the backend API to see posts.",
+    "categoriesLabel": "Categories",
+    "allCategories": "All",
+    "readMore": "Read More",
+    "unpublished": "Date unavailable",
+    "prevPage": "Previous",
+    "nextPage": "Next",
+    "pageStatus": "Page {{page}} of {{totalPages}}",
+    "popular": "Popular Posts"
+  },
+  "admissionPage": {
+    "howToApplyTitle": "Detail About How to Apply",
+    "howToApply": {
+      "p1": "Admissions are open for {{grades}}. We review every applicant carefully — academic records, character, and readiness to join our learning community — rather than using a single formula.",
+      "p2": "Share your details through the inquiry form below. Our Admissions Office will guide you through assessment dates, required documents, and enrollment steps."
+    },
+    "faqTitle": "Admission Questions",
+    "faqLeft": [
+      {
+        "question": "What does submitting an inquiry mean, and what's next?",
+        "answer": "An inquiry tells our office you are interested. We will contact you with the next steps for assessment, documentation, and enrollment for Grades 9–12."
+      },
+      {
+        "question": "I missed a reply deadline. Can I still continue?",
+        "answer": "Contact the Admissions Office as soon as possible. Late replies are reviewed case by case when capacity remains."
+      },
+      {
+        "question": "Can I appeal or reapply?",
+        "answer": "Yes. You may request guidance on appeals or reapplication windows from Admissions after a decision is issued."
+      }
+    ],
+    "faqRight": [
+      {
+        "question": "My status is unqualified. What does that mean?",
+        "answer": "It usually means required criteria or documents were not met for this cycle. Admissions can explain options for the next intake."
+      },
+      {
+        "question": "If my status is qualified, am I accepted?",
+        "answer": "Qualified means you meet academic criteria. Final acceptance depends on placement capacity, interview (if required), and completed enrollment steps."
+      },
+      {
+        "question": "I submitted documents late. What should I do?",
+        "answer": "Email or visit Admissions with your reference details. We will confirm whether your file can be restored or resubmitted."
+      }
+    ],
+    "processTitle": "The Application Process",
+    "process": [
+      {
+        "title": "Start Online Inquiry",
+        "body": "Complete the admissions interest form with student and guardian contact details."
+      },
+      {
+        "title": "Submit The Form",
+        "body": "Send your inquiry so our office can open a file and reply with next steps."
+      },
+      {
+        "title": "Review The Submission",
+        "body": "Admissions reviews your details and confirms assessment or visit guidance."
+      },
+      {
+        "title": "Gather Necessary Documents",
+        "body": "Prepare academic records, identification, and any required certificates."
+      },
+      {
+        "title": "Interviewing Process",
+        "body": "Attend placement assessment or interview when invited by the school."
+      },
+      {
+        "title": "Last Decision",
+        "body": "Receive the admissions decision and complete enrollment to begin the term."
+      }
+    ],
+    "thingsTitle": "Things to Know First",
+    "thingsBody": "Abyssinia Academy uses a clear admissions pathway for secondary entry. Prepare accurate contact details and academic history before you apply.",
+    "youWillNeed": "You will need:",
+    "needs": [
+      {
+        "text": "Student full name and intended grade (9–12)"
+      },
+      {
+        "text": "Parent/guardian contact email and phone"
+      },
+      {
+        "text": "Previous school academic records (certified copies)"
+      },
+      {
+        "text": "Willingness to complete placement requirements"
+      }
+    ],
+    "whereTitle": "Where to Apply?",
+    "applyNow": "Apply Now"
+  },
+  "register": {
+    "banner": {
+      "title": "Register your interest",
+      "description": "Admissions are open for {{grades}}. Share a few details and our office will guide you through the next steps."
+    },
+    "formTitle": "Student Registration Form",
+    "formSubtitle": "Admissions inquiry for {{grades}}. Our office will guide the next steps.",
+    "reset": "Reset",
+    "help": "Prefer to talk first?"
+  },
+  "contact": {
+    "banner": {
+      "eyebrow": "Contact Us",
+      "title": "Get in touch",
+      "description": "Have questions about admissions, academics, or campus life? Send us a message and our office will get back to you shortly."
+    },
+    "info": {
+      "badge": "Contact Information",
+      "title": "We’d love to hear from you",
+      "description": "Whether you’re curious about admissions, curriculum, campus visits, or need general information — we’re ready to answer any question.",
+      "email": "Email",
+      "admissionsOffice": "Admissions Office",
+      "address": "Address",
+      "pending": "Verified phone, email, and street address will appear here once confirmed in <code>SITE.contact</code>. {{location}} is the published location line for now."
+    },
+    "visit": {
+      "title": "Planning a campus visit?",
+      "body": "Request a visit so we can walk you through classrooms, laboratories, and campus grounds — tailored for prospective families.",
+      "cta": "Request Visit"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "phone": "Phone Number (optional)",
+      "email": "Email",
+      "subject": "Subject",
+      "subjectPlaceholder": "Admissions, campus visit, general inquiry…",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message"
+    }
+  },
+  "events": {
+    "eyebrow": "Campus Life",
+    "title": "Events",
+    "description": "Published campus gatherings and academic events from Abyssinia Academy.",
+    "loading": "Loading events…",
+    "loadError": "Unable to load events right now.",
+    "readMore": "Details →",
+    "tabs": {
+      "happening": "Happening",
+      "upcoming": "Upcoming",
+      "expired": "Expired"
+    },
+    "empty": {
+      "title": "No published events yet",
+      "description": "When events are published in the academy CMS, they will appear here."
+    }
+  },
+  "eventDetail": {
+    "eyebrow": "Event",
+    "backToList": "← Back to events",
+    "loading": "Loading event…",
+    "loadError": "Unable to load this event right now.",
+    "notFoundTitle": "Event not found",
+    "notFoundDescription": "This event is unavailable or has not been published."
+  },
+  "cms": {
+    "eyebrow": "Academy page",
+    "loading": "Loading page…",
+    "loadError": "Unable to load this page right now.",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "This content page is unavailable or has not been published."
+  },
+  "newsletterPages": {
+    "confirm": {
+      "title": "Confirm subscription",
+      "description": "We are confirming your Abyssinia Bulletin subscription.",
+      "loading": "Confirming your subscription…",
+      "missingToken": "This confirmation link is missing a token. Open the link from your email again.",
+      "failed": "Unable to confirm this subscription. The link may be invalid or expired."
+    },
+    "unsubscribe": {
+      "title": "Unsubscribe",
+      "description": "We are processing your unsubscribe request for the Abyssinia Bulletin.",
+      "loading": "Updating your subscription…",
+      "missingToken": "This unsubscribe link is missing a token. Open the link from your email again.",
+      "failed": "Unable to unsubscribe right now. Please try again later."
+    }
+  },
+  "forms": {
+    "admissions": {
+      "submitFailed": "Unable to submit the admissions inquiry. Please try again."
+    },
+    "contact": {
+      "submitFailed": "Unable to send your message. Please try again."
+    },
+    "demoRequest": {
+      "submitFailed": "Unable to submit the demo request. Please try again."
+    },
+    "newsletter": {
+      "submitFailed": "Unable to submit the newsletter subscription. Please try again.",
+      "followUpFailed": "Admissions inquiry was saved, but newsletter signup could not be completed.",
+      "confirmHint": "Please check your email to confirm the subscription if a confirmation message was sent."
+    }
+  }
+}

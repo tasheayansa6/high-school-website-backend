@@ -1,0 +1,1550 @@
+{
+  "common": {
+    "siteName": "Abyssinia Academy",
+    "tagline": "Finfinnee • Itoophiyaa",
+    "locationLine": "Finfinnee, Itoophiyaa",
+    "location": "Finfinnee",
+    "country": "Itoophiyaa",
+    "description": "Kutaa 9 hanga 12tti barnoota sadarkaa lammaffaa keessatti hoogganummaa sammuu, fedhii saayinsii, fi amanamummaa amalaa guddifna.",
+    "gradesLabel": "Kutaa 9–12",
+    "studentsImageAlt": "Barattoota Abyssinia Academy",
+    "loading": "Feʼamaa jira…",
+    "loadingPage": "Fuulli feʼamaa jira…",
+    "somethingWrong": "Rakkoon tokko uumameera",
+    "tryAgain": "Irra deebiʼii yaali",
+    "returnHome": "Gara Manaatti deebiʼi",
+    "contactUs": "Nu quunnami",
+    "contactSchool": "Mana Barumsaa Quunnami",
+    "exploreAcademicPrograms": "Sagantaalee Barnootaa Qorradhu",
+    "submitAdmissionsInquiry": "Gaaffii Galmee Ergi →",
+    "email": "Imeelii",
+    "admissionsOffice": "Waajjira Galmee",
+    "focus": "Xiyyeeffannoo",
+    "pleaseWait": "Maaloo eegaa…"
+  },
+  "languages": {
+    "select": "Afaan filadhu",
+    "listLabel": "Afaanota",
+    "en": "English",
+    "am": "አማርኛ",
+    "om": "Afaan Oromoo"
+  },
+  "nav": {
+    "home": "Mana",
+    "about": "Waaʼee",
+    "blogs": "News",
+    "contact": "Nu Quunnamaa",
+    "primary": "Tarreeffama ijoo",
+    "mobilePrimary": "Tarreeffama ijoo (bilbila)",
+    "openMenu": "Tarreeffama daawwannaa banuu",
+    "closeMenu": "Tarreeffama daawwannaa cufuu",
+    "events": "Taateewwan",
+    "login": "Seeni",
+    "aboutOverview": "Overview",
+    "aboutStory": "Our Story",
+    "aboutMission": "Mission & Vision",
+    "aboutCampus": "Campus Life",
+    "academics": "Academics",
+    "academicsOverview": "Overview",
+    "academicsSubjects": "Subjects",
+    "academicsWhy": "Why Study Here",
+    "admission": "Admission",
+    "news": "News",
+    "search": "Search news"
+  },
+  "signin": {
+    "help": "Gargaarsa barbaadda? Bulchiinsa mana barumsaa kee quunnami.",
+    "signIn": "Seeni",
+    "signingIn": "Seenaa jira…",
+    "forgotPassword": "Jecha icciitii dagatte? Jijjiiruuf bulchiinsa mana barumsaa quunnami.",
+    "errors": {
+      "generic": "Seenuu hin dandeenye. Maaloo irra deebiʼii yaali."
+    },
+    "identify": {
+      "title": "Seensa Mana Barumsaa",
+      "subtitle": "Itti fufuuf Barsiisaa ykn Barataa filadhu.",
+      "label": "Ani akka",
+      "helper": "Akkaawuntiwwan mana barumsaatiin uumamu. Hojjettoonni linkii seensa admin mana barumsaatiin kenname fayyadamu.",
+      "continue": "Itti fufi"
+    },
+    "roles": {
+      "admin": {
+        "title": "Bulchiinsa"
+      },
+      "teacher": {
+        "title": "Barsiisaa"
+      },
+      "student": {
+        "title": "Barataa"
+      }
+    },
+    "welcomeBack": "Baga nagaan dhuftan!",
+    "authMethod": {
+      "label": "Mala seensa",
+      "email": "Imeelii",
+      "code": "Koodii",
+      "detectedEmail": "Argame: Imeelii",
+      "detectedStudentCode": "Argame: Koodii barataa"
+    },
+    "credentials": {
+      "adminSubtitle": "Mana barumsaa kee bulchuuf seeni",
+      "teacherSubtitle": "Akkaawuntii barsiisummaa keetti seeni",
+      "studentSubtitle": "Daashboordii dhuunfaa keetti seentuuf seeni"
+    },
+    "fields": {
+      "email": "Imeelii",
+      "emailPlaceholder": "fkn. you@school.edu.et",
+      "password": "Jecha icciitii",
+      "passwordPlaceholder": "Jecha icciitii kee galchi",
+      "loginCode": "Koodii seensa",
+      "loginCodePlaceholder": "Koodii barataa kee galchi",
+      "loginCodeHelper": "Koodii barataa bulchiinsi mana barumsaa siif kenne fayyadami.",
+      "studentIdentifier": "Imeelii ykn koodii barataa",
+      "studentIdentifierPlaceholder": "fkn. 0909 ykn you@school.edu.et",
+      "studentIdentifierHelper": "Bulchiinsa mana barumsaatiin siif kenname."
+    },
+    "switch": {
+      "staffPrompt": "Bulchiinsa miti?",
+      "otherPrompt": "Portaala sirrii miti?",
+      "chooseRole": "Gahee filadhu"
+    },
+    "welcomeSubtitle": "Log in to continue your journey and get things done.",
+    "loginToAccount": "Log in to your account",
+    "keepSignedIn": "Keep me signed in",
+    "resetPassword": "Forgot your password?",
+    "admissionsPrompt": "Don't have an account?"
+  },
+  "footer": {
+    "brandTagline": "Barnoota sadarkaa lammaffaa Finfinnee keessatti",
+    "explore": "Qorradhu",
+    "columns": {
+      "platform": "Platform",
+      "resources": "Qabeenya",
+      "support": "Deeggarsa"
+    },
+    "resources": {
+      "contactSales": "Gurgurtaa Quunnami",
+      "ourStory": "Seenaa Keenya"
+    },
+    "legal": {
+      "privacy": "Imaammata Dhuunfaa",
+      "terms": "Haala Tajaajilaa"
+    },
+    "newsletter": {
+      "title": "Beeksisa Abisiiniyaa",
+      "blurb": "Odeeffannoo barnootaa yeroo yerootti, milkaaʼina barattootaa, fi affeerraa taateewwan kampasii fudhadhu.",
+      "emailLabel": "Teessoo imeelii galmeessuuf",
+      "emailPlaceholder": "family@example.com",
+      "subscribe": "Galmaaʼi",
+      "notice": "Galmeewwan mirkaneessa dachaa fayyadamu. Guutummaatti osoo hin galmin duratti email mirkaneessaa barbaachuu dandaʼa."
+    },
+    "contact": {
+      "admissionsOffice": "Waajjira Galmee",
+      "inquiries": "Gaaffiiwwan",
+      "administration": "Bulchiinsa"
+    },
+    "copyright": "© {{year}} Abyssinia Academy. Mirgi hundi eegameera.",
+    "portals": "Seeni",
+    "portalLinks": {
+      "admin": "Seensa bulchiinsa",
+      "teacher": "Seensa barsiisaa",
+      "student": "Seensa barataa",
+      "admissions": "Gaaffii Galmee"
+    }
+  },
+  "errors": {
+    "boundary": {
+      "title": "Rakkoon tokko uumameera",
+      "message": "Fuula kana agarsiisuu irratti dogoggorri hin eegamne uumameera. Gara fuula manaatti deebiʼuudhaan daawwachuu itti fufuu dandeessa.",
+      "returnHome": "Gara Manaatti deebiʼi"
+    }
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Fuulli hin argamne",
+    "description": "Fuulli ati gaafatte hin jiru ykn bakka biraatti ceʼee jiraachuu dandaʼa. Tarreeffama fayyadami ykn gara manaatti deebiʼi.",
+    "returnHome": "Gara Manaatti deebiʼi",
+    "contactUs": "Nu quunnami"
+  },
+  "blogDetail": {
+    "eyebrow": "Beeksisa Akademii",
+    "fallbackTitle": "Barreeffama",
+    "description": "Balʼina barreeffamaa",
+    "backToList": "← Gara blogootaatti deebiʼi",
+    "loading": "Barreeffama feʼamaa jira…",
+    "loadError": "Amma barreeffama kana feʼuu hin dandeenye.",
+    "notFoundTitle": "Barreeffamni hin argamne",
+    "notFoundDescription": "Maxxansiin kun hin argamu ykn hin maxxanfamne."
+  },
+  "home": {
+    "scrollNav": {
+      "ariaLabel": "Kutaalee fuulaa",
+      "top": "Ol",
+      "stats": "Gabaabinaan",
+      "shaping": "Boru Bocuu",
+      "subjects": "Barnoota",
+      "campus": "Jireenya Kampasii",
+      "news": "Oduu Haaraa",
+      "admission": "Seensa"
+    },
+    "campusLifeIntro": "Guyyoonni idilee yaadannoo taʼu — ganama kutaa keessa, hiriyyummaa dirree irratti, fi galgala boona callisaa waliin xumuramu.",
+    "hero": {
+      "badge": "Mana Barumsaa Itoophiyaaf Kan Ijaarame",
+      "title": "Iddoo ati taʼuu jirtutti guddatuu dandeessu.",
+      "description": "Abyssinia Academy keessatti barattoonni maqaan beekamu. Of eeggannoodhaan barsiifna, kaayyoo waliin qormaata goona, fi kutaa 9 hanga 12 cinaa deemna.",
+      "ctaPrimary": "Mana keenyaa argadhu",
+      "ctaSecondary": "Nu waliin haasaʼi",
+      "scrollDown": "Itti fufi",
+      "tablistLabel": "Mulʼina hojii (seensa miti)",
+      "dotsLabel": "Mulʼina hojii agarsiisi",
+      "openPortal": "Hojii {{portal}} mulʼisi",
+      "tabs": {
+        "admin": "Bulchiinsa",
+        "teacher": "Barsiisaa",
+        "student": "Barataa"
+      },
+      "trust": [
+        {
+          "icon": "translate",
+          "label": "Ingiliffaa & Amaariffaa"
+        },
+        {
+          "icon": "cloud",
+          "label": "Hosting Nageenya Qabu"
+        },
+        {
+          "icon": "backup",
+          "label": "Backup Guyyaa Guyyaan"
+        }
+      ],
+      "previews": {
+        "admin": {
+          "title": "Bakka Hojii Bulchiinsa",
+          "subtitle": "Mana barumsaa guutuu bulchi",
+          "nav": [
+            "Barsiisota & barattoota",
+            "Kutaa & galmeessuu",
+            "Argama",
+            "Hojiiwwan & qormaata",
+            "Kaffaltii",
+            "Gabaasa & weebsaayitii"
+          ],
+          "stats": [
+            {
+              "label": "Barattoota sochoʼan",
+              "value": "1,245"
+            },
+            {
+              "label": "Haftee kaffaltii",
+              "value": "86"
+            }
+          ],
+          "rows": [
+            "Beeksisa kutaa maxxansi",
+            "Kaffaltii barumsaa kenni fi galmeessi",
+            "Gabaasa argamaa fi qormaata ilaali"
+          ]
+        },
+        "teacher": {
+          "title": "Bakka Hojii Barsiisaa",
+          "subtitle": "Kutaa kenname barsiisi",
+          "nav": [
+            "Kutaa koo",
+            "Barattoota koo",
+            "Argama",
+            "Hojiiwwan",
+            "Buʼaa qormaataa",
+            "Profaayilii"
+          ],
+          "stats": [
+            {
+              "label": "Kutaa kenname",
+              "value": "4"
+            },
+            {
+              "label": "Galchuu qabdu",
+              "value": "12"
+            }
+          ],
+          "rows": [
+            "Argama Kutaa 9A mallatteessi",
+            "Hojii manaa Fiiziksii maxxansi",
+            "Qabxii qormaata gidduu galchi"
+          ]
+        },
+        "student": {
+          "title": "Bakka Hojii Barataa",
+          "subtitle": "Giddugala barumsaa kee",
+          "nav": [
+            "Kutaa koo",
+            "Barnoota",
+            "Argama",
+            "Hojiiwwan",
+            "Buʼaa qormaataa",
+            "Kaffaltii & beeksisa"
+          ],
+          "stats": [
+            {
+              "label": "Hojiiwwan hafan",
+              "value": "3"
+            },
+            {
+              "label": "Haftee kaffaltii",
+              "value": "ETB 2k"
+            }
+          ],
+          "rows": [
+            "Hojii manaa herrega galchi",
+            "Buʼaa qormaataa maxxanfame ilaali",
+            "Beeksisa mana barumsaa dubbisi"
+          ]
+        }
+      }
+    },
+    "intro": {
+      "eyebrow": "Kutannoo & Gatii Keenya",
+      "heading": "Aadaa cimaa barnootaa itti gaafatamummaa amalaa fi haaromsa irratti hundaaʼe.",
+      "curriculum": "Barnoonni keenya barnoota STEM cimaa, dandeettii afaanii Amaariffaa fi Ingiliffaa, fi barnoota namummaa ilaalcha Itoophiyaa fi addunyaa kabajuu walitti makuudhaan hojjeta.",
+      "holistic": {
+        "title": "Barnoota Guutuu",
+        "body": "Barnoota biyyoolessaa walitti makame hoogganummaa fi gaaffiin badhaadhe."
+      },
+      "language": {
+        "title": "Dandeettii Afaanii",
+        "body": "Dandeettii Ingiliffaa barnootaa waliin ogummaa dubbii Amaariffaa sooressaa."
+      },
+      "imageLabel": "Jireenya Kampasii",
+      "quote": "Kutannoon dhaabbata keenyaa ogeeyyii of-ilaalan dhaala aadaa kabajanii hawaasa isaanii amanamummaadhaan tajaajiluuf dandeettii xiinxalaa argatan guddisuudha.",
+      "attribution": "Abyssinia Academy, {{location}}"
+    },
+    "pillars": {
+      "eyebrow": "Hundee Dhaabbataa",
+      "title": "Utubaawwan Lamaan Abyssinia Academy",
+      "one": {
+        "label": "Utubaa Tokkoffaa",
+        "title": "Cimaa Barnootaa & Fedhii Sammuu",
+        "body": "Barattoonni eebbifaman barnoota olaanaa keessatti hubannoodhaan akka hoogganan, rakkoo xiinxaluudhaan furuu, qorannoo saayinsii, ogbarruu fi qorannoo hawaasaa guddisuu.",
+        "caption": "Sadarkaa Barnootaa Buʼuuraa"
+      },
+      "two": {
+        "label": "Utubaa Lammaffaa",
+        "title": "Dhaala Aadaa & Lammummaa Addunyaa",
+        "body": "Aadaa Itoophiyaa hawaasummaa, obsaa fi beekumsaa kabajuudhaan barattoota eebbifaman karaa yuunivarsiitii fi gumaacha lammummaatiif qopheessuu.",
+        "caption": "Ilaalcha Addunyaa & Hundee Hawaasaa"
+      }
+    },
+    "honor": {
+      "tabs": {
+        "honor": "Amanamummaa Barnootaa & Kabaja",
+        "leadership": "Hoogganummaa Barattootaa",
+        "stewardship": "Tajaajila Hawaasaa & Kunuunsa"
+      },
+      "panels": {
+        "honor": {
+          "title": "“Amanamummaa, Wal-kabajuu fi Dhugaa Sammuu”",
+          "body": "Barataan Abyssinia Academy hundi beekumsa amalaan wal-qabate irratti of-kennu—yaada of-dandaʼe, ilaalcha adda addaa kabajuu, fi itti gaafatamummaa dhuunfaa kutaa hunda keessatti.",
+          "points": [
+            "Hojii barnootaa dhugaa fi isaa mataa isaa taʼuuf kutannoo",
+            "Hawaasa barattootaa gidduutti wal-kabajuu",
+            "Amanamummaa barnootaaf eegumsa ifa taʼe"
+          ],
+          "badge": "Kakuu Amanamummaa",
+          "note": "Aadaa wal-amantaa fi amala ijaaruu garee hunda keessatti."
+        },
+        "leadership": {
+          "title": "Hoogganummaa Barattootaa & Itti Gaafatamummaa Waloo",
+          "body": "Carraaleen hoogganummaa barattoonni hiriyoota isaanii tajaajilan, jireenya kampasii deeggaran, fi kunuunsa mana barumsaa sadarkaa lammaffaaf taʼu shaakalan afeeru.",
+          "points": [
+            "Sagalee barattootaa jireenya kampasii fi deeggarsa hiriyyootaa keessatti",
+            "Pirojektoota waloo garee kutaa gidduutti",
+            "Gorsa kutaa hundaa waliin guddatu"
+          ],
+          "badge": "Hoogganummaa Barattootaa",
+          "note": "Amalli itti gaafatamummaa fi tajaajilaan ijaaramu."
+        },
+        "stewardship": {
+          "title": "Tajaajila Hawaasaa & Kunuunsa",
+          "body": "Itti gaafatamummaan lammummaa tajaajila umurii wajjin walii-galuu fi kunuunsa hawaasa naannoo akademiitiin guddifama.",
+          "points": [
+            "Tajaajila fedhii hawaasa naannoo irratti hundaaʼe",
+            "Dhaala aadaa fi iddoowwan waloo kabajuu",
+            "Amala kunuunsaa kampasii ol darbu"
+          ],
+          "badge": "Itti Gaafatamummaa Lammummaa",
+          "note": "Amanamummaa fi kunuunsaan gumaachuu barachuu."
+        }
+      }
+    },
+    "departments": {
+      "eyebrow": "Damee Barnootaa",
+      "title": "Kutaalee Barnootaa",
+      "focusLabel": "Xiyyeeffannoo",
+      "viewProgram": "Sagantaa Ilaali",
+      "items": [
+        {
+          "eyebrow": "Saayinsii Fiiziksii fi Jireenyaa",
+          "title": "Saayinsii Uumamaa & STEM",
+          "body": "Fiiziksii, keemistirii, baayoolojii fi saayinsii naannoo shaakala laaboraatoorii fi rakkoo gaaffiin hogganamuun furuu waliin.",
+          "aside": "Shaakala laaboraatoorii fi qorannoo saayinsii marsaa sadarkaa lammaffaa guutuu keessatti.",
+          "meta": "Kutaa 9–12"
+        },
+        {
+          "eyebrow": "Damee Lakkoofsaa",
+          "title": "Herrega & Qorannoo Kompiitaraa",
+          "body": "Guddina aljebraa, tirigonoometirii, kaalkulasii fi istaatistiksii waliin buʼuura piroograamii fi yaada herregaa.",
+          "aside": "Yaada lakkoofsaa fi qorannoo kompiitaraa qophii yuunivarsiitiif.",
+          "meta": "Kutaa 9–12"
+        },
+        {
+          "eyebrow": "Namummaa fi Qorannoo Hawaasaa",
+          "title": "Namaa, Saayinsii Hawaasaa & Afaanota",
+          "body": "Seenaa Itoophiyaa fi Afrikaa balʼaa, jiograafii, siivikisii, ogbarruu fi ogummaa dubbii Amaariffaa fi Ingiliffaadhaan.",
+          "aside": "Barreeffama xiinxalaa, hubannoo lammummaa fi dandeettii afaanii.",
+          "meta": "Amaariffaa fi Ingiliffaa"
+        },
+        {
+          "eyebrow": "Ibsa Bareedinaa",
+          "title": "Aartii Uumamaa & Muuziqaa",
+          "body": "Aartii argamuu fi muuziqaan ibsa aadaa Itoophiyaa shaakala uumamaa ammayyaa waliin kabajan.",
+          "aside": "Shaakalli uumamaa akka kutaa barnoota sadarkaa lammaffaa madaalawaa tokkoo.",
+          "meta": "Istudiyoo fi sirboota"
+        }
+      ]
+    },
+    "tenets": {
+      "eyebrow": "Garaagarummaa Abyssinia",
+      "title": "Buʼuura Afur Jireenya Barataa",
+      "description": "Naannoo sammuu ol guddisuu, hiriyyummaa cimsuu fi kaayyoo amalaa dhaabuuf qophaaʼe.",
+      "items": [
+        {
+          "title": "Kutaa Waltaʼinsaafi Gaaffiin Hogganamu",
+          "body": "Kutaaleen mariin, qorannoo pirojektii irratti hundaaʼe, fi falmii qindaaʼe xiyyeeffannaa kennu; barattoonni ragaadhaan falmuu baratu.",
+          "caption": "Aadaa Barumsaa Sochii fi Hirmaannaa Qabu"
+        },
+        {
+          "title": "Barsiisota Kutataa & Gorsitoota",
+          "body": "Ogeessonni gosa barnootaa barattoota gorsa barnootaa qindaaʼeen fi gorsa kutaa keessaatiin hogganu.",
+          "caption": "Gorsa Barnootaa Dhuunfaa"
+        },
+        {
+          "title": "Waldaalee Kampasii Sochoʼoo & Ispoortii",
+          "body": "Kilaboonni, ispoortiin fi waldaaleen aadaa barumsa kutaa hojii gareetiin fi ibsa uumamaatiin guutu.",
+          "caption": "Jireenya Barattootaa Dabalataa Barnootaa"
+        },
+        {
+          "title": "Gorsa Yuunivarsiitii & Hojii",
+          "body": "Qajeelfamni karaa yuunivarsiitii biyyoolessaa fi qophii iyyannoo barnoota olaanaa deeggara.",
+          "caption": "Qophii Barnoota Olaanaa"
+        }
+      ],
+      "gallery": [
+        "Barumsa Waloo",
+        "Ispoortii Kampasii",
+        "Kampasii Lafa Olʼaanaa"
+      ]
+    },
+    "bulletin": {
+      "eyebrow": "Oduu fi Ergaawwan Kampasii",
+      "title": "Oduu Haaraa",
+      "archiveLink": "Kuusaa Beeksisaa Daawwadhu →",
+      "emptyTitle": "Seenaawwan asitti mulʼatu",
+      "emptyBody": "Oduun akademii maxxanfaman yeroo jiraatan asitti mulʼatu.",
+      "visitBlogs": "Barreeffamoota Hunda Ilaali",
+      "prev": "Oduu duraani",
+      "next": "Oduu itti aanu",
+      "pages": "Fuulota oduu",
+      "goToPage": "Gara fuula oduu {{page}} deemi"
+    },
+    "admissions": {
+      "eyebrow": "Galmee",
+      "title": "Yeroo maatii kee qophaaʼe nu qophaaʼaa jirra.",
+      "description": "Galmeen {{grades}}f banaadha. Waaʼee barataa kee xinnoo nu himi — tarkaanfii itti aanu ifatti deebisna, formii dheeraa miti.",
+      "ctaPrimary": "Gaaffii jalqabi",
+      "ctaSecondary": "Gaaffii gaafadhu",
+      "steps": [
+        {
+          "title": "Gaafadhu",
+          "description": "Gaaffii toora interneetiin ergi ykn odeeffannoo gaafadhu."
+        },
+        {
+          "title": "Madaalamuu",
+          "description": "Akka barbaachisummaa isaatti madaallii ramaddii fi af-gaaffii xumuri."
+        },
+        {
+          "title": "Galmaaʼi",
+          "description": "Beeksisa galmee fudhadhuu hawaasa makamuu."
+        }
+      ],
+      "nextSteps": {
+        "label": "Tarkaanfiiwwan Itti Aanan",
+        "title": "Waajjira Galmee Waliin Haasaʼi",
+        "body": "Yeroon iyyannoo ammaa, guyyaan madaallii fi tilmaamni kaffaltii kallattiin Waajjira Galmeetiin mirkanaaʼa—hanga mirkanaaʼutti asitti hin maxxanfamu."
+      },
+      "submitInquiry": "Gaaffii Galmee Ergi →",
+      "contactSchool": "Mana Barumsaa Quunnami"
+    },
+    "inquiry": {
+      "eyebrow": "Galmeessa Galmee Idilee",
+      "title": "Odeeffannoo Galmee Gaafadhu",
+      "description": "Odeeffannoo curriculumii fi qajeelfama seensa gaafachuuf unka kana guuti.",
+      "form": {
+        "guardianName": "Maqaa Guutuu Maatii / Guddiftuu (filannoo)",
+        "email": "Teessoo Imeelii",
+        "phone": "Lakkoofsa Bilbilaa",
+        "grade": "Kutaa Barataa Galuu",
+        "gradePlaceholder": "Kutaa Galuu Filadhu",
+        "grade9": "Kutaa 9",
+        "grade10": "Kutaa 10",
+        "grade11": "Kutaa 11",
+        "grade12": "Kutaa 12",
+        "newsletterLabel": "Eeyyee, waaʼee guyyaa daawwannaa kampasii, sagantaa qormaata galmee, fi beeksisa mana barumsaa na beeksiisaa.",
+        "newsletterDescription": "Dhuunfaa kee kabajna. Yeroo kamiyyuu dhiisuu dandeessa.",
+        "confidentiality": "Odeeffannoon barattootaa hundi iccitiidhaan cimaan qabama.",
+        "submit": "Gaaffii Galmee Ergi →",
+        "studentName": "Maqaa Guutuu Barataa Dhufaa",
+        "academicYear": "Waggaa Barnootaa",
+        "message": "Ergaa Gaaffii",
+        "messagePlaceholder": "Waaʼee odeeffannoo ykn daawwannaa gaafattu nuuf himi."
+      }
+    },
+    "events": {
+      "eyebrow": "Galmee Barnootaa",
+      "title": "Walgaʼii Kampasii Dhufaa",
+      "viewAll": "Taateewwan hunda ilaali →",
+      "emptyTitle": "Taateewwan dhufaa hin tarreeffamne",
+      "emptyBody": "Taateewwan kalandarii akademii irraa maxxanfamani asitti mulʼatu."
+    },
+    "portals": {
+      "badge": "Waltajjii tokko. Muuxannoo sadii.",
+      "title": "Hirmaataan Hunduu Poortaala Mataa Isaa Qaba",
+      "subtitle": "Hogganoonni, barsiisonni fi barattoonni bakka hojii mataa isaaniitiin qophaa’e argatu — poortaala maati hin jiru.",
+      "setupBadge": "Qopheessuu salphaa",
+      "cards": {
+        "admin": {
+          "title": "Itti gaafatamummaa bulchiinsa",
+          "description": "Mana barumsaa bulchi: namoota, barnoota, kaffaltii, beeksisa fi weebsaayitii.",
+          "features": [
+            "Barsiisota, barattoota fi galmeessuu bulchi",
+            "Waggaa barumsaa, kutaa fi barnoota qopheessi",
+            "Argama, hojiiwwan fi qormaata hordofi",
+            "Kaffaltii kenni fi galmeessi",
+            "Beeksisa fi qabiyyee weebsaayitii maxxansi"
+          ],
+          "cta": "Ilaalcha bulchiinsa"
+        },
+        "teacher": {
+          "title": "Itti gaafatamummaa barsiisaa",
+          "description": "Kutaa fi barnoota bulchiinsaan kenname qofa waliin hojjedhu.",
+          "features": [
+            "Kutaa fi barattoota kenname ilaali",
+            "Argama guyyaa mallatteessi",
+            "Hojiiwwan uumi fi madaali",
+            "Buʼaa qormaataa barnoota keetiif galchi",
+            "Profaayilii barsiisummaa kee haaromsi"
+          ],
+          "cta": "Ilaalcha barsiisaa"
+        },
+        "student": {
+          "title": "Itti gaafatamummaa barataa",
+          "description": "Galmeessuu kee hordofi: kutaa, hojii, buʼaa fi beeksisa.",
+          "features": [
+            "Kutaa fi barnoota galmaaʼan ilaali",
+            "Argama dhuunfaa mirkaneessi",
+            "Hojiiwwan galchi",
+            "Buʼaa qormaataa maxxanfame ilaali",
+            "Kaffaltii fi beeksisa hordofi"
+          ],
+          "cta": "Ilaalcha barataa"
+        }
+      }
+    },
+    "sms": {
+      "steps": {
+        "badge": "Qopheessuu salphaa",
+        "title": "Tarkaanfii 3 keessatti eegali",
+        "subtitle": "Akademii Abisiiniyaaf — Kutaa 9–12 Finfinnee keessatti.",
+        "items": [
+          {
+            "title": "Waggaa barumsaa qopheessi",
+            "body": "Termii, kutaa 9–12, kutaa fi barumsa qopheessi.",
+            "icon": "apartment"
+          },
+          {
+            "title": "Hojjettoota fi barattoota dabali",
+            "body": "Akaawuntii barsiisaa fi barataa uumi, barattoota kutaa keessatti galmeessi.",
+            "icon": "group"
+          },
+          {
+            "title": "Poortaalota irratti eegali",
+            "body": "Barsiisonni argamuu fi hojii kennu; barattoonni dhiyeessu fi bu’aa ilaalu.",
+            "icon": "bolt"
+          }
+        ]
+      },
+      "modules": {
+        "badge": "Mooduulota waltajjii",
+        "title": "Waan mana barumsaa kee barbaachisu hunda",
+        "subtitle": "Mooduulota cimaa bulchiinsa sadarkaa lammaffaaf — malee poortaala maati.",
+        "items": [
+          {
+            "title": "Bulchiinsa barataa",
+            "body": "Barattoota galmee fi seenaa barumsaa waliin bulchi.",
+            "icon": "person"
+          },
+          {
+            "title": "Hordoffii argamuu",
+            "body": "Argamuu saffisaan galmeessi fi gabaasa ilaali.",
+            "icon": "event_available"
+          },
+          {
+            "title": "Hojii mana",
+            "body": "Digitaalaan kenna; barattoonni dhiyeessu.",
+            "icon": "edit_note"
+          },
+          {
+            "title": "Qabxii fi qormaata",
+            "body": "Qabxii galchi fi bu’aa maxxansi.",
+            "icon": "grade"
+          },
+          {
+            "title": "Beeksisa mana barumsaa",
+            "body": "Barsiisotaaf, barattootaaf ykn kutaa kenni.",
+            "icon": "campaign"
+          },
+          {
+            "title": "Bulchiinsa kaffaltii",
+            "body": "Kaffaltii fi haala hafe hordofi.",
+            "icon": "payments"
+          },
+          {
+            "title": "Gabaasa barumsaa",
+            "body": "Gabaasa mana barumsaa fi barataa uumi.",
+            "icon": "analytics"
+          },
+          {
+            "title": "Ijaarsa yeroo barumsaa",
+            "body": "Yeroo barumsaa maxxansi.",
+            "icon": "calendar_month"
+          },
+          {
+            "title": "CMS weebsaayitii",
+            "body": "Fuula ummataa waliin SMS haaromsi.",
+            "icon": "language"
+          }
+        ]
+      },
+      "local": {
+        "badge": "Barnoota Itoophiyaa",
+        "title": "Akkuma mana barumsaa keenya hojjetutti kan qophaa’e",
+        "subtitle": "Moodeela sadarkaa lammaffaa Akademii Abisiiniyaa Finfinnee keessatti.",
+        "points": [
+          "Fuula ummataa Afaan Ingilizii, Amaariffaa fi Afaan Oromoo",
+          "Caasaa kutaa 9–12",
+          "Adeemsa kaffaltii naannoo",
+          "Poortaala admin, barsiisaa fi barataa qofa",
+          "Argama nageenya qabu",
+          "Mobilii mijataa"
+        ],
+        "cards": [
+          {
+            "title": "Afaanota hedduu",
+            "body": "EN · አማ · Afaan Oromoo",
+            "icon": "translate"
+          },
+          {
+            "title": "Caasaa naannoo",
+            "body": "Kutaa 9–12",
+            "icon": "school"
+          },
+          {
+            "title": "Kaffaltii ETB",
+            "body": "Hordoffii kaffaltii barumsaa",
+            "icon": "payments"
+          },
+          {
+            "title": "Nageenya",
+            "body": "Argama gahee irratti hundaa’e",
+            "icon": "verified_user"
+          },
+          {
+            "title": "Xiinxala",
+            "body": "Argamuu fi raawwii",
+            "icon": "insights"
+          }
+        ]
+      },
+      "security": {
+        "badge": "Nageenya",
+        "title": "Nageenya fi amansiisummaa sadarkaa olaanaa",
+        "subtitle": "Galmeewwan mana barumsaa eegumsa barbaadu.",
+        "items": [
+          {
+            "title": "Mirkaneessa JWT",
+            "body": "Tookeniin mallattoo qabu poortaala tokkoon tokkoo.",
+            "icon": "key"
+          },
+          {
+            "title": "Argama gahee",
+            "body": "Hayyama adda addaa admin, barsiisaa fi barataaf.",
+            "icon": "admin_panel_settings"
+          },
+          {
+            "title": "Daangaa barsiisaa",
+            "body": "Barsiisonni kutaa kenname qofa argu.",
+            "icon": "lock_person"
+          },
+          {
+            "title": "Dhuunfaa barataa",
+            "body": "Barataan galmee barataa biraa hin argu.",
+            "icon": "privacy_tip"
+          },
+          {
+            "title": "Galmee auditii",
+            "body": "Gochaaleen barbaachisoo ni galmaa’u.",
+            "icon": "history"
+          },
+          {
+            "title": "Fe’umsa mirkanaa’e",
+            "body": "Mallattoo faayilii fi daangaa guddinaa.",
+            "icon": "upload_file"
+          }
+        ]
+      },
+      "why": {
+        "badge": "Maaliif Akademii Abisiiniyaa",
+        "title": "Maaliif waltajjiin keenya walqabate barbaachisaa ta’e",
+        "items": [
+          {
+            "title": "Yeroo bulchiinsa qusadhu",
+            "icon": "trending_up"
+          },
+          {
+            "title": "Adeemsa barsiisaa ifa",
+            "icon": "groups"
+          },
+          {
+            "title": "Argamuu salphisi",
+            "icon": "calendar_month"
+          },
+          {
+            "title": "Galmee barumsaa qindeessi",
+            "icon": "folder"
+          },
+          {
+            "title": "Beeksisa walitti qabi",
+            "icon": "forum"
+          },
+          {
+            "title": "Bakka hundaa argi",
+            "icon": "public"
+          },
+          {
+            "title": "Waraqaa hir’isi",
+            "icon": "description"
+          },
+          {
+            "title": "Kutaa 9–12 waliin guddadhu",
+            "icon": "layers"
+          }
+        ]
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Gaaffilee yeroo hedduu gaafataman",
+        "items": [
+          {
+            "question": "Poortaalli maati jiraa?",
+            "answer": "Lakki. Poortaalonni Admin, Barsiisaa fi Barataa qofa."
+          },
+          {
+            "question": "Weebsaayitiin ummataa afaanota hedduu deeggaraa?",
+            "answer": "Eeyyee. Afaan Ingilizii, Amaariffaa fi Afaan Oromoo."
+          },
+          {
+            "question": "Barsiisaan barattoota hunda argaa?",
+            "answer": "Lakki. Kutaa fi barumsa kenname qofa."
+          },
+          {
+            "question": "Deetaan nageenya qabaa?",
+            "answer": "Eeyyee. Mirkaneessa, hayyama, auditii fi fe’umsa mirkanaa’e."
+          },
+          {
+            "question": "Kun weebsaayitii ummataa bakka bu’aa?",
+            "answer": "Lakki. Fuula ummataa fi CMS ni itti fufa."
+          },
+          {
+            "question": "Mirgi maxxansa kan eenyuu?",
+            "answer": "© Akademii Abisiiniyaa. Mirgi hundi eegama."
+          }
+        ]
+      },
+      "cta": {
+        "eyebrow": "Har’a eegali",
+        "title": "Hojiiwwan kampasii haaromsuuf qophaa’oo?",
+        "subtitle": "Paakeejii odeeffannoo gaafadhu ykn galmee quunnami. Seensi barsiisaa fi barataa amma qophaaʼaa — mata duree irraa Seeni fayyadami.",
+        "primary": "Paakeejii Odeeffannoo Gaafadhu",
+        "secondary": "Nu Quunnami",
+        "cardEyebrow": "Waltajjii kampasii",
+        "cardBody": "Sadarkaa lammaffaa · Kutaa 9–12 · Finfinnee, Itoophiyaa.",
+        "copyrightNote": "© Akademii Abisiiniyaa. Mirgi hundi eegama."
+      }
+    },
+    "statsBar": {
+      "ariaLabel": "Manni barumsaa gabaabinaan",
+      "intro": "Namoonni, seenaawwan fi waggoota hiriyyummaa — hawaasa keenya gabaabinaan.",
+      "items": [
+        {
+          "key": "established",
+          "label": "Maatii tajaajilaa jirra erga",
+          "value": "2010"
+        },
+        {
+          "key": "students",
+          "label": "Barattoota waggaa kanaa",
+          "value": "1,200+"
+        },
+        {
+          "key": "staff",
+          "label": "Barsiisotaa fi hojjettoota",
+          "value": "85+"
+        },
+        {
+          "key": "alumni",
+          "label": "Barattoota duraanii addunyaa irratti",
+          "value": "3,500+"
+        },
+        {
+          "key": "partners",
+          "label": "Michiwwan hawaasaa",
+          "value": "12"
+        }
+      ]
+    },
+    "subjectsSection": {
+      "title": "Barattoonni asitti maal baratu",
+      "intro": "Afaan Amaaraa fi Ingiliffaa irraa hanga laaboraatoorii saayinsii fi ICT — barnoota obsaan, fedhiidhaan fi haasaʼaa dhugaadhaan kenname."
+    },
+    "community": {
+      "quote": "Walii keenya eegganna. Seenaawwan adda addaa, kampasii tokko — fi barataa tokkollee hin dhiifnu jedhanii waadaa walii qabna.",
+      "attribution": "— Hawaasa Abyssinia Academy"
+    },
+    "team": {
+      "title": "Guyyaa qajeelchitu namoonni",
+      "intro": "Hoogganaa fi kunuunsi fuula arguu dandeessan irraa jalqaba — maqaa gubbaa qofa irraa miti.",
+      "members": [
+        {
+          "name": "Itti aanaa mana barumsaa",
+          "role": "Haala barumsaa fi hiriyyummaa qindeessa",
+          "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "Itti aanaa — Barnoota",
+          "role": "Barsiisuu yaadaa fi cimaa taʼuu eega",
+          "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "Diin barattootaa",
+          "role": "Jireenya kampasii keessatti barattoota waliin deema",
+          "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=480&q=80"
+        },
+        {
+          "name": "Daayirektara seensaa",
+          "role": "Maatii gara haasaʼatti simata",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=480&q=80"
+        }
+      ]
+    },
+    "facilities": {
+      "title": "Community Facilities and Services",
+      "body": "Students enjoy classrooms, science labs, library resources, sports grounds, and counseling services that support academic excellence and wellbeing.",
+      "viewMore": "View More"
+    },
+    "numbers": {
+      "title": "By the Numbers",
+      "items": [
+        {
+          "value": "1,200+",
+          "title": "Students",
+          "body": "Scholars across Grades 9–12 in day and residential pathways."
+        },
+        {
+          "value": "85+",
+          "title": "Faculty & Staff",
+          "body": "Teachers and support staff dedicated to secondary formation."
+        },
+        {
+          "value": "13",
+          "title": "Core Subjects",
+          "body": "National curriculum subjects spanning sciences, languages, and ICT."
+        },
+        {
+          "value": "24",
+          "title": "Clubs & Teams",
+          "body": "Sports, arts, debate, STEM, and community service opportunities."
+        }
+      ]
+    },
+    "campusMemory": "In memory of our campus journey",
+    "admissionSection": {
+      "title": "Admission at Abyssinia Academy",
+      "body": "Our admission process is designed to identify talented and motivated students who are ready to thrive in a supportive learning environment.",
+      "cards": {
+        "admission": "Admission",
+        "social": "Social Science Students",
+        "natural": "Natural Science Students"
+      }
+    },
+    "upcomingEvents": {
+      "title": "Upcoming Events",
+      "viewAll": "View All"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Ilaalcha Dhaabbataa",
+      "title": "Waaʼee Abyssinia Academy",
+      "subtitle": "Dhaabbata Sadarkaa Lammaffaa ({{grades}})",
+      "tagline": "Finfinnee keessatti cimaa sammuu, dhaala aadaa, fi hoogganummaa amalaa guddifna.",
+      "paragraph1": "Abyssinia Academy dhaabbata sadarkaa lammaffaa Itoophiyaa of-dandaʼe ({{grades}}) amantaa beekumsi sadarkaa olʼaanaa amala fi itti gaafatamummaa biyyaalessaa irraa addaan hin baasamne irratti hundaaʼee ti. Finfinnee keessatti argamuun, Akademiin barnoota ulfaataa saayinsii uumamaa fi herrega cimaa ogbarruu, seenaa fi amala lammummaa keessatti qorannoo namummaa waliin walitti fidu ittiin ogeeyyii qopheessa.",
+      "paragraph2": "Gabaabbiiwwan barnootaa fi sammuu cufaa duuba hordofuu ni didna. Ogeeyyiin keenya of-eeggannoodhaan dubbisuu, xumura karaa sirnaawaadhaan morkachuu, ilaalcha Amaariffaa fi Ingiliffaan ibsuu, fi dhaala seenaa biyya keenyaa kabajuu, yeroo qophii barnoota yuunivarsiitiif godhaman baratu.",
+      "matrix": {
+        "title": "Gabaabbii Akademii",
+        "cycleLabel": "Marsaa Barnootaa",
+        "cycleValue": "{{grades}} Marsaa Sadarkaa Lammaffaa",
+        "mediumLabel": "Afaan Barnootaa",
+        "mediumValue": "Afaan Lamaan (Amaariffaa fi Ingiliffaa)",
+        "frameworkLabel": "Caasaa Barsiisuu",
+        "frameworkValue": "Caasaa Sadarkaa Lammaffaa Biyyoolessaa & Qophii",
+        "locationLabel": "Iddoo Kampasii",
+        "locationPending": "{{location}} [Teessoon ammallee hin murtoofne]",
+        "accreditationLabel": "Beekamtii fi Hayyamaa Dhaabbataa",
+        "accreditationValue": "Sakattaʼa toʼannoo idilee jala jira / gaaffii irratti mirkanaaʼa"
+      },
+      "imageLabel": "Barumsa Kampasii",
+      "imageCaption": "Ogeeyyii Abyssinia Academy keessatti jireenya barnootaa sadarkaa lammaffaa isaanii keessatti seminaarota saayinsii fi namummaa irratti hirmaatan."
+    },
+    "story": {
+      "eyebrow": "Guddina Dhaabbataa",
+      "title": "Seenaa Keenya & Dhaala Barnootaa",
+      "paragraph1": "Hundeeffamni Abyssinia Academy amantaa barsiisota Itoophiyaa walii-galuu irraa burqe: Finfinneen dhaabbata sadarkaa lammaffaa kutannoo qabu, bilchaata sammuu fi amala dargaggootaa Kutaa 9 hanga 12tti jiranii guddisu akka barbaachisu.",
+      "paragraph2": "Akademiin barnoota ijoo sadarkaa lammaffaa, iddoowwan qoʼannoo sirnaawoo, shaakala laaboraatoorii fi naannoo gorsa barsiisaa gara barataatti xiyyeeffannoodhaan guutame irratti xiyyeeffata.",
+      "milestones": [
+        {
+          "phase": "Marsaa Hundeessuu",
+          "marker": "Hundeeffamaa fi Chaartarii",
+          "note": "Galmeewwan chaartarii seenaa mirkanaaʼuuf jiru",
+          "title": "Hundeeffama Caasaa Sadarkaa Lammaffaa",
+          "body": "Banamni marsaa sadarkaa lammaffaa waggaa afur dargaggoota Finfinnee guutuu tajaajiluuf qophaaʼe, galmee barnootaa, itti gaafatamummaa lammummaa fi beekumsa qophiif xiyyeeffannaa kennu."
+        },
+        {
+          "phase": "Sadarkaalee Barnootaa",
+          "marker": "Caasaa Barnootaa",
+          "note": "Caasaalee idilee Ministeera Barnootaa waliin wal-simatan",
+          "title": "Barnoota & Sadarkaalee Barnootaa",
+          "body": "Walitti makamni caasaalee sadarkaa lammaffaa biyyoolessaa herrega, saayinsii fiiziksii fi uumamaa keessatti, barnoota afaan lamaan Ingiliffaa fi Amaariffaa waliin."
+        },
+        {
+          "phase": "Naannoo Kampasii",
+          "marker": "Guddina Kampasii",
+          "note": "Tarreen miidhaginsaa gaaffiin ni dhiyaata",
+          "title": "Kutaalee fi Wantoota Qoʼannoo",
+          "body": "Guddina kutaalee sadarkaa lammaffaa, iddoowwan qoʼannoo, fi bakkeewwan barumsa saayinsii gaaffii waloo fi qoʼannoo olʼaanaa xiyyeeffannoon qabuuf qophaaʼan."
+        },
+        {
+          "phase": "Garee Barattootaa",
+          "marker": "Ijaarsa Itti Fufaa",
+          "note": "Balʼina garee Waajjirri Galmee ni mirkaneessa",
+          "title": "Barnoota Sadarkaa Lammaffaa & Qophii Yuunivarsiitii",
+          "body": "Qophii itti fufiinsa qabu garee sadarkaa lammaffaa sadarkaalee qormaata biyyoolessaa fi sirna qophii barnoota olaanaa jalatti."
+        }
+      ],
+      "archiveNote": "Yaadannoo: Kuusaan seenaa fi galmeewwan bulchiinsaa Waajjira Hojii Akademii keessatti eegamanii gaaffii irratti ni argamu."
+    },
+    "missionVision": {
+      "eyebrow": "Kaayyoo",
+      "title": "Ergama Keenya & Mulʼata Keenya",
+      "mission": {
+        "label": "Ergama",
+        "title": "Ijaarsa Barnootaa Cimaa Gaaffiin Hogganamu",
+        "body": "“Barnoota sadarkaa lammaffaa cimaa gaaffiin hogganamu ifummaa xiinxalaa, amala, fi kunuunsa aadaa guddisu kennuu; barattoonni hawaasa Itoophiyaa fi addunyaa balʼaatiif gumaacha gaʼaa akka gumaachan isaan qopheessuu.”"
+      },
+      "vision": {
+        "label": "Mulʼata",
+        "title": "Fakkeenya Gaarii Beekumsa Itoophiyaa",
+        "body": "“Dhaabbata sadarkaa lammaffaa Itoophiyaa fakkeenya taʼee dhaabbachuu, aadaa fi beekumsi fuulduraa ilaalu itti wal-argan, ogeeyyii of-ilaalan gaarummaa, of-gadi-qabuu fi kaayyoo sammuu qabatanii hogganan eebbisuu.”"
+      }
+    },
+    "values": {
+      "eyebrow": "Ijaarsa Amalaa",
+      "title": "Gatiiwwan Buʼuuraa Keenya",
+      "description": "Gatiiwwan laaboraatoorii, galma qormaataa fi tarsiimoo hirmaannaa hawaasaa keessatti hojiirra oolu.",
+      "items": [
+        {
+          "title": "Amanamummaa & Dhugaa Sammuu",
+          "body": "Kutannoo hin jijjiiramne beekumsa dhugaa, rakkoo of-dandaʼanii furuu, fi dhugummaa qormaataa irratti qabnu."
+        },
+        {
+          "title": "Olaantummaa Barnootaa & Gaaffii",
+          "body": "Gadi fageenya yaad-rimee yaadachuu qofa irra dursuu—daataa qorachuu, tilmaama gaafachuu, fi ogummaa herregaa hordofuu."
+        },
+        {
+          "title": "Itti Gaafatamummaa & Kunuunsa Lammummaa",
+          "body": "Itti gaafatamummaa sochii qabu wal-eegumsaa fi dhaabbilee hawaasaa Finfinnee tajaajiluuf."
+        },
+        {
+          "title": "Wal-kabajuu & Gaarummaa",
+          "body": "Ulfina hiriyyaa kutaa fi hojjetaa hunda mirkaneessuu—obsaan dhaggeeffachuu fi amaloota gaarii qabatanii dubbachuu."
+        },
+        {
+          "title": "Dhaala Aadaa & Boonummaa",
+          "body": "Kabaja hundee qabu dhaala afaanii Itoophiyaa, barreeffama seenaa, fi dhaala hawaasaa saayinsii addunyaa cimaa waliin."
+        },
+        {
+          "title": "Fedhii fi Ajaaʼibsiisa Umrii Guutuu",
+          "body": "Fedhii dubbisuu, yaalii, jaalala ogbarruu fi marii yaadaan guutame qormaata ol itti fufsiisuu."
+        }
+      ]
+    },
+    "governance": {
+      "eyebrow": "Kunuunsa",
+      "title": "Hoogganummaa & Bulchiinsa",
+      "description": "Abyssinia Academy modeela bulchiinsaa qulqullina barnootaa, ifummaa dhaabbataa fi eegumsa daaʼimman irratti kutannoo qabuun hojjeta. Hojjettoonni maqaan waamaman yeroo mirkanaaʼan qofa maxxanfamu.",
+      "items": [
+        {
+          "title": "Waajjira Mataa Mana Barumsaa",
+          "body": "Hoogganummaa dhaabbataa qulqullina barnootaa, eegumsaa fi aadaa mana barumsaatiif."
+        },
+        {
+          "title": "Hogganoota Kutaalee Barnootaa",
+          "body": "Hoogganummaa damee barnootaa herrega, saayinsii, afaanota, saayinsii hawaasaa, ICT fi aartii keessatti."
+        },
+        {
+          "title": "Deeggarsa Barattootaa & Eegumsa",
+          "body": "Caasaaleen kunuunsaa gaarummaa barattootaa fi eegumsa daaʼimmanii irratti kutannoo qaban."
+        },
+        {
+          "title": "Quunnamtii Maatii & Hawaasaa",
+          "body": "Karaalee quunnamtii maatii fi hirmaannaa hawaasaa akademii waliin."
+        }
+      ]
+    },
+    "environment": {
+      "eyebrow": "Kampasii",
+      "title": "Naannoo Barumsaa Keenya",
+      "items": [
+        {
+          "title": "Kutaalee fi Laaboraatoorii Sadarkaa Lammaffaa",
+          "body": "Iddoowwan barsiisuu, shaakala laaboraatoorii, fi hojii koorsii sadarkaa lammaffaa gaaffiin hogganamuuf taʼan."
+        },
+        {
+          "title": "Iddoowwan Qoʼannoo fi Dubbisaa",
+          "body": "Bakkeewwan calʼisaa fi waliin itti hojjetaman dubbisuu, qorannoo fi qoʼannoo toʼatamuuf."
+        },
+        {
+          "title": "Dirree Bashannanaa Alaa",
+          "body": "Bakkeewwan alaa ispoortii, bashannanaa fi jireenya hawaasa kampasii deeggaran."
+        }
+      ]
+    },
+    "community": {
+      "eyebrow": "Hiriyyummaa",
+      "title": "Hirmaannaa Hawaasaa & Maatii",
+      "body": "Maatiin ijaarsa sadarkaa lammaffaa keessatti hiriyyoota. Akademiin guddina barnootaa, jireenya kampasii fi qajeelfama galmeef karaalee quunnamtii eega.",
+      "familyTitle": "Quunnamtii Maatii",
+      "familyBody": "Walgaʼiiwwan guddinaa, odeeffannoo haaraa beeksisaa fi quunnamtii kallattii hojjettoota barnootaa waliin kunuunsitoota waggaa barnootaa guutuu beeksisu.",
+      "cta": {
+        "title": "Jireenya Barnootaa Abyssinia Academy Keessaa Argadhu",
+        "body": "Fuula Amala irratti sagantaalee qorradhu, ykn gaaffii galmee {{grades}}f qabaattan Waajjira Galmee quunnami.",
+        "explore": "Sagantaalee Barnootaa Qorradhu",
+        "inquire": "Waajjira Galmee Gaafadhu"
+      }
+    },
+    "stats": {
+      "established": "Established",
+      "students": "Students",
+      "staff": "Staff",
+      "alumni": "Alumni pathways",
+      "grades": "Grade levels"
+    },
+    "shaping": {
+      "eyebrow": "Our promise",
+      "title": "Shaping the Future",
+      "body": "At Abyssinia Academy we nurture the next generation of leaders, innovators, and thinkers. Through a rigorous academic program, modern facilities, and holistic development, we prepare students to excel in higher education and life beyond the classroom.",
+      "commitmentTitle": "Our Commitment",
+      "commitments": [
+        {
+          "title": "Excellence in Education",
+          "body": "Strong academic foundation across sciences, arts, and languages."
+        },
+        {
+          "title": "Innovation & Technology",
+          "body": "Hands-on labs, ICT, and digital learning tools."
+        },
+        {
+          "title": "Character & Leadership",
+          "body": "Clubs, sports, and community service to build confidence and responsibility."
+        },
+        {
+          "title": "Global Readiness",
+          "body": "Skills and knowledge to thrive in the 21st century."
+        }
+      ],
+      "quote": "Abyssinia Academy — Where Today's Learners Become Tomorrow's Leaders"
+    },
+    "campusLife": {
+      "eyebrow": "Daily life",
+      "title": "Campus Life",
+      "items": [
+        {
+          "title": "Starting the Day",
+          "body": "Students arrive with purpose — morning gatherings, first lessons, and a calm start to focused learning."
+        },
+        {
+          "title": "Friendships in Bloom",
+          "body": "Courtyards and study commons fill with conversation, teamwork, and friendships that last beyond graduation."
+        },
+        {
+          "title": "Action on the Field",
+          "body": "Sports and recreation build sportsmanship, energy, and healthy competition after class."
+        },
+        {
+          "title": "A Successful Day Ends",
+          "body": "As the day closes, scholars leave with new skills, shared stories, and readiness for tomorrow."
+        }
+      ],
+      "readMore": "Learn more"
+    },
+    "subjects": {
+      "eyebrow": "Curriculum",
+      "title": "Discover a Study Area That Will Transform Your Future",
+      "gradeRange": "Grade 9 – Grade 12",
+      "items": [
+        {
+          "name": "Amharic",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "English",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "Mathematics",
+          "note": "Grade 9 – Grade 12"
+        },
+        {
+          "name": "Physics",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Chemistry",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Biology",
+          "note": "Grade 9 – Grade 12 (Natural Science focus in 11–12)"
+        },
+        {
+          "name": "Geography",
+          "note": "Grade 9 – Grade 12 (Social Science focus in 11–12)"
+        },
+        {
+          "name": "IT",
+          "note": "Grade 9 – Grade 12"
+        }
+      ]
+    },
+    "whyStudy": {
+      "eyebrow": "Academics",
+      "title": "Why Study at Abyssinia Academy?",
+      "sightsTitle": "Set Your Sights on the Future",
+      "sightsBody": "We prepare every scholar for university pathways and responsible citizenship through innovative learning, holistic development, and a proven academic culture.",
+      "highlights": [
+        {
+          "title": "Innovative Learning",
+          "body": "Hands-on labs, digital tools, and inquiry-led classrooms."
+        },
+        {
+          "title": "Holistic Development",
+          "body": "Sports, arts, clubs, and leadership beyond the timetable."
+        },
+        {
+          "title": "Path to Success",
+          "body": "Consistent preparation for national exams and higher education."
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Strong Academic Foundation",
+          "body": "Sciences, mathematics, social sciences, Amharic, English, and ICT across {{grades}}."
+        },
+        {
+          "title": "Experienced Faculty",
+          "body": "Dedicated teachers who give individual attention and high expectations."
+        },
+        {
+          "title": "Holistic Development",
+          "body": "Debate, science clubs, arts, sports, and student leadership."
+        },
+        {
+          "title": "Proven Track Record",
+          "body": "A culture of examination readiness and alumni pathways to higher study."
+        }
+      ]
+    },
+    "tour": {
+      "eyebrow": "Visit",
+      "title": "Take a Virtual Tour of Our Campus",
+      "body": "Explore classrooms, labs, library spaces, and recreation areas — and see where your academic journey begins.",
+      "points": [
+        "Modern classrooms and science labs",
+        "Computer and ICT labs",
+        "Library and resource centers",
+        "Sports fields and recreation areas",
+        "Arts and cultural spaces"
+      ],
+      "cta": "View campus"
+    },
+    "readMore": "Read More",
+    "campusBlock": {
+      "title": "Abyssinia Academy's Campus",
+      "body": "A vibrant environment for students to learn, grow, and connect — classrooms, labs, grounds, and community spaces designed for academic excellence."
+    }
+  },
+  "blogs": {
+    "eyebrow": "Beeksisa Akademii",
+    "title": "Blogii Keenya",
+    "description": "Hubannoo, seenaawwan fi odeeffannoo addunyaa barnootaa irraa",
+    "listLabel": "Barruuwwan blogii",
+    "featuredTitle": "Barruuwwan Filataman",
+    "recentTitle": "Barruuwwan Dhihoo",
+    "searchLabel": "Barruuwwan barbaadi",
+    "searchPlaceholder": "Barruuwwan barbaadi...",
+    "searchSubmit": "Barbaadi",
+    "paginationLabel": "Fuulawwan blogii",
+    "newsletter": {
+      "title": "Gara Newsletter Keenyaatti Galmaaʼi",
+      "blurb": "Barruuwwan fi hubannoo haaraa kallattiin sanduuqa imeelii keetti argadhu."
+    },
+    "placeholder": {
+      "date": "Guyyaa maxxansaa",
+      "title": "Mata duree barruu",
+      "excerpt": "Bakki ciccitaa — maxxansawwan maxxanfamaniif qabame.",
+      "read": "Dubbisi"
+    },
+    "empty": {
+      "title": "Ammatti maxxansiin hin jiru",
+      "description": "Yeroo dhiyootti deebiʼi. CMS akademii irratti yeroo maxxanfamu asitti mulʼata."
+    },
+    "loading": "Maxxansiwwan feʼamaa jiru…",
+    "emptyShort": "Ammatti maxxansiin hin jiru. Yeroo dhiyootti deebiʼi.",
+    "loadError": "Amma blogoota feʼuu hin dandeenye. Maxxansa ilaaluuf API duubaa jalqabi.",
+    "categoriesLabel": "Ramaddiiwwan",
+    "allCategories": "Hunda",
+    "readMore": "Read More",
+    "unpublished": "Guyyaan hin argamu",
+    "prevPage": "Duraa",
+    "nextPage": "Itti aansu",
+    "pageStatus": "Fuula {{page}} keessaa {{totalPages}}",
+    "popular": "Popular Posts"
+  },
+  "register": {
+    "banner": {
+      "title": "Register your interest",
+      "description": "Admissions are open for {{grades}}. Share a few details and our office will guide you through the next steps."
+    },
+    "help": "Prefer to talk first?",
+    "formTitle": "Student Registration Form",
+    "formSubtitle": "Admissions inquiry for {{grades}}. Our office will guide the next steps.",
+    "reset": "Reset"
+  },
+  "contact": {
+    "banner": {
+      "eyebrow": "Nu Quunnamaa",
+      "title": "Nu quunnamaa",
+      "description": "Waaʼee galmee, barnoota, ykn jireenya kampasii gaaffii qabdaa? Ergaa nuuf ergi — waajjirri keenya yeroo gabaabaa keessatti siif deebisa."
+    },
+    "info": {
+      "badge": "Odeeffannoo Quunnamtii",
+      "title": "Siirraa dhagaʼuu barbaanna",
+      "description": "Waaʼee galmee, barnoota, daawwannaa kampasii, ykn odeeffannoo waliigalaa yoo barbaadde — gaaffii kamiyyuu deebisuuf qophaaʼoodha.",
+      "email": "Imeelii",
+      "admissionsOffice": "Waajjira Galmee",
+      "address": "Teessoo",
+      "pending": "Bilbilli, imeeliin fi teessoon daandii mirkanaaʼan <code>SITE.contact</code> keessatti erga mirkanaaʼanii booda asitti mulʼatu. {{location}} yeroo ammaaf sararri iddoo maxxanfame dha."
+    },
+    "visit": {
+      "title": "Daawwannaa kampasii karoorfatteettaa?",
+      "body": "Daawwannaa gaafadhu; kutaalee, laaboraatoorii fi lafa kampasii siif agarsiifna — maatii galuu barbaadaniif qophaaʼe.",
+      "cta": "Daawwannaa Gaafadhu"
+    },
+    "form": {
+      "title": "Ergaa nuuf ergi",
+      "name": "Maqaa Guutuu",
+      "phone": "Lakkoofsa Bilbilaa (filannoo)",
+      "email": "Imeelii",
+      "subject": "Mata duree",
+      "subjectPlaceholder": "Galmee, daawwannaa kampasii, gaaffii waliigalaa…",
+      "message": "Ergaa",
+      "messagePlaceholder": "Akkamitti si gargaaruu dandeenya?",
+      "submit": "Ergaa Ergi"
+    }
+  },
+  "events": {
+    "eyebrow": "Jireenya Kampasii",
+    "title": "Taateewwan",
+    "description": "Taateewwan kampasii fi barnootaa Akademii Abisiiniyaa irraa maxxanfamani.",
+    "loading": "Taateewwan feʼamaa jiru…",
+    "loadError": "Amma taateewwan feʼuu hin dandeenye.",
+    "readMore": "Balʼina →",
+    "empty": {
+      "title": "Ammatti taateen maxxanfame hin jiru",
+      "description": "CMS akademii irratti yeroo maxxanfamu asitti mulʼata."
+    },
+    "tabs": {
+      "happening": "Happening",
+      "upcoming": "Upcoming",
+      "expired": "Expired"
+    }
+  },
+  "eventDetail": {
+    "eyebrow": "Taatee",
+    "backToList": "← Gara taateewwanitti deebiʼi",
+    "loading": "Taatee feʼamaa jira…",
+    "loadError": "Amma taatee kana feʼuu hin dandeenye.",
+    "notFoundTitle": "Taateen hin argamne",
+    "notFoundDescription": "Taateen kun hin argamu ykn hin maxxanfamne."
+  },
+  "cms": {
+    "eyebrow": "Fuula akademii",
+    "loading": "Fuula feʼamaa jira…",
+    "loadError": "Amma fuula kana feʼuu hin dandeenye.",
+    "notFoundTitle": "Fuulli hin argamne",
+    "notFoundDescription": "Fuulli qabiyyee kun hin argamu ykn hin maxxanfamne."
+  },
+  "newsletterPages": {
+    "confirm": {
+      "title": "Galmee mirkaneessi",
+      "description": "Galmee Abyssinia Bulletin kee mirkaneessaa jirra.",
+      "loading": "Galmee kee mirkaneessaa jira…",
+      "missingToken": "Hidhaan mirkaneessaa kun token hin qabu. Hidhaa email keessaa argatte irra deebiʼii bani.",
+      "failed": "Galmee kana mirkaneessuu hin dandeenye. Hidhaan dogoggoraa ykn yeroon isaa darbe taʼuu dandaʼa."
+    },
+    "unsubscribe": {
+      "title": "Galmee dhiisi",
+      "description": "Gaaffii Abyssinia Bulletin dhiisuu kee adeemsisaa jirra.",
+      "loading": "Galmee kee haaromsaa jira…",
+      "missingToken": "Hidhaan dhiisuu kun token hin qabu. Hidhaa email keessaa argatte irra deebiʼii bani.",
+      "failed": "Amma galmee dhiisuu hin dandeenye. Booda irra deebiʼii yaali."
+    }
+  },
+  "forms": {
+    "admissions": {
+      "submitFailed": "Gaaffii seensa galchuu hin dandeenye. Maaloo irra deebiʼii yaali."
+    },
+    "contact": {
+      "submitFailed": "Ergaa kee erguu hin dandeenye. Maaloo irra deebiʼii yaali."
+    },
+    "demoRequest": {
+      "submitFailed": "Gaaffii demo galchuu hin dandeenye. Maaloo irra deebiʼii yaali."
+    },
+    "newsletter": {
+      "submitFailed": "Galmee oduu galchuu hin dandeenye. Maaloo irra deebiʼii yaali.",
+      "followUpFailed": "Gaaffiin seensa kuufameera, garuu galmeen oduu hin milkoofne.",
+      "confirmHint": "Yoo ergaan mirkaneessaa ergame, galmee mirkaneessuuf email kee ilaali."
+    }
+  },
+  "amharicBook": {
+    "kicker": "Afaan Amaaraa Koo Jalqabaa",
+    "titleHighlight": "Qubeewwan",
+    "subtitle": "Kitaaba Fakkii Tarjamaa Ingiliffaan",
+    "coverAlt": "Fuula kitaaba qubee Afaan Amaaraa",
+    "blurb": "Kitaaba qubee gammachuu maatii waliin qoodannu — qubee tuqi, jecha argadhu, Afaan Amaaraa addunyaa akkamitti sagalee tokkoon banu ilaali.",
+    "familyLabel": "Maatii qubee",
+    "selectFidel": "Qubee {{char}} filadhu"
+  },
+  "academicsPage": {
+    "title": "Major & Program",
+    "nav": {
+      "overview": "Overview",
+      "outcomes": "Learning outcomes",
+      "programs": "Programs",
+      "amharic": "Kitaaba Amaaraa",
+      "streams": "Streams",
+      "entry": "Entry requirements",
+      "apply": "How to apply"
+    },
+    "amharic": {
+      "title": "Afaan Amaaraa — afaan onnee qabu",
+      "body": "Afaan Amaaraa sadarkaa lammaffaa Abyssinia keessatti haasaa, ogbarruu fi ibsa ifaa guddiftu. Qubee gammachiifnas eegna — kitaabni fakkii kun maatiiifi barattoota hundaaf balbala ho’aa dha."
+    },
+    "overview": {
+      "title": "Overview",
+      "p1": "Abyssinia Academy delivers quality secondary education for {{grades}}, aligned with the Ethiopian Ministry of Education curriculum and focused on readiness for national examinations and higher education.",
+      "p2": "Students build strong foundations across sciences, languages, and social studies, then choose preparatory streams that match their university pathways."
+    },
+    "outcomesTitle": "Learning Outcomes",
+    "outcomes": [
+      "Strong academic knowledge across core secondary subjects",
+      "Critical thinking and problem-solving habits",
+      "Clear communication in Amharic and English",
+      "Confident use of digital technology and ICT tools",
+      "Collaboration, leadership, and civic responsibility",
+      "Preparation for national exams and university entry"
+    ],
+    "programs": {
+      "title": "Programs Offered",
+      "secondaryTitle": "Secondary School Program (Grades 9–10)",
+      "secondaryBody": "Foundational secondary curriculum preparing students for the national Grade 10 examination and stream selection."
+    },
+    "grade9Subjects": [
+      "English",
+      "Amharic",
+      "Mathematics",
+      "Biology",
+      "Chemistry",
+      "Physics",
+      "History",
+      "Geography",
+      "Civics & Ethical Education",
+      "Information and Communication Technology (ICT)",
+      "Physical Education",
+      "Economics",
+      "Business"
+    ],
+    "streams": {
+      "title": "Stream",
+      "naturalTitle": "Natural Science Stream",
+      "naturalBody": "Prepares students for science- and technology-based university programs.",
+      "socialTitle": "Social Science Stream",
+      "socialBody": "Prepares students for social sciences, business, and humanities pathways."
+    },
+    "naturalSubjects": [
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Technical Drawing",
+      "English",
+      "ICT",
+      "Civics & Ethical Education"
+    ],
+    "socialSubjects": [
+      "Mathematics",
+      "History",
+      "Geography",
+      "Economics",
+      "Business",
+      "English",
+      "ICT",
+      "Civics & Ethical Education"
+    ],
+    "pathwaysTitle": "Future University Pathways",
+    "pathways": [
+      "Medicine and Health Sciences",
+      "Engineering",
+      "Computer Science & IT",
+      "Business, Law, and Social Sciences"
+    ],
+    "entry": {
+      "title": "Entry Requirements",
+      "grade9Title": "Secondary School (Grade 9)",
+      "grade9a": "Completion of primary education",
+      "grade9b": "Placement based on regional or national examination results",
+      "grade11Title": "Preparatory School (Grade 11)",
+      "grade11a": "Successful completion of Grade 10",
+      "grade11b": "Passing the Ethiopian General Secondary School Leaving Certificate Examination (EGSLCE)",
+      "grade11c": "Stream placement based on academic performance"
+    },
+    "apply": {
+      "title": "How to Apply",
+      "body": "Your application will require certified copies of academic records and guidance from the admissions office.",
+      "step1": "Obtain an application form from the school administration",
+      "step2": "Submit previous academic records",
+      "step3": "Complete placement and registration requirements",
+      "step4": "Enroll and begin your academic journey",
+      "cta": "Apply Now"
+    }
+  },
+  "admissionPage": {
+    "howToApplyTitle": "Detail About How to Apply",
+    "howToApply": {
+      "p1": "Admissions are open for {{grades}}. We review every applicant carefully — academic records, character, and readiness to join our learning community — rather than using a single formula.",
+      "p2": "Share your details through the inquiry form below. Our Admissions Office will guide you through assessment dates, required documents, and enrollment steps."
+    },
+    "faqTitle": "Admission Questions",
+    "faqLeft": [
+      {
+        "question": "What does submitting an inquiry mean, and what's next?",
+        "answer": "An inquiry tells our office you are interested. We will contact you with the next steps for assessment, documentation, and enrollment for Grades 9–12."
+      },
+      {
+        "question": "I missed a reply deadline. Can I still continue?",
+        "answer": "Contact the Admissions Office as soon as possible. Late replies are reviewed case by case when capacity remains."
+      },
+      {
+        "question": "Can I appeal or reapply?",
+        "answer": "Yes. You may request guidance on appeals or reapplication windows from Admissions after a decision is issued."
+      }
+    ],
+    "faqRight": [
+      {
+        "question": "My status is unqualified. What does that mean?",
+        "answer": "It usually means required criteria or documents were not met for this cycle. Admissions can explain options for the next intake."
+      },
+      {
+        "question": "If my status is qualified, am I accepted?",
+        "answer": "Qualified means you meet academic criteria. Final acceptance depends on placement capacity, interview (if required), and completed enrollment steps."
+      },
+      {
+        "question": "I submitted documents late. What should I do?",
+        "answer": "Email or visit Admissions with your reference details. We will confirm whether your file can be restored or resubmitted."
+      }
+    ],
+    "processTitle": "The Application Process",
+    "process": [
+      {
+        "title": "Start Online Inquiry",
+        "body": "Complete the admissions interest form with student and guardian contact details."
+      },
+      {
+        "title": "Submit The Form",
+        "body": "Send your inquiry so our office can open a file and reply with next steps."
+      },
+      {
+        "title": "Review The Submission",
+        "body": "Admissions reviews your details and confirms assessment or visit guidance."
+      },
+      {
+        "title": "Gather Necessary Documents",
+        "body": "Prepare academic records, identification, and any required certificates."
+      },
+      {
+        "title": "Interviewing Process",
+        "body": "Attend placement assessment or interview when invited by the school."
+      },
+      {
+        "title": "Last Decision",
+        "body": "Receive the admissions decision and complete enrollment to begin the term."
+      }
+    ],
+    "thingsTitle": "Things to Know First",
+    "thingsBody": "Abyssinia Academy uses a clear admissions pathway for secondary entry. Prepare accurate contact details and academic history before you apply.",
+    "youWillNeed": "You will need:",
+    "needs": [
+      {
+        "text": "Student full name and intended grade (9–12)"
+      },
+      {
+        "text": "Parent/guardian contact email and phone"
+      },
+      {
+        "text": "Previous school academic records (certified copies)"
+      },
+      {
+        "text": "Willingness to complete placement requirements"
+      }
+    ],
+    "whereTitle": "Where to Apply?",
+    "applyNow": "Apply Now"
+  }
+}
